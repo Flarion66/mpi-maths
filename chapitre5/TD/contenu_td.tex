@@ -316,18 +316,13 @@ Donc $\ds \sum_{k=1}^{2n} \frac {(-1)^k} {k^2} \to \frac {\pi^2} {24} - \frac {\
 
 % --- Correction 8 ---
 \begin{correction}{8}
-\begin{itemize}
+\begin{enumerate}
     \item 
-        Soit $u_{n,p} = \frac{1}{n p^n}$ pour $n \ge 2, p \ge 2$.
+        Soit $u_{n,p} = \frac{1}{n p^n}$ pour $n \geqslant 2, p \geqslant 2$.
 
-        Fixons $n \geqslant 2$. $\displaystyle \sum_{p \ge 2} \frac{1}{n p^n} = \frac{1}{n} \sum_{p=2}^{+\infty} \left(\frac{1}{p}\right)^n$.
+        Fixons $p \geqslant 2$. $\displaystyle\sum_{n=2}^{+\infty} \frac{1}{n p^n}$.
         
-        On sait que $\displaystyle \sum_{p=2}^{+\infty} \frac{1}{p^n} \le \sum_{p=2}^{+\infty} \frac{1}{p^2}$ (pour $n \ge 2$).
-        Mais pour la sommabilité, il vaut mieux sommer d'abord sur $n$.
-        
-        Fixons $p \ge 2$. $\displaystyle\sum_{n=2}^{+\infty} \frac{1}{n p^n}$.
-        
-        On sait que pour $x \in ]-1,1[$, $\displaystyle\ln(1-x) = -\sum_{n=1}^{+\infty} \frac{x^n}{n}$.
+        On sait que pour $x \in ]-1,1[$, $\displaystyle\ln(1-x) = -\sum_{n=1}^{+\infty} \frac{x^n}{n}$ (il faudrait le reprouver...).
 
         Donc $\displaystyle \sum_{n=1}^{+\infty} \frac{1}{n p^n} = \sum_{n=1}^{+\infty} \frac{(1/p)^n}{n} = -\ln\left(1-\frac{1}{p}\right)$.
 
@@ -351,7 +346,7 @@ Donc $\ds \sum_{k=1}^{2n} \frac {(-1)^k} {k^2} \to \frac {\pi^2} {24} - \frac {\
         Donc $S_N = 1 + \ln N - (\ln N + \gamma + o(1)) \to 1 - \gamma$.
 
         Conclusion : $\displaystyle \sum_{n=2}^{+\infty} \frac{\zeta(n)-1}{n} = 1-\gamma$.
-\end{itemize}
+\end{enumerate}
 \end{correction}
 
 % --- Correction 9 ---
@@ -525,16 +520,16 @@ Soient $p,q \in \N$. On remarque que :
 \begin{correction}{17}
 \begin{enumerate}
     \item $\displaystyle w_n = \sum_{k=1}^n \frac{1}{k^2} \frac{1}{(n-k)!}$.
-        Posons $u_n = \frac{1}{n^2}$ pour $n \ge 1$, $u_0=0$.
-        Posons $v_n = \frac{1}{n!}$ pour $n \ge 0$.
+        Posons $u_n = \frac{1}{n^2}$ pour $n \geqslant 1$, $u_0=0$.
+        Posons $v_n = \frac{1}{n!}$ pour $n \geqslant 0$.
 
         $w_n$ est le terme général du produit de Cauchy de $\sum u_n$ et $\sum v_n$.
         
         $\sum |u_n|$ converge (Riemann $\alpha=2$).
         $\sum |v_n|$ converge (exponentielle).
 
-        Donc $\sum w_n$ converge absolument et sa somme est le produit des sommes.
-        $$\sum_{n=0}^{+\infty} w_n = \left(\sum_{n=1}^{+\infty} \frac{1}{n^2}\right) \left(\sum_{n=0}^{+\infty} \frac{1}{n!}\right) = \frac{\pi^2}{6} \times e$$
+        Donc $\sum w_n$ converge absolument et sa somme est le produit des sommes :
+        \[\sum_{n=0}^{+\infty} w_n = \left(\sum_{n=1}^{+\infty} \frac{1}{n^2}\right) \left(\sum_{n=0}^{+\infty} \frac{1}{n!}\right) = \frac{\pi^2}{6} \times e\]
 
     \item $\displaystyle w_n = \frac{1}{2^n} \sum_{k=0}^n 2^k u_k = \sum_{k=0}^n u_k \frac{1}{2^{n-k}}$.
         Posons $a_k = u_k$ et $b_k = \frac{1}{2^k}$.
@@ -542,10 +537,9 @@ Soient $p,q \in \N$. On remarque que :
         $w_n$ est le produit de Cauchy de $\sum u_n$ et $\sum \frac{1}{2^n}$.
 
         On nous dit que $\sum u_n$ converge absolument.
-        $\sum \frac{1}{2^n}$ converge absolument (géométrique $1/2 < 1$).
+        $\sum \frac{1}{2^n}$ converge absolument (géométrique et $\frac 1 2 < 1$).
         Donc $\sum w_n$ converge absolument.
-
-        Somme :
-        $$\left(\sum_{n=0}^{+\infty} u_n\right) \left(\sum_{n=0}^{+\infty} \frac{1}{2^n}\right) = S_u \times 2$$
+        Sa somme est :
+        \[\left(\sum_{n=0}^{+\infty} u_n\right) \left(\sum_{n=0}^{+\infty} \frac{1}{2^n}\right) = S_u \times 2\]
 \end{enumerate}
 \end{correction}
