@@ -37,6 +37,7 @@
 \RequirePackage{pgfplots}
 \RequirePackage{titletoc}
 \RequirePackage{enumitem}
+\RequirePackage{luacode}
 \RequirePackage[hidelinks]{hyperref}
 
 \setmainfont{fbb}[
@@ -133,6 +134,7 @@
 \definecolor{ideayellow}{RGB}{230, 160, 0}
 \definecolor{dangerred}{RGB}{220, 40, 40}
 \definecolor{forestgreen}{RGB}{46,111,64}
+\definecolor{navyblue}{RGB}{0,0,128}
 % =============================================================================
 % SOULIGNAGE
 % =============================================================================

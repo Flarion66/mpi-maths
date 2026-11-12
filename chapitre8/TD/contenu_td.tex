@@ -1,26 +1,26 @@
-\section{Énoncés}
+\section{Énoncés des exercices}
 \setcounter{numexo}{15}
 
 \subsection{Anneaux}
 
 % --- Exercice 16 ---
 \begin{exercice}
-On considère $A=\mathbb{R}^{\mathbb{N}}$ l'ensemble des suites réelles que l'on munit des lois $+$ et $*$ définies par : 
+On considère $A=\R^{\N}$ l'ensemble des suites réelles que l'on munit des lois $+$ et $*$ définies par : 
 \[\forall u=(u_{n}), v=(v_{n}) \in A, \quad u+v=w=(w_{n}) \quad \text{et} \quad u*v=z=(z_{n})\]
-avec 
+avec :
 \[\forall n\in\mathbb{N}, \quad w_{n}=u_{n}+v_{n} \quad \text{et} \quad z_{n}=\sum_{k=0}^{n}u_{k}v_{n-k}\]
 Montrer que $(A,+,*)$ est un anneau intègre. 
 \end{exercice}
 
 % --- Exercice 17 ---
 \begin{exercice}
-Soit $A$ un anneau commutatif. On dit qu'un élément $a\in A$ est nilpotent s'il existe $n\in\mathbb{N}^{*}$ tel que $a^{n}=0$. 
+Soit $A$ un anneau commutatif. On dit qu'un élément $a\in A$ est nilpotent s'il existe $n\in\N^*$ tel que $a^{n}=0$. 
 Montrer que l'ensemble $I$ des éléments nilpotents de $A$ est un idéal. 
 \end{exercice}
 
 % --- Exercice 18 ---
 \begin{exercice}
-On considère $I$ un intervalle réel et l'anneau $A=F(I,\mathbb{R})$. 
+On considère $I$ un intervalle réel et l'anneau $A=\mathscr F(I,\R)$. 
 Pour $a\in I$, on considère l'ensemble $I_{a}$ des fonctions $f\in A$ qui s'annulent en $a$. 
 \begin{enumerate}
     \item Montrer que $I_{a}$ est un idéal de $A$. 
@@ -32,41 +32,40 @@ Pour $a\in I$, on considère l'ensemble $I_{a}$ des fonctions $f\in A$ qui s'ann
 \begin{exercice}
 Soit $A$ un anneau commutatif et $I$ un idéal de $A$. 
 On pose :
-\[J=\{x\in A,\exists n\in\mathbb{N},x^{n}\in I\}\]
+\[\sqrt I=\{x\in A,\exists n\in\N,x^{n}\in I\}\]
 \begin{enumerate}
-    \item Montrer que $J$ est un idéal de $A$ (appelé radical de $I$). 
-    \item Lorsque $A=\mathbb{Z}$, identifier $J$ en fonction de $I$. 
+    \item Montrer que $\sqrt I$ est un idéal de $A$ (appelé radical de $I$).
+    \item Que vaut $\sqrt{\sqrt I}$ ?
+    \item Lorsque $A=\Z$, identifier $\sqrt I$ en fonction de $I$. 
 \end{enumerate}
 \end{exercice}
 
 % --- Exercice 20 ---
 \begin{exercice}
 On définit :
-$\mathbb{Z}[\sqrt{2}]=\{a+b\sqrt{2},a,b\in\mathbb{Z}\}$
+$\Z[\sqrt{2}]=\{a+b\sqrt{2},a,b\in\Z\}$
 
-Montrer que $\mathbb{Z}[\sqrt{2}]$ est un anneau intègre. 
+Montrer que $\Z[\sqrt{2}]$ est un anneau intègre. 
 \end{exercice}
 
 \subsection{L'anneau \texorpdfstring{$\Z$}{Z}}
 
 % --- Exercice 21 ---
 \begin{exercice}
-(Exercice 21)
 \begin{enumerate}
- \item Soit $a$ un entier naturel non nul et $\lambda\in[1,a[$. Évaluer $\lfloor \lambda \rfloor + \lfloor -\lambda \rfloor$ selon que $\lambda$ est un entier ou non. 
- \item Soient $a, b$ deux naturels non nuls, $d=\text{PGCD}(a,b)$. 
+ \item Soit $a$ un entier naturel non nul et $\lambda\in[1,a[$. Évaluer $\lfloor \lambda \rfloor + \lfloor a -\lambda \rfloor$ selon que $\lambda$ est un entier ou non. 
+ \item Soient $a, b$ deux naturels non nuls, $d=\pgcd(a,b)$. 
  On note $a=da^{\prime}$ et $b=db^{\prime}$, si bien que $a'$ et $b'$ sont premiers entre eux. 
  Pour $k\in\{1,..,b-1\}$, montrer que $k\frac{a}{b}$ est entier pour exactement $d-1$ valeurs de $k$. 
  \item En déduire que :
- $$ \sum_{k=1}^{b-1}\left(\lfloor k\frac{a}{b}\rfloor+\lfloor a-k\frac{a}{b}\rfloor\right)=(b-1)(a-1)+d-1 $$ 
+ \[\sum_{k=1}^{b-1}\left(\left\lfloor k\frac{a}{b}\right\rfloor+\left\lfloor a-k\frac{a}{b}\right\rfloor\right)=(b-1)(a-1)+d-1\]
  \item Conclure en montrant le théorème de Marcelo Polezzi (publié en 1997) :
- $$ \text{PGCD}(a,b)=a+b-ab+2\sum_{k=1}^{b-1}\lfloor k\frac{a}{b}\rfloor $$ 
+ \[\pgcd(a,b)=a+b-ab+2\sum_{k=1}^{b-1}\left\lfloor k\frac{a}{b}\right\rfloor\]
 \end{enumerate}
 \end{exercice}
 
 % --- Exercice 22 ---
 \begin{exercice}
-(Exercice 22)
 On dit qu'un entier naturel $n$ est parfait s'il est égal à la moitié de la somme de ses diviseurs positifs. 
 Par exemple, $6$ est parfait car $6=\frac{1+2+3+6}{2}$. 
 Montrer que si l'entier $2^{n}-1$ est premier alors $2^{n-1}(2^{n}-1)$ est parfait (résultat démontré par Euclide). 
@@ -74,23 +73,21 @@ Montrer que si l'entier $2^{n}-1$ est premier alors $2^{n-1}(2^{n}-1)$ est parfa
 
 % --- Exercice 23 ---
 \begin{exercice}
-(Exercice 23)
-On considère deux naturels $a\ge2$ et $n\ge2$. 
+On considère deux naturels $a > 2$ et $n\geqslant2$. 
 \begin{enumerate}
- \item[a)] Montrer que si $a>2$ alors $a^{n}-1$ est divisible par $a-1$. Est-il premier ? 
- \item[b)] Montrer que si $n$ n'est pas premier alors $2^{n}-1$ n'est pas premier. 
- \item[c)] Si $n$ est premier, montrer qu'on ne peut pas conclure sur la primalité de $2^{n}-1$. 
+ \item Montrer que si $a>2$ alors $a^{n}-1$ est divisible par $a-1$. Est-il premier ? 
+ \item Montrer que si $n$ n'est pas premier alors $2^{n}-1$ n'est pas premier. 
+ \item Si $n$ est premier, montrer qu'on ne peut pas conclure sur la primalité de $2^{n}-1$. 
 \end{enumerate}
 Un nombre premier de ce type est appelé nombre de Mersenne (du nom de Marin Mersenne (1588-1648)). 
 \end{exercice}
 
-\subsection{L'anneau Z/nZ}
+\subsection{L'anneau \texorpdfstring{$\Z/n\Z$}{Z/nZ}}
 
 % --- Exercice 24 ---
 \begin{exercice}
-(Exercice 24)
 On cherche à résoudre le système :
-$$ \begin{cases}x\equiv3[13]\\ x\equiv5[17]\end{cases} $$ 
+\[\begin{cases}x\equiv3[13]\\ x\equiv5[17]\end{cases}\]
 \begin{enumerate}
  \item[a)] Trouver deux entiers $u$ et $v$ tels que $13u+17v=1$. 
  \item[b)] En déduire les solutions du système en utilisant le théorème chinois. 
@@ -99,10 +96,9 @@ $$ \begin{cases}x\equiv3[13]\\ x\equiv5[17]\end{cases} $$
 
 % --- Exercice 25 ---
 \begin{exercice}
-(Exercice 25)
 Soit $p$ un entier naturel supérieur à 2. 
 \begin{enumerate}
- \item[a)] On suppose que $p$ est premier. En utilisant le fait que $\mathbb{Z}/p\mathbb{Z}$ est un corps et que $\overline{1}$ et $-1$ sont les seules classes égales à leur inverse, montrer que $(p-1)!=\overline{-1}$. 
+ \item[a)] On suppose que $p$ est premier. En utilisant le fait que $\Z/p\Z$ est un corps et que $\overline{1}$ et $-1$ sont les seules classes égales à leur inverse, montrer que $(p-1)!=\overline{-1}$. 
  \item[b)] On suppose réciproquement que $(p-1)!\equiv-1[p]$. Montrer que tout diviseur de $p$ divise $-1$. 
  \item[c)] Conclure : $(p-1)!\equiv-1[p]$ si et seulement si $p$ est premier. C'est le Théorème de Wilson. 
 \end{enumerate}
@@ -110,12 +106,11 @@ Soit $p$ un entier naturel supérieur à 2.
 
 % --- Exercice 26 ---
 \begin{exercice}
-(Exercice 26)
-Soit $p\ge3$ un naturel premier, on note $p-1=2^{r}q$ avec $q$ impair. 
-On considère $a\in\{2,..,p-1\}$ et $A=\{s\in\mathbb{N}, a^{2^{s}q}\equiv1[p]\}$. 
+Soit $p\geqslant3$ un naturel premier, on note $p-1=2^{r}q$ avec $q$ impair. 
+On considère $a\in\{2,..,p-1\}$ et $A=\{s\in\N, a^{2^{s}q}\equiv1[p]\}$. 
 \begin{enumerate}
  \item Montrer que $A$ possède un minimum $s_{0}$. 
- \item Montrer que si $s_{0}\ge1$ alors $a^{2^{s_{0}-1}q}\equiv-1[p]$. 
+ \item Montrer que si $s_{0}\geqslant1$ alors $a^{2^{s_{0}-1}q}\equiv-1[p]$. 
  \item En déduire que si $p$ est premier on a : soit $a^{q}\equiv1[p]$, soit il existe $t\in\{0,...,r-1\}$ tel que $a^{2^{t}q}\equiv-1[p]$. 
 \end{enumerate}
 Sa contraposée est le test de primalité de Rabin-Miller. 
@@ -123,43 +118,37 @@ Sa contraposée est le test de primalité de Rabin-Miller.
 
 % --- Exercice 27 ---
 \begin{exercice}
-(Exercice 27)
-Utiliser la mise sous forme canonique pour résoudre dans $\mathbb{Z}/37\mathbb{Z}$ l'équation :
-$$ x^{2}+x+17=0 $$ 
+Utiliser la mise sous forme canonique pour résoudre dans $\Z/37\Z$ l'équation :
+\[x^{2}+x+17=0\]
 \end{exercice}
 
 % --- Exercice 28 ---
 \begin{exercice}
-(Exercice 28)
-Résoudre dans $\mathbb{Z}/143\mathbb{Z}$ l'équation $x^{2}-4x+3=0$. 
+Résoudre dans $\Z/143\Z$ l'équation $x^{2}-4x+3=0$. 
 \end{exercice}
 
 % --- Exercice 29 ---
 \begin{exercice}
-(Exercice 29)
-Résoudre dans $\mathbb{Z}/20\mathbb{Z}$ le système :
-$$ \begin{cases}5x+2y=3\\ 2x+4y=6\end{cases} $$ 
+Résoudre dans $\Z/20\Z$ le système :
+\[\begin{cases}5x+2y=3\\ 2x+4y=6\end{cases}\]
 \end{exercice}
 
 % --- Exercice 30 ---
 \begin{exercice}
-(Exercice 30)
-Résoudre l'équation $x^{3}=x^{2}$ dans $\mathbb{Z}/13\mathbb{Z}$ puis dans $\mathbb{Z}/12\mathbb{Z}$. 
+Résoudre l'équation $x^{3}=x^{2}$ dans $\Z/13\Z$ puis dans $\Z/12\Z$. 
 \end{exercice}
 
 % --- Exercice 31 ---
 \begin{exercice}
-(Exercice 31)
 Soit $p$ un entier premier. Utiliser l'application :
-$$ (\mathbb{Z}/p\mathbb{Z})^{*}\rightarrow(\mathbb{Z}/p\mathbb{Z})^{*}, \quad x \mapsto x^2 $$ 
-pour déterminer le nombre de carrés dans $(\mathbb{Z}/p\mathbb{Z})^{*}$. 
+\[(\Z/p\Z)^{*}\rightarrow(\Z/p\Z)^{*}, \quad x \mapsto x^2\]
+pour déterminer le nombre de carrés dans $(\Z/p\Z)^{*}$. 
 \end{exercice}
 
-\subsection{L'anneau K[X]}
+\subsection{L'anneau \texorpdfstring{$\K[X]$}{K[X]}}
 
 % --- Exercice 32 ---
 \begin{exercice}
-(Exercice 32)
 \begin{enumerate}
  \item[a)] Soient $P, Q$ des polynômes premiers entre eux. Montrer qu'il existe deux polynômes $U$ et $V$ tels que $\deg(U)<\deg(Q)$, $\deg(V)<\deg(P)$ et $PU+QV=1$. 
  \item[b)] Montrer qu'il existe deux polynômes $T$ et $S$ de degré inférieur à $n-1$ tels que :
@@ -169,39 +158,32 @@ pour déterminer le nombre de carrés dans $(\mathbb{Z}/p\mathbb{Z})^{*}$.
 
 % --- Exercice 33 ---
 \begin{exercice}
-(Exercice 33)
-Soit $n\in\mathbb{N}^{*}$. Déterminer le PGCD de :
+Soit $n\in\N^{*}$. Déterminer le PGCD de :
 $$ nX^{n+1}-(n+1)X^{n}+1 \quad \text{et} \quad X^{n}-nX+n-1 $$ 
 \end{exercice}
 
 % --- Exercice 34 ---
 \begin{exercice}
-(Exercice 34)
-Décomposer le polynôme $X^{4}+1$ en produit de facteurs irréductibles dans $\mathbb{C}[X]$, puis dans $\mathbb{R}[X]$, puis dans $\mathbb{Q}[X]$. 
+Décomposer le polynôme $X^{4}+1$ en produit de facteurs irréductibles dans $\C[X]$, puis dans $\R[X]$, puis dans $\Q[X]$. 
 \end{exercice}
 
 \subsection{Corps}
 
 % --- Exercice 35 ---
 \begin{exercice}
-(Exercice 35)
 On définit :
-$$ \mathbb{Q}(\sqrt{2})=\{a+b\sqrt{2},a,b\in\mathbb{Q}\} $$ 
-Montrer que $\mathbb{Q}(\sqrt{2})$ est un corps. 
+$$ \Q(\sqrt{2})=\{a+b\sqrt{2},a,b\in\Q\} $$ 
+Montrer que $\Q(\sqrt{2})$ est un corps. 
 \end{exercice}
 
 % --- Exercice 36 ---
 \begin{exercice}
-(Exercice 36)
 Soit $(A,+,\cdot)$ un anneau commutatif intègre tel que $A$ est un ensemble fini. 
 Pour $x\in A\setminus\{0\}$ on considère l'application $\varphi_{x} : A\rightarrow A, \quad a\mapsto xa$. 
 Montrer que $\varphi_{x}$ est injective et en déduire que $(A,+,\cdot)$ est un corps. 
 \end{exercice}
 
-\vspace{1em}
-\hrule
-\vspace{1em}
-
+\newpage
 \section{Corrections}
 
 % --- Correction 16 ---
@@ -211,10 +193,10 @@ Montrons d'abord que $(A,+,*)$ est un anneau commutatif.
  \item $(A,+)$ est un groupe abélien car c'est un produit direct de groupes additifs réels. 
  \item La loi $*$ est commutative : pour tout $n$, $(u*v)_n = \sum_{k=0}^n u_k v_{n-k}$. Par le changement d'indice $p = n-k$, on a $\sum_{p=0}^n u_{n-p} v_p = (v*u)_n$. 
  \item La loi $*$ est associative (le produit de Cauchy des suites conserve l'associativité). 
- \item Élément neutre pour $*$ : posons $e = (e_n)_{n\in\mathbb{N}}$ avec $e_0=1$ et $e_n=0$ pour $n \ge 1$. On a $(u*e)_n = \sum_{k=0}^n u_k e_{n-k} = u_n e_0 = u_n$. 
+ \item Élément neutre pour $*$ : posons $e = (e_n)_{n\in\N}$ avec $e_0=1$ et $e_n=0$ pour $n \ge 1$. On a $(u*e)_n = \sum_{k=0}^n u_k e_{n-k} = u_n e_0 = u_n$. 
  \item La distributivité de $*$ par rapport à $+$ découle de la linéarité de la somme. 
 \end{itemize}
-Pour l'intégrité, soient $u \neq 0$ et $v \neq 0$. Il existe un premier entier où $u$ ne s'annule pas. Soit $n_0 = \min \{n \in \mathbb{N} \mid u_n \neq 0\}$ et $m_0 = \min \{m \in \mathbb{N} \mid v_m \neq 0\}$. 
+Pour l'intégrité, soient $u \neq 0$ et $v \neq 0$. Il existe un premier entier où $u$ ne s'annule pas. Soit $n_0 = \min \{n \in \N \mid u_n \neq 0\}$ et $m_0 = \min \{m \in \N \mid v_m \neq 0\}$. 
 Regardons le terme d'indice $n_0+m_0$ du produit :
 $$ (u*v)_{n_0+m_0} = \sum_{p=0}^{n_0+m_0} u_p v_{n_0+m_0-p} $$
 Si $p < n_0$, $u_p = 0$. Si $p > n_0$, alors $n_0+m_0-p < m_0$, d'où $v_{n_0+m_0-p} = 0$. 
@@ -260,6 +242,8 @@ En conclusion, $I$ est bien un idéal de $A$.
  Pour chaque terme, on a soit $k \ge n \implies x^k \in I$, soit $n+m-k \ge m \implies y^{n+m-k} \in I$. 
  L'idéal absorbant les produits, chaque terme de la somme est dans $I$. Comme $I$ est stable par addition, la somme y est aussi : $(x-y)^{n+m} \in I$. Donc $x-y \in J$. 
  Enfin, pour $a \in A$ et $x \in J$ (avec $x^n \in I$), on a $(ax)^n = a^n x^n \in I$, donc $ax \in J$. Ainsi $J$ est un idéal. 
+
+ \item À faire.
  
  \item Si $A = \mathbb{Z}$, l'idéal $I$ est de la forme $n\mathbb{Z}$. 
  Si $n=0$, $I=\{0\}$, $J$ est l'ensemble des nilpotents de $\mathbb{Z}$, c'est-à-dire $\{0\}$. 
