@@ -53,19 +53,17 @@ On rappelle ici quelques résultats démontrés en sup.
 
 \begin{theoreme}{Caractérisation séquentielle de la borne sup}{}
 
-    Soit $A \subset \R$ non vide majorée et soit $\alpha \in \R$ un majorant de $A$. \\
-
-    Alors $\alpha = \sup A$ ssi il existe $(u_n)_{n \in \N}$ suite d'éléments de $A$
+    Soit $A \subset \R$ non vide majorée et soit $\alpha \in \R$ un majorant de $A$.
+    
+    Alors $\alpha = \sup A$ ssi il existe $(u_n)$ une suite d'éléments de $A$
     telle que $\lim_{n \to + \infty} u_n = \alpha$.
 \end{theoreme}
 
 
 \begin{exemple}
-    Soient $A, B \in \mathcal P(\R)$ non vides et majorées. 
-
+    Soient $A, B \in \mathcal P(\R)$ non vides et majorées.
     Alors :
      \[A + B = \{x + y,~(x,y) \in A \times B\} = \{z \in \R \mid \exists (x, y) \in (A \times B),~z = x + y\}\]
-
     est non vide et majorée, et $\sup( A + B) = \sup A + \sup B$. \\
 
     \uline{Preuve :}
@@ -124,6 +122,7 @@ On rappelle ici quelques résultats démontrés en sup.
 Soit $\K = \R$ ou $\C$ et $E$ un espace vectoriel sur $\K$.
 
 \notedanger{Bien penser à vérifier que c'est une application à valeurs dans $\R^+$ pour montrer qu'on a une norme !}
+
 \begin{definition}{Norme et espace vectoriel normé}{}
     On appelle norme sur $E$ toute application :
     \[\fonction{N}{E}{\R^+}{u}{N(u)}\]
@@ -198,10 +197,8 @@ Soit $\K = \R$ ou $\C$ et $E$ un espace vectoriel sur $\K$.
     (HP) Un ensemble muni de $d : E^2 \mapsto \R^{+}$ vérifiant 1., 2. et 3. est appelé \textbf{espace métrique}.
 \end{remarque}
 
-\begin{proof}~\\
-
-    Pour le 3 : $d_N(u, w) = N(u - w) = N( u - v + v - w) \leqslant N(u - v) + N(v - w)$ \\
-
+\begin{proof}
+    Pour le 3 : $d_N(u, w) = N(u - w) = N( u - v + v - w) \leqslant N(u - v) + N(v - w)$.
     Évident pour le reste.
 \end{proof}
 
