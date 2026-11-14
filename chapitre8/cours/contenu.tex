@@ -7,7 +7,7 @@
     $\cdot$ telles que : 
     \begin{itemize}
         \item $(A, +)$ est un groupe abélien de neutre noté $0_A$.
-        \item $\cdot$ est associative et munie un neutre noté $1_A$.
+        \item $\cdot$ est associative et munie d'un neutre noté $1_A$.
         \item La loi $\cdot$ est distributive par rapport à la loi $+$.
     \end{itemize}
     Alors $(A,+,\cdot)$ est un anneau. Si de plus $\cdot$ est commutative, on dit que $(A, +, \cdot)$ est un \textbf{anneau commutatif}.
@@ -102,7 +102,7 @@ $(\Z, +,\times)$, $(\Q,+,\times)$, $(\R, +, \times)$ et $(\C, +, \times)$ sont d
     \end{itemize}    
 \end{proposition}
 
-\idee{Définitioin d'un sous anneau.}
+\idee{Définition d'un sous-anneau.}
 
 \begin{proof}
     $\Rightarrow$ Supposons que $B$ est un sous-anneau de $A$.
@@ -189,7 +189,7 @@ On les appelle idéaux triviaux de $A$.
 
 \begin{exemple}
     \begin{itemize}
-        \item Dans $\Z$, soit $n \in \N$, $n \geqslant 2$. Alors $I = n\Z$ est bien un sous groupe de $(\Z, +)$.
+        \item Dans $\Z$, soit $n \in \N$, $n \geqslant 2$. Alors $I = n\Z$ est bien un sous-groupe de $(\Z, +)$.
 
         Si $a \in \Z$ et $x \in I$, alors $x = ny$ pour un certain $y \in \Z$, donc :
         \[a \cdot x = a \cdot (ny) = n(ay) \in n\Z = I.\]
@@ -232,7 +232,7 @@ On les appelle idéaux triviaux de $A$.
     Soit $I \subset A$ un idéal. On dit que $I$
     est \textbf{principal} ssi $\exists a \in A$ tel que $I = aA$.
 
-    C'est à dire que $I$ est l'idéal engendré par un élément.
+    C'est-à-dire que $I$ est l'idéal engendré par un élément.
 \end{definition}
 
 \begin{exemple}
@@ -258,7 +258,7 @@ On les appelle idéaux triviaux de $A$.
 \begin{enumerate}
     \item Montrons que $I_1 \cap I_2$ est un idéal de $A$.
 
-    $I_1 \cap I_2 \subset A$ et sous groupe de $(A, +)$ car intersection de sous-groupes.
+    $I_1 \cap I_2 \subset A$ et sous-groupe de $(A, +)$ car intersection de sous-groupes.
 
     Soit $x \in I_1 \cap I_2$ et $a \in A$. Alors $x \in I_1$ est un idéal, donc $a \cdot x \in I_1$, 
     idem avec $I_2$. Donc $a \cdot x \in I_1 \cap I_2$.
@@ -329,12 +329,12 @@ aka l'hypothèse d'intégrité.}
     Alors il existe $u, v \in A$ tels que $b = a \cdot u$ et $c = b \cdot v$.
     Donc $c = bua$ donc $a \mid c$ (transitivité).
 
-    \avspace $1 \Leftrightarrow \exists c \in A, \, b = a \cdot c \Leftrightarrow b = ac$.
+    \avspace $1 \iff \exists c \in A, \, b = a \cdot c \iff b = ac$.
 
     Supposons $1$, $\exists c \in A, \, b = ac$. Soit $x \in bA$, $x = bu$. Donc $x = acu \in aA$,
     d'où le 3.
 
-    Suppposons 3. $b = 1b$ donc $b \in bA \subset aA$, d'où le 2.
+    Supposons 3. $b = 1b$ donc $b \in bA \subset aA$, d'où le 2.
 \end{proof}
 
 \marginenote{Remarque}{Comme d'habitude, $A^*$ désigne l'ensemble des éléments inversibles de $A$.}
@@ -482,7 +482,7 @@ Soit $(A, +, \cdot)$ un anneau.
     Soit $A$ un anneau commutatif non nul. 
     
     On dit que $(A, +, \cdot)$ est un corps 
-    ssi $A^* = A \setminus \{0_A\}$, c'est à dire si tout élément non nul de $A$ est inversible.
+    ssi $A^* = A \setminus \{0_A\}$, c'est-à-dire si tout élément non nul de $A$ est inversible.
 \end{definition}
 
 \begin{exemple}
@@ -577,7 +577,7 @@ que simultanément.}
 \begin{proof}
     Les $a \Z$ sont les idéaux principaux engendrés par $a \in \Z$, donc des idéaux de $\Z$.
 
-    Réciproquement, Soit $I$ un idéal de $\Z$. Alors $I$ sous groupe de $(\Z, +)$, donc il existe 
+    Réciproquement, Soit $I$ un idéal de $\Z$. Alors $I$ sous-groupe de $(\Z, +)$, donc il existe 
     $a \in \N$ tel que $I = a \Z$.
 \end{proof}
 
@@ -610,7 +610,7 @@ que simultanément.}
 
     \svspace Supposons qu'il existe $c' \in \N$ vérifiant les mêmes propriétés que $c$. 
 
-    Alors (avec c dans le rôle de d dans la proprosition), 
+    Alors (avec c dans le rôle de d dans la proposition), 
     $c \mid c'$ et de même, $c' \mid c$, donc $c$ et $c'$ sont associés, donc $c = c'$.
 \end{proof}
 
@@ -620,7 +620,7 @@ que simultanément.}
     \[c_1 \Z + c_2 \Z + \cdots + c_n \Z = d \Z\]
 
     $d$ est appelé le \textbf{plus grand commun diviseur} de $c_1, c_2, \ldots, c_n$, et 
-    on obtient l'associativité par def. 
+    on obtient l'associativité en utilisant la définiton. 
 \end{proposition}
 
 \begin{theoreme}{Lien PPCM et idéaux dans $\Z$}{}
@@ -714,10 +714,10 @@ Soient $a, b \in \Z$. On cherche $u, v \in \Z$ tels que $au + bv = \pgcd(a, b)$.
     
 \end{theoreme}
 
-\marginenote{Mémo}{Il faut croiser : le PGCD utilsie le mini et le PPCM le maxi.}
+\marginenote{Mémo}{Il faut croiser : le PGCD utilise le mini et le PPCM le maxi.}
 
 \begin{proposition}{PGCD PPCM avec valuations $p$-adiques}{}
-    Soient $a, b \in \Z \setminus \{0, -1, 1\}$ décomposé en 
+    Soient $a, b \in \Z \setminus \{0, -1, 1\}$ décomposés en 
     $\displaystyle a = \varepsilon_a \prod_{i = 1}^k p_i^{\alpha_i}$ et
     $\displaystyle b = \varepsilon_b \prod_{i = 1}^k p_i^{\beta_i}$. 
     Alors :
@@ -737,7 +737,7 @@ Soient $a, b \in \Z$. On cherche $u, v \in \Z$ tels que $au + bv = \pgcd(a, b)$.
     \begin{enumerate}
         \item Théorème des nombres premiers (Hadamard et de La Vallée Poussin, 1896) :
         \[\pi(x) \substack{\sim \\ x \to + \infty} \frac x {\ln(x)}\]
-        \item fonction logarithme intégral : 
+        \item Fonction logarithme intégral : 
         \[\mathrm{Li}(x) = \alpha + \int_2^x \frac {dt}{\ln(t)}\]
         où $\displaystyle \alpha = \gamma + \ln(\ln(2)) + \sum_{n = 1}^{+\infty} \frac{(\ln(2))^n}{n \cdot n!}$. 
 
@@ -824,16 +824,17 @@ fh:close()
 \end{tikzpicture}
 \end{center}
 
+\newpage 
 \section{L'anneau \texorpdfstring{$\Z / n \Z$}{Z/nZ}}
 \subsection{Structure}
 
 Soit $n \geqslant 2$ un entier.
 
 \begin{theoreme}{Structure de $\Z / n \Z$}{}
-    Soient $c, d, \in \Z/ n \Z$, $x \in c $ et $y \in d$. Alors 
+    Soient $c, d \in \Z/ n \Z$, $x \in c $ et $y \in d$. Alors 
     $\widehat{x \cdot y}$ ne dépend pas des choix de $x$ et $y$.
 
-    on définit ainsi une lci $\cdot$ sur $\Z / n \Z$  en posant $c \cdot d = \widehat{x \cdot y}$.
+    On définit ainsi une loi de composition interne $\cdot$ sur $\Z / n \Z$  en posant $c \cdot d = \widehat{x \cdot y}$.
 
     Alors $(\Z / n \Z, +, \cdot)$ est un anneau commutatif et $\fonction{\varphi}{\Z}{\Z / n \Z}{x}{\widehat x}$ est un morphisme d'anneaux
     surjectif de noyau $n \Z$.
@@ -867,7 +868,7 @@ Soit $n \geqslant 2$ un entier.
     $\varphi(xy) = \widehat{xy} = \widehat{x} \cdot \widehat{y} = \varphi(x) \cdot \varphi(y)$ et 
     $\varphi(1) = \widehat{1}$.
     
-    Unjectivité et noyau déjà vus.
+    Surjectivité et noyau déjà vus.
 \end{proof}
 
 \begin{exemple}
@@ -924,7 +925,7 @@ Soit $n \geqslant 2$ un entier.
 \end{theoreme}
 
 \begin{proof}
-    $\Z \ n \Z$ est un corps ssi $\forall c \in \Z / n \Z \setminus \{\widehat{0}\}, \, c \in (\Z / n \Z)^*$
+    $\Z/n \Z$ est un corps ssi $\forall c \in \Z / n \Z \setminus \{\widehat{0}\}, \, c \in (\Z / n \Z)^*$
 
     ssi $\forall x \in \ninter 1 {n - 1}, \, \pgcd(x, n) = 1$ par le théorème précédent
 
@@ -932,30 +933,25 @@ Soit $n \geqslant 2$ un entier.
 \end{proof}
 
 \begin{exemple}
-    $p = 53$, $c = \widehat{18}$. : cherchons $c^{-1}$
-
-    $1\times 53 + 0 \times 18 = 53$
-    
-    $0 \times 53 + 1 \times 18 = 18$
-
-    $1 \times 53 + (-2) \times 18 = 17$
-
-    $- 53 + 3 \times 18 = 1$ 
-
+    Posons $p = 53$, $c = \widehat{18}$. Cherchons $c^{-1}$ :
+    \begin{align*}
+        1\times 53 + 0 \times 18 &= 53 \\
+        0 \times 53 + 1 \times 18 &= 18 \\
+        1 \times 53 + (-2) \times 18 &= 17 \\
+        - 53 + 3 \times 18 &= 1 
+    \end{align*}
     Donc $c^{-1} = \widehat{3} $
 
-    \lvspace $p = 13$, résolvons $x^2 - 3x + \widehat 3 = 0$ dans $\zz 3$
-
+    \lvspace Posons maintenant $p = 13$, résolvons $x^2 - 3x + \widehat 3 = 0$ dans $\zz 3$
     $\widehat 2^{-1} = \widehat 7$. 
-
     \begin{align*}
-        (E) & \Leftrightarrow x^2 - 3 *7*2x + 3 = 0 \\
-        & \Leftrightarrow x^2 - 8 * 2x + 3 = 0 \\
-        & \Leftrightarrow (x - 8)^2 + 1 + 3 = 0 \\
-        & \Leftrightarrow (x - 8)^2 + 4 = 0 \\
-        & \Leftrightarrow (x - 8)^2 - 3^2 = 0 \\
-        & \Leftrightarrow (x - 8^- 3)(x - 8 + 3) = 0 \\
-        & \Leftrightarrow x = \widehat {11} \text{ ou } x = \widehat {5}
+        (E) & \iff x^2 - 3 *7*2x + 3 = 0 \\
+        & \iff x^2 - 8 * 2x + 3 = 0 \\
+        & \iff (x - 8)^2 + 1 + 3 = 0 \\
+        & \iff (x - 8)^2 + 4 = 0 \\
+        & \iff (x - 8)^2 - 3^2 = 0 \\
+        & \iff (x - 8 - 3)(x - 8 + 3) = 0 \\
+        & \iff x = \widehat {11} \text{ ou } x = \widehat {5}
     \end{align*}
 \end{exemple}
 
@@ -1156,7 +1152,7 @@ Donc $x_0$ est une solution particulière de $(S)$.
 \]
 
 \begin{theoreme}{Multiplicativité de $\varphi$}{}
-    $\varphi$ est un fonction multiplicative, c'est à dire que 
+    $\varphi$ est une fonction multiplicative, c'est-à-dire que 
     si $n \wedge k = 1$, avec $n, k \geqslant 2$, alors
     \[\varphi(nk) = \varphi(n) \times \varphi(k)\]
 \end{theoreme}
@@ -1172,11 +1168,11 @@ Donc $x_0$ est une solution particulière de $(S)$.
 
     On peut donc définir $\fonction g {(\zz {nk})^*}{(\zz n)^* \times (\zz k)^*}{c = \overline x}{g(c) = f(c) = (\widehat x, \widetilde x)}$.
 
-    Soient $c_1, c_2 \in (\zz{nk})^*$ tel que $g(c_1) = g(c_2)$. Alors 
+    Soient $c_1, c_2 \in (\zz{nk})^*$ tels que $g(c_1) = g(c_2)$. Alors 
     $f(c_1) = f(c_2)$, or $f$ bijective donc injective, donc $c_1 = c_2$. Donc $g$ est injective.
 
-    Soit $(d, h) \in (\zz n)^* \times (\zz k)^*$, et posons $c = f^{-1}(d, h)$ existe car $f$ 
-    est bijective. Soit $x \in c$.
+    Soit $(d, h) \in (\zz n)^* \times (\zz k)^*$, et posons $c = f^{-1}(d, h)$ (qui existe car $f$ 
+    est bijective). Soit $x \in c$.
 
     Alors $f(x) = (d, h)$ donc $\widehat x = d $ et $\widetilde x = h$ et 
     $d \in (\zz n)^*$ donc $x \wedge n = 1$, de même $x \wedge k = 1$.
@@ -1191,20 +1187,20 @@ Donc $x_0$ est une solution particulière de $(S)$.
 
 \subsubsection{Calcul de $\varphi(n)$}
 
-\uline{Lemme :} Soit $p$ nombre premier et $\alpha \geqslant 1$. Alors 
+\uline{Lemme :} Soit $p$ un nombre premier et $\alpha \geqslant 1$. Alors 
 \[
     \varphi(p^\alpha) = p^\alpha - p^{\alpha - 1} 
 \]
 
 \begin{proof}
-    Notons 
+    Notons :
     \begin{align*}
         B & = \{k \in \ninter 1 {p^\alpha}, k \wedge p^\alpha \neq 1\} \\
         & = \{k \in \ninter 1 {p^\alpha}, p \mid k\} \\
         & = \{p, 2p, 3p, \ldots, p^{\alpha - 1} p\} \\
     \end{align*} 
 
-    Donc $\operatorname{Card}(B) = p^{\alpha - 1}$, or $\ninter 1 {p^\alpha} = B = \bigsqcup \{k \in \ninter 1 {p^\alpha - 1}, k \wedge p^\alpha = 1\}$
+    Donc $\operatorname{Card}(B) = p^{\alpha - 1}$, or $\ninter 1 {p^\alpha} = B \bigsqcup \{k \in \ninter 1 {p^\alpha - 1}, k \wedge p^\alpha = 1\}$
     
     Donc $p^\alpha = p^{\alpha - 1} + \varphi(p^\alpha)$
 \end{proof}
@@ -1260,16 +1256,16 @@ $561$ l'est par exemple, et il en existe une infinité.
 
 \subsubsection{RSA}
 
-Bob choisit deux grands nombres premiers $p$ et $q$ distincts et calcul $n = pq$. 
+Bob choisit deux grands nombres premiers $p$ et $q$ distincts et calcule $n = pq$. 
 
 Donc $\varphi(n) = (p- 1)(q-1)$. Il choisit $c \in \N$ tel que $c \wedge \varphi(n) = 1$ et 
 calcule $d = c^{-1}$ dans $(\zz {\varphi(n)})^*$. Il publie $n$ et $c$. 
 
 Alice veut transmettre son message $M \in \N$. Elle calcule $M' = M^c [n]$ et le transmet à Bob.
 
-Bob calcul $M'^d \equiv (M^c)^d [n] \equiv M^{cd} \equiv M^{1 + k \varphi(n)} \equiv M[n]$
+Bob calcule $M'^d \equiv (M^c)^d [n] \equiv M^{cd} \equiv M^{1 + k \varphi(n)} \equiv M[n]$
 
-Donc la sécurité de l'algo repose sur la difficulté à décomposer $n$ en facteurs premiers. 
+Donc la sécurité de l'algorithme repose sur la difficulté à décomposer $n$ en facteurs premiers. 
 
 \section{L'anneau \texorpdfstring{$\K [X]$}{K[X]}}
 \subsection{Idéaux de \texorpdfstring{$\K [X]$}{K[X]}}
@@ -1289,25 +1285,32 @@ Soit $\K$ un sous-corps de $\C$.
 \begin{proof}
     Soit $I$ un idéal de $A$. 
 
-    \uindent{Cas 1 } $I = \{0\}$. Alors $I = 0 \K[X]$.
+    \begin{itemize}
+        \item $I = \{0\}$. Alors $I = 0 \K[X]$.
 
-    \uindent{Cas 2 } $I \neq \{0\}$. Donc $D = \{\deg(P), P \in I \setminus \{0\}\}$ 
-    est un sous-ensemble non vide de $\N$. Donc $D$ admet un plus petit élément, noté $d_0$.
+        \item  $I \neq \{0\}$. Donc $D = \{\deg(P), P \in I \setminus \{0\}\}$ 
+        est un sous-ensemble non vide de $\N$. Donc $D$ admet un plus petit élément, noté $d_0$.
 
-    Soit $P_1 \in I$ tel que $P_1 \neq 0 $ et $\deg P_1 = d_0$. Notons $\alpha$ le coef dominant 
-    de $P_1$, et posons $P_0 = \frac{P_1} \alpha$. 
+        Soit $P_1 \in I$ tel que $P_1 \neq 0 $ et $\deg P_1 = d_0$.
 
-    $P_0$ est unitaire, et $P_0 \in I$ donc $P_0 \K[X] \subset I$.
+        Notons $\alpha$ le coef dominant de $P_1$, et posons $P_0 = \frac{P_1} \alpha$. 
 
-    \avspace Soit $P \in I$. Par division euclidienne de $P$, $P = P_0 Q + R$, avec 
-    $\deg R < \deg P_0$. Donc $R = P - P_0 Q \in I$. Mais alors, par minimalté de $d_0$,
-    $R = 0$, donc $P \in P_0 \K[X]$. Donc $I \subset P_0 \K[X]$.
+        $P_0$ est unitaire, et $P_0 \in I$ donc $P_0 \K[X] \subset I$.
 
-    \lvspace Supposons qu'un autre polynôme unitaire $Q_0$ vérifie $I = Q_0 \K[X]$.
+        \avspace Soit $P \in I$. Par division euclidienne de $P$, $P = P_0 Q + R$, avec 
+        $\deg R < \deg P_0$.
 
-    $Q_0 \in I = P_0 \K[X]$, donc $P_0 \mid Q_0$. De même, $P_0 \in I = Q_0 \K[X]$, donc $Q_0 \mid P_0$.
+        Donc $R = P - P_0 Q \in I$. Mais alors, par minimalité de $d_0$,
+        $R = 0$, donc $P \in P_0 \K[X]$.
 
-    Donc $P_0$ et $Q_0$ sont associés, et comme ils sont unitaires, $P_0 = Q_0$, d'où l'unicité.
+        Donc $I \subset P_0 \K[X]$.
+
+        \lvspace Supposons qu'un autre polynôme unitaire $Q_0$ vérifie $I = Q_0 \K[X]$.
+
+        $Q_0 \in I = P_0 \K[X]$, donc $P_0 \mid Q_0$. De même, $P_0 \in I = Q_0 \K[X]$, donc $Q_0 \mid P_0$.
+
+        Donc $P_0$ et $Q_0$ sont associés, et comme ils sont unitaires, $P_0 = Q_0$, d'où l'unicité.
+    \end{itemize}
 \end{proof}
 
 \begin{exemple}
@@ -1329,7 +1332,7 @@ Soit $\K$ un sous-corps de $\C$.
 \end{exemple}
 
 \begin{exemple}
-    $\alpha = \sqrt 2 + \sqrt 3$, et $\fonction f {\Q[X]} \R P {P(\alpha)}$ est un morhpisme d'anneaux.
+    $\alpha = \sqrt 2 + \sqrt 3$, et $\fonction f {\Q[X]} \R P {P(\alpha)}$ est un morphisme d'anneaux.
 
     Donc $I = \Ker f$ est un idéal de $\Q[X]$. Mais $\alpha \notin \Q$, donc aucun 
     polynôme de degré $1$ n'est dans $I$.
@@ -1346,14 +1349,14 @@ Soit $\K$ un sous-corps de $\C$.
 
     On a : $X^4 - 10 X^2 + 1 = (X - \sqrt 2 + \sqrt 3)(X + \sqrt 2 - \sqrt 3)$ dans $\R[X]$.
 
-    Les divisuers non triviaux dans $\R$ de $X^4 - 10 X^2 + 1$ ne sont pas dans $\Q[X]$.
+    Les diviseurs non triviaux dans $\R$ de $X^4 - 10 X^2 + 1$ ne sont pas dans $\Q[X]$.
 
     Donc $P_0 = X^4 - 10 X^2 + 1$ est irréductible dans $\Q[X]$ et est donc le polynôme minimal de
     $\alpha$ sur $\Q$.
 \end{exemple}
 
 \begin{exemple}
-    On verra que pour $A \in \mathcal M_n{\K}$, l'application $\fonction f {\K[X]}{\mathcal M_n(\K)}{P}{P(A)}$ est un morphisme d'anneaux.
+    On verra que pour $A \in \mathcal M_n(\K)$, l'application $\fonction f {\K[X]}{\mathcal M_n(\K)}{P}{P(A)}$ est un morphisme d'anneaux.
 
     Donc son noyau est un idéal de $\K[X]$.
 
@@ -1384,7 +1387,7 @@ Soit $\K$ un sous-corps de $\C$.
 
 \subsection{Arithmétique dans \texorpdfstring{$\K [X]$}{K[X]}}
 
-\begin{theoreme}{Pgcd dans $\K[X]$}{}
+\begin{theoreme}{PGCD dans $\K[X]$}{}
     Soient $P, Q \in \K[X]$, alors $P\K[X] + Q \K[X] $ est un idéal de $\K[X]$, 
     donc il existe un unique polynôme $D \in \K[X]$ unitaire ou nul tel que
     \[P \K[X] + Q \K[X] = D \K[X]\]
@@ -1392,7 +1395,7 @@ Soit $\K$ un sous-corps de $\C$.
     De plus, $D$ est l'unique polynôme unitaire ou nul tel que 
     $D \mid P$, $D \mid Q$ et si $\forall E \in \K[X], E \mid P$ et $E \mid Q$ $\Rightarrow E \mid D$.
 
-    $D$ est appelé le pgcd de $P$ et $Q$, noté $\pgcd(P, Q)$.
+    $D$ est appelé le plus grand commun diviseur de $P$ et $Q$, noté $\pgcd(P, Q)$.
 \end{theoreme}
 
 \begin{remarque}
@@ -1402,6 +1405,8 @@ Soit $\K$ un sous-corps de $\C$.
     \[\exists U, V \in \K[X], \, PU + QV = D\]
 
     On a également l'algorithme d'Euclide étendu pour calculer le pgcd de $P$ et $Q$.
+
+    Plus généralement, l'arithmétique se passe comme dans $\Z$.
 \end{remarque}
 
 \begin{proof}
@@ -1416,7 +1421,7 @@ Soit $\K$ un sous-corps de $\C$.
     De plus, $M$ est l'unique polynôme unitaire ou nul tel que
     $P \mid M$, $Q \mid M$ et si $\forall N \in \K[X], P \mid N$ et $Q \mid N$ $\Rightarrow M \mid N$.
 
-    $M$ est appelé le PPCM de $P$ et $Q$. 
+    $M$ est appelé le plus commun multiple de $P$ et $Q$, noté $\ppcm(P,Q)$. 
 \end{theoreme}
 
 \begin{remarque}
@@ -1440,7 +1445,10 @@ Soit $\K$ un sous-corps de $\C$.
 \end{definition}
 
 \begin{exemple}
-    Tous les polynômes de degré $1$ sont irréductibles.
+    \begin{itemize}
+        \item Tous les polynômes de degré $1$ sont irréductibles.
+        \item Un polynôme $P$ de $\K[X]$ de degré $2$ ou $3$ est irréductible si et seulement si il n'a pas de racines dans $\K$.
+    \end{itemize}
 \end{exemple}
 
 \begin{proposition}{Caractérisation des irréductibles par les racines}{}
@@ -1458,20 +1466,20 @@ Soit $\K$ un sous-corps de $\C$.
     $X^4 + 1 = (X^2 - \sqrt 2 X + 1)(X^2 + \sqrt 2 X + 1)$.
 \end{remarque}
 
-\uindent{Astuce } 
+\textbf{\uline{Astuce :}} 
 
 \avspace $X^4 + 1 = (X^2 + 1)^2 - 2X^2$
 
-$\displaystyle a^n - b^n = \prod_{k = 0}^{n - 1} (a - b e^{\frac{2i\pi k} n})$
+$\displaystyle a^n - b^n = \prod_{k = 0}^{n - 1} \left(a - b e^{\frac{2i\pi k} n}\right)$
 
 \begin{theoreme}{Décomposition en irréductibles dans $\K[X]$}{}
+
     Tout polynôme de degré $\geqslant 1$ se décompose de manière unique comme produit d'une constante 
     non nulle et de puissances de polynômes unitaires irréductibles. 
 
     Si $ P \in \K[X]$, $\deg P \geqslant 1$. 
-
     $\exists ! \alpha \in \K, \, \exists ! k \in \N^*, \, \exists (P_1, \ldots, P_k)$ irréductibles et unitaires, 
-    $\exists (\beta_1, \beta_2, \ldots, \beta_k) \in (\N^*)^k$ tels que
+    $\exists (\beta_1, \beta_2, \ldots, \beta_k) \in (\N^*)^k$ tels que :
     \[P = \alpha \prod_{i = 1}^k P_i^{\beta_i}\]
 \end{theoreme}
 
@@ -1483,17 +1491,19 @@ $\displaystyle a^n - b^n = \prod_{k = 0}^{n - 1} (a - b e^{\frac{2i\pi k} n})$
     Utilisation du théorème de Gauss pour l'unicité.
 }
 
-\begin{proof}
-    \uline{Lemme } Soit $P_0$ irréductible, et $Q \in \K[X]$. Soit $D = \pgcd(P_0, Q)$.
-    Alors $D \mid P_0$
+\uline{Lemme :} Soit $P_0$ irréductible, et $Q \in \K[X]$. Soit $D = \pgcd(P_0, Q)$.
+Alors $D \mid P_0$
 
-    \avspace Preuve : Or $P_0$ est irréductible, donc $D = 1$ ou $D = \frac {P_0} \alpha$.
+\begin{proof}
+    Or $P_0$ est irréductible, donc $D = 1$ ou $D = \frac {P_0} \alpha$.
 
     Si $D = \frac {P_0} \alpha$, alors $D \mid Q$ donc $P_0 \mid Q$.
 
     Si $D = 1$, alors $P_0$ et $Q$ sont premiers entre eux.
+\end{proof}
 
-    \lvspace \uindent{Unicité de la décomposition }
+\begin{proof}
+    \uline{Unicité de la décomposition :}
 
     Supposons que $\displaystyle P = \alpha \prod_{i = 1}^k P_i^{\beta_i} = \alpha' \prod_{j = 1}^{k'} P_j'^{\beta_j'}$.
 
@@ -1510,13 +1520,11 @@ $\displaystyle a^n - b^n = \prod_{k = 0}^{n - 1} (a - b e^{\frac{2i\pi k} n})$
     Et quitte à renuméroter les $P_j'$, $\forall i \in \ninter 1 k, \, P_i = P_i'$.
 
     De plus si on avait pour un certain $i$, $\beta_i \neq \beta_i'$, quitte à les échanger supposons 
-    que l'on ait $\beta_i < \beta_i'$, et alors en simplifiant par $P_i^{\beta_i}$, on obient
-    
+    que l'on ait $\beta_i < \beta_i'$, et alors en simplifiant par $P_i^{\beta_i}$, on obtient :
     \[P_i \mid \prod_{\substack{j = 1 \\ j \neq i}}^k P_j'^{\beta_j'}\]
-
     ce qui est absurde, donc $\beta_i = \beta_i'$.
 
-    \uindent{Existence de la décomposition }
+    \uline{Existence de la décomposition :}
 
     Par récurrence sur $\deg P$. 
 
@@ -1534,19 +1542,19 @@ $\displaystyle a^n - b^n = \prod_{k = 0}^{n - 1} (a - b e^{\frac{2i\pi k} n})$
 
 \begin{remarque}
     Analogies entre $\Z$ et $\K[X]$ :
-    \[\begin{array}{|c|c|}
-        \hline
-        \Z & \K[X] \\
-        \hline
-        \text{valeur absolue} & \text{degré} \\
-        \hline 
-        \{-1, 1\} & \K^* \\
-        \hline
-        \text{entier premier} & \text{polynôme irréductible} \\
-        \hline
-        \text{signe} & \text{coef dominant} \\
-        \hline
-    \end{array}\]
+    \begin{table}[htpb]
+        \centering
+        \begin{tabular}{cc}
+            \toprule
+            $\Z$ & $\K[X]$ \\
+            \midrule
+            valeur absolue & degré \\
+            $\{-1,1\}$ & $\K^*$ \\
+            entier premier & polynôme irréductible \\
+            signe & coefficient dominant \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
 \end{remarque}
 
 \begin{theoreme}{Irréductibles de $\C[X]$}{}
@@ -1563,7 +1571,7 @@ $\displaystyle a^n - b^n = \prod_{k = 0}^{n - 1} (a - b e^{\frac{2i\pi k} n})$
 
 \begin{theoreme}{}{}
     Les irréductibles de $\R[X]$ sont les polynômes de degré $1$ et les polynômes
-    de degré $2$ à disciminant strictement négatif.
+    de degré $2$ à discriminant strictement négatif.
 \end{theoreme}
 
 \begin{proof}
@@ -1618,8 +1626,8 @@ $\displaystyle a^n - b^n = \prod_{k = 0}^{n - 1} (a - b e^{\frac{2i\pi k} n})$
 \begin{definition}{Sous-algèbre}{}
     Soit $(A, +, \times, \cdot)$ une $\K$-algèbre, et $B \subset A$ non vide. 
 
-    On dit que $B$ est une sous algèbre de $A$ ssi $(B, +, \times, \cdot)$ est une $\K$-algèbre 
-    et $1_B = 1_A$, c'est à dire ssi $B$ est un sous-anneau et un sous-ev de $A$.
+    On dit que $B$ est une sous-algèbre de $A$ ssi $(B, +, \times, \cdot)$ est une $\K$-algèbre 
+    et $1_B = 1_A$, c'est-à-dire ssi $B$ est un sous-anneau et un sous-espace vectoriel de $A$.
 \end{definition}
 
 \begin{proposition}{Caractérisation des sous-algèbres}{}
@@ -1640,7 +1648,7 @@ $\displaystyle a^n - b^n = \prod_{k = 0}^{n - 1} (a - b e^{\frac{2i\pi k} n})$
     On dit que $\varphi$ est un morphisme d'algèbres ssi $\varphi$ est un 
     morphisme d'anneaux et une application linéaire.
 
-    C'est à dire ssi 
+    C'est-à-dire ssi 
     \begin{itemize}
         \item $\varphi(1_A) = 1_B$
         \item $\forall x, y \in A, \, \forall \lambda \in \K, \, \varphi(\lambda x + y) = \lambda \varphi(x) + \varphi(y)$
@@ -1651,7 +1659,7 @@ $\displaystyle a^n - b^n = \prod_{k = 0}^{n - 1} (a - b e^{\frac{2i\pi k} n})$
 \begin{remarque}
     $\operatorname{Im} \varphi$ est alors une sous-algèbre de $B$.
 
-    $\Ker \varphi$ est alors un idéal et un sous-ev de $A$.
+    $\Ker \varphi$ est alors un idéal et un sous-espace vectoriel de $A$.
 \end{remarque}
 
 \begin{exemple}

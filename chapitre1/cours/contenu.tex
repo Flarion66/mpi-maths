@@ -45,8 +45,8 @@ On rappelle ici quelques résultats démontrés en sup.
     Il existe un unique réel $\alpha$ appelé borne supérieure de $A$ et noté 
     $\alpha = \sup A$ tel que : 
     \begin{itemize}
-        \item $\alpha$ est un majorant de $A$, c'est à dire $\forall a \in A, a \leqslant \alpha$
-        \item $\alpha$ est le plus petit des majorants de $A$ c'est à dire $\forall m \in \R$: 
+        \item $\alpha$ est un majorant de $A$, c'est-à-dire $\forall a \in A, a \leqslant \alpha$
+        \item $\alpha$ est le plus petit des majorants de $A$ c'est-à-dire $\forall m \in \R$: 
     \end{itemize}
     \[(\forall a \in A, a \leqslant m ) \Rightarrow \alpha \leqslant m\]
 \end{theoreme}
@@ -66,7 +66,7 @@ On rappelle ici quelques résultats démontrés en sup.
     Alors :
      \[A + B = \{x + y,~(x,y) \in A \times B\} = \{z \in \R \mid \exists (x, y) \in (A \times B),~z = x + y\}\]
 
-    est non vide et majorée, et $\sup( A + B) = \sup A + \sup B$.. \\
+    est non vide et majorée, et $\sup( A + B) = \sup A + \sup B$. \\
 
     \uline{Preuve :}
 
@@ -149,7 +149,7 @@ Soit $\K = \R$ ou $\C$ et $E$ un espace vectoriel sur $\K$.
 \end{proposition}
 
 \idee{
-    Utiliser l'astuce $x = x + y - y$ pour faire apparaitre les bons termes, 
+    Utiliser l'astuce $x = x + y - y$ pour faire apparaître les bons termes, 
     puis inégalité triangulaire. (astuce dite du taupin).
 }
 
@@ -177,7 +177,7 @@ Soit $\K = \R$ ou $\C$ et $E$ un espace vectoriel sur $\K$.
 
 \begin{definition}{}{}
     Soit $(E, N)$ un espace vectoriel normé.
-    On définit $d_N$ la distance associée ) $N$ par :
+    On définit $d_N$ la distance associée à $N$ par :
     \[\forall (u, v) \in E^2,~ d_N(u, v) = N(v - u) = N(u - v)\]
 \end{definition}
 
@@ -288,11 +288,11 @@ Soit $(E, N)$ un espace vectoriel normé et $d$ la distance associée à $N$.
     Dans $(\R, |\cdot|)$, les boules fermées sont les segments non 
     réduits à un singleton. \\
     
-    $\forall a \in \R, \forall R > 0$, $B'(w, R) = \left[w - R, w + R\right]$
+    $\forall \omega \in \R, \forall R > 0$, $B'(\omega, R) = \left[\omega - R, \omega + R\right]$
 
-    $\forall a < b \in \R, \left[a, b \right] = B'(\frac{a + b} 2, \frac{b - a} 2)$
+    $\forall a < b \in \R, \left[a, b \right] = B'\left(\frac{a + b} 2, \frac{b - a} 2\right)$
 
-    Les sphères sont les paires de réels: $S(\omega, R) = \{w - R, w + R\}$
+    Les sphères sont les paires de réels: $S(\omega, R) = \{\omega - R, \omega + R\}$
 \end{exemple}
 
 \subsection{Convexité}
@@ -333,7 +333,7 @@ Soit $(E, N)$ un espace vectoriel normé et $d$ la distance associée à $N$.
     $\Leftarrow$ Supposons $E_f$ convexe.
     Soient $x_1 < x_2 \in I$ et $\lambda \in [0,1]$.
 
-    Posons $x_3  \lambda x_1 + (1 - \lambda) x_2$.
+    Posons $x_3 = \lambda x_1 + (1 - \lambda) x_2$.
 
     Or $(x_1,f(x_1))$ et $(x_2,f(x_2))$ sont dans $E_f$ donc $w \in E_f$. Donc $f$ est convexe.
 \end{proof}
@@ -451,23 +451,23 @@ Soit $(E, N)$ un espace vectoriel normé et $d$ la distance associée à $N$.
     $\exists a_1, \dots, a_n, b_1, \dots, b_p \in A$
 
     $\exists \lambda_1, \dots, \lambda_n, \mu_1, \dots, \mu_p \geqslant 0$ tels que 
-    $\displaystyle \sum_{i = 1}^{n} \lambda_i = 1$, et $\displaystyle \sum_{j = 1}^{p} \mu_j = 1$ et 
-    $\displaystyle x = \sum_{i = 1}^{n }\lambda_i a_i$ et $\displaystyle y = \sum_{j = 1}^{p } \mu_j b_j$
+    $\displaystyle \sum_{i = 1}^n \lambda_i = 1$, et $\displaystyle \sum_{j = 1}^p \mu_j = 1$ et 
+    $\displaystyle x = \sum_{i = 1}^n \lambda_i a_i$ et $\displaystyle y = \sum_{j = 1}^p \mu_j b_j$
 
     Considérons $z = \alpha x + (1 - \alpha)y$ et montrons que $z \in C$. 
 
-    $\displaystyle z = \sum_{i = 1}^{n} \alpha \lambda_i a_i + \sum_{j = 1}^{p } (1 - \alpha) \mu_j b_j$
-    qui est bien une combinaison linéaire à coefs positifs de points de $A$. 
+    $\displaystyle z = \sum_{i = 1}^n \alpha \lambda_i a_i + \sum_{j = 1}^p (1 - \alpha) \mu_j b_j$
+    qui est bien une combinaison linéaire à coefficients positifs de points de $A$. 
 
-    On a bien aussi $\displaystyle \sum_{i = 1}^{n } \alpha \lambda_i + \sum_{j = 1}^{p } (1 - \alpha) \mu_j$
+    On a bien aussi $\displaystyle \sum_{i = 1}^n \alpha \lambda_i + \sum_{j = 1}^p (1 - \alpha) \mu_j$
     $ = \alpha + (1 - \alpha) = 1$. 
 
     Donc $z \in C$ donc $C$ convexe dans $B \subset C$. 
 
     Montrons que $C \subset B$. 
 
-    Soit $x \in C$, qui s'écrit $\displaystyle x = \sum_{ i = 1}^{n }\lambda_i a_i$ où 
-    $\displaystyle \sum_{i = 1}^{n } \lambda_i = 1$ et $a_i \in A$
+    Soit $x \in C$, qui s'écrit $\displaystyle x = \sum_{i = 1}^n \lambda_i a_i$ où 
+    $\displaystyle \sum_{i = 1}^n \lambda_i = 1$ et $a_i \in A$
 
     \underline{Si $n = 1$ :} $x = a_i$ ou $a_1 \in A$
     or $A \subset B$ donc $x \in B$
@@ -484,23 +484,23 @@ Soit $(E, N)$ un espace vectoriel normé et $d$ la distance associée à $N$.
     Supposons que l'on a le résultat pour tout $x \in C$ correspondant à une combinaison
     linéaire de $(n - 1)$ éléments de $B$. 
 
-    On a $\displaystyle x = \sum_{i = 1}^{n } \lambda_i a_i$ avec $a_i \in A$ donc $a_i \in B$.
+    On a $\displaystyle x = \sum_{i = 1}^n \lambda_i a_i$ avec $a_i \in A$ donc $a_i \in B$.
 
     \quad \underline{Si $\lambda_n = 0$ ou $\lambda = 1$ : } On est dans l'hypothèse 
     de récurrence, donc $x \in B$. 
 
     \quad \underline{Sinon :} $\displaystyle x = (1 - \lambda_n) \sum_{i = 1}^{n - 1} \frac{\lambda_1}{1 - \lambda_n} x_i + \lambda_n x_n$
 
-    On a $\displaystyle \sum_{i = 1}^{n - 1} \frac{\lambda_i}{1 - \lambda_n} = \frac{\sum_{i = 1}{n - 1} \lambda_i}{1 - \lambda_n} = 1$
+    On a $\displaystyle \sum_{i = 1}^{n - 1} \frac{\lambda_i}{1 - \lambda_n} = \frac{\sum_{i = 1}^{n - 1} \lambda_i}{1 - \lambda_n} = 1$
 
     Donc (HR), $\displaystyle w = \sum_{i = 1}^{n-1} \frac{\lambda_i}{1 - \lambda_n} a_i \in B$
 
     Comme $\displaystyle x = (1 - \lambda_n)w + \lambda_n a_n$ et que $B$ est convexe, $x \in B$. 
 
-    D'où la récurrence, $C \subset B$ donc $C = B$. 
+    Par le principe de récurrence, $C \subset B$ donc $C = B$. 
 \end{proof}
 
-\begin{exemple}
+\begin{exemple}[Théorème de Gauss-Lucas]
     Soit $P \in \C[X]$ de degré $\geqslant 2$. Alors les racines de $P'$ sont dans 
     l'enveloppe convexe des racines de $P$. 
 
@@ -519,12 +519,12 @@ Soit $(E, N)$ un espace vectoriel normé et $d$ la distance associée à $N$.
     
     Donc $\displaystyle \sum_{i = 1}^{k}\frac{m_i }{|\alpha - z_i|^2} (\alpha - z_i) = 0$
     
-    En posant $\beta = \frac{m_i}{|\alpha - z_i|^2}$, on a
-    $\displaystyle \sum_{i = 1}^{n}\beta_i \alpha = \sum_{i = 1}^{n} \beta_i z_i$.
+    En posant $\beta_i = \frac{m_i}{|\alpha - z_i|^2}$, on a
+    $\displaystyle \sum_{i = 1}^{k}\beta_i \alpha = \sum_{i = 1}^{k} \beta_i z_i$.
 
-    Donc $\displaystyle \alpha = \sum_{i = 1}^{n}\frac{\beta_i}{S} z_i$ en notant $\ds S = \sum_{i=1}^n \beta_i$.
+    Donc $\displaystyle \alpha = \sum_{i = 1}^{k}\frac{\beta_i}{S} z_i$ en notant $\ds S = \sum_{i=1}^k \beta_i$.
 
-    Or $\displaystyle \sum_{i = 1}^{n }\frac{\beta_i }{S} = 1$.
+    Or $\displaystyle \sum_{i = 1}^{k}\frac{\beta_i }{S} = 1$.
     Donc toutes les racines qui sont racines de $P'$ mais pas de $P$ sont dans l'enveloppe convexe des racines de $P$.
     Donc toutes les racines de $P'$ le sont.
 \end{exemple}
@@ -536,7 +536,7 @@ Soit $(E, N)$ un espace vectoriel normé sur $\K$.
 
 \begin{definition}{Partie bornée}{}
     Soit $A \subset E$. On dit que $A$ est bornée ssi $\exists M > 0, \forall x \in A, N(x) \leqslant M$, 
-    c'est à dire ssi $\exists M > 0, A \subset B'(0, M)$.
+    c'est-à-dire ssi $\exists M > 0, A \subset B'(0, M)$.
 \end{definition}
 
 \begin{theoreme}{Diamètre - LHP}{}
@@ -621,7 +621,7 @@ Soit $(E, N)$ un espace vectoriel normé sur $\K$.
     Soit $X$ un espace vectoriel normé non vide et $f \in \mathscr F(X, E)$. 
     On dit que $f$ est bornée ssi
     \[\exists M > 0, \forall x \in X, N(f(x)) \leqslant M\]
-    c'est à dire si l'image directe $f(X)$ est bornée dans $E$. 
+    c'est-à-dire si l'image directe $f(X)$ est bornée dans $E$. 
 \end{definition}
 
 \begin{exemple}
@@ -733,9 +733,9 @@ Soit $E$ un $\K$-espace vectoriel.
 \begin{proposition}{Montrer que deux normes ne sont pas équivalentes}{}
     Soient $N_1, N_2$ deux normes sur $E$ telles qu'il existe $(u_n)_{n \in \N}$ suite
     de vecteurs non nuls de $E$ vérifiant 
-    \[\frac{N_1(u_n )}{N_2(u_n )} \limit{n}{+ \infty} 0 \quad ou \quad \frac{N_1(u_n )}{N_2(u_n )} \limit{n}{+ \infty} + \infty\]
+    \[\frac{N_1(u_n )}{N_2(u_n )} \limit{n}{+ \infty} 0 \quad \text{ou} \quad \frac{N_1(u_n )}{N_2(u_n )} \limit{n}{+ \infty} + \infty\]
     ou
-    \[\frac{N_2(u_n )}{N_1(u_n )} \limit{n}{+ \infty} 0 \quad ou \quad \frac{N_2(u_n )}{N_1(u_n )} \limit{n}{+ \infty} + \infty\]
+    \[\frac{N_2(u_n )}{N_1(u_n )} \limit{n}{+ \infty} 0 \quad \text{ou} \quad \frac{N_2(u_n )}{N_1(u_n )} \limit{n}{+ \infty} + \infty\]
 
     Alors $N_1$ et $N_2$ ne sont pas équivalentes.
 \end{proposition}
@@ -778,16 +778,16 @@ Soit $E$ un $\K$-espace vectoriel.
 \begin{exemple}[Normes dans $\mathscr{C}{([0, 1], \R)}$]
     On a le même genre de normes sur les fonctions avec les intégrales ou le sup. 
 
-    $|| f ||_1 = \int_{0}^{1} \mid f(t) \mid \text d t \leqslant \int_{0}^{1} ||f||_\infty \leqslant ||f ||_\infty$
+    $\ds ||f||_1 = \int_{0}^{1} \mid f(t) \mid \text d t \leqslant \int_{0}^{1} ||f||_\infty \leqslant ||f ||_\infty$
 
-    Donc la norme infinie est plus fine que le norme 1. 
+    Donc la norme infinie est plus fine que la norme 1. 
 
     Posons $\forall n \in \N^*, f_n (x) = x^n$. 
 
-    Alors $\int_{0}^{1} x^n \text d x = \left[\frac {x^n + 1}{n+ 1}\right] = \frac 1 {n + 1}$
+    Alors $\ds \int_{0}^{1} x^n \text d x = \left[\frac {x^n + 1}{n+ 1}\right]_0^1 = \frac 1 {n + 1}$
     et $||f_n|| = 1$
 
-    Donc $\frac{||f_n||_1}{||f_n||_\infty} \limit{n}{+ \infty} 0$ : les normes ne sont pas équivalentes. \\
+    Donc $\ds \frac{||f_n||_1}{||f_n||_\infty} \limit{n}{+ \infty} 0$ : les normes ne sont pas équivalentes. \\
 
     De même, la norme infinie est plus fine que la norme 2, et $x^n$ montre aussi 
     que les normes infinies et 2 ne sont pas équivalentes.
@@ -796,10 +796,10 @@ Soit $E$ un $\K$-espace vectoriel.
 
     Donc elles ne sont pas équivalentes. \\
 
-    Comme $(f, g) \mapsto \int_{0}^{1}fg = \langle f, g \rangle$ est un produit scalaire, on 
+    Comme $\ds (f, g) \mapsto \int_{0}^{1}fg = \langle f, g \rangle$ est un produit scalaire, on 
     a par Cauchy Schwarz : 
 
-    $||f||_1 = \int_{0}^{1} |f| \times 1 = \langle |f|, 1 \rangle$
+    $\ds ||f||_1 = \int_{0}^{1} |f| \times 1 = \langle |f|, 1 \rangle$
 
         Donc la norme 2 est plus fine que la norme 1. 
 \end{exemple}
@@ -852,7 +852,7 @@ Soit $E$ un $\K$-espace vectoriel.
 \begin{proof}
     $|| \cdot ||_\infty$ est bien définie à valeur dans $\R^+$.
 
-    Montrons que la norme infnie est une norme sur $\mathscr B (X, \K)$. 
+    Montrons que la norme infinie est une norme sur $\mathscr B (X, \K)$. 
 
     \begin{itemize}
         \item \uline{Séparation :}
@@ -895,7 +895,7 @@ Soit $E$ un $\K$-espace vectoriel.
 \end{definition}
 
 \begin{definition}{Espace vectoriel des suites bornées}{}
-    On note $\ell^\infty(K) = \mathscr B(\N, \K)$ l'espace vectoriel des suites bornées
+    On note $\ell^\infty(\K) = \mathscr B(\N, \K)$ l'espace vectoriel des suites bornées
     à valeurs dans $\K$. On y a ainsi défini la norme $|| \cdot ||_\infty$ par :
 
     \[||(u_n)_{n \in \N} ||_\infty = \sup\{|u_n|, n \in \N\}\]
@@ -916,7 +916,7 @@ Soit $E$ un $\K$-espace vectoriel.
     \]
 \end{definition}
 
-\subsection{Applications, produit cartésien d'espaces vectoriels normalisés}
+\subsection{Applications, produit cartésien d'espaces vectoriels normés}
 
 \begin{theoreme}{Norme produit}{}
     Soient $(E_1, N_1), \dots, (E_p, N_p)$ des espaces vectoriels normés
@@ -936,11 +936,11 @@ Soit $E$ un $\K$-espace vectoriel.
         Or $N_j$ est une norme donc $u_j = 0$.
 
         \item \uline{Homogénéité :}
-        Soit $\lambda \in K, u = (u_1, \dots, u_p)$,
+        Soit $\lambda \in \K, u = (u_1, \dots, u_p)$,
 
         \[
             \begin{array}{rcl}
-                N_\infty(\lambda u) & = & \max{N_j(\lambda u_j), j \in \{1, ..., p\}} \\
+                N_\infty(\lambda u) & = & \max\{N_j(\lambda u_j), j \in \{1, ..., p\}\} \\
                 \space & = & |\lambda| ~ \max\{N_j(u_j), j \in \{1, ..., p\}\} \\
                 \space & = & |\lambda| ~ N_\infty(u) \\
             \end{array}
@@ -978,14 +978,14 @@ Soit $E$ un $\K$-espace vectoriel.
 
     \begin{itemize}
         \item Si la norme est nulle, alors on a une somme de nombres positifs nuls, qui sont donc tous nuls. 
-        \item Si $\displaystyle \lambda \in \K$, $||\lambda x ||_1 = \sum_{i = 1 }^{n }|\lambda x_i | = |\lambda| ~ ||x_i||_1$.
+        \item Si $\lambda \in \K$, $\ds ||\lambda x ||_1 = \sum_{i = 1}^n|\lambda x_i | = |\lambda| ~ ||x||_1$.
         \item  Inégalité triangulaire classique à utiliser pour la prouver. 
     \end{itemize}
 \end{proof}
 
 \begin{definition}{Ensemble des suites convergentes}{}
 
-    On note $\ell^1(\K) = \{(u_n)_{n \in \N} \in \K^n \mid \sum_{n \geqslant 0} |u_n| ~ \text{est une suite convergente} ~ \}$
+    On note $\ell^1(\K) = \{(u_n) \in \K^{\N} \mid \sum_{n \geqslant 0} |u_n| ~ \text{est une série convergente} ~ \}$
 \end{definition}
 
 \begin{theoreme}{Norme 1 suites}{}
@@ -1045,12 +1045,11 @@ Soit $E$ un $\K$-espace vectoriel.
 \end{proof}
 
 \begin{exemple}
-    Si $E = \K(X)$.
+    Si $E = \K[X]$.
     On peut poser pour $\ds P \in E~||P|| = \int_{-1}^{2} |P(t)| \text d t$
 
     La preuve est identique à celle d'avant sauf la fin de la vérification de l'axiome de séparation 
-    où il faut ajouter que P(t) est nul sur le segment, donc a une infinité de racines donc
-    est nul. 
+    où il faut ajouter que P est nul sur le segment, donc possède une infinité de racines donc est nul. 
 \end{exemple}
 
 \subsection{Normes 2}
@@ -1069,7 +1068,7 @@ Soit $E$ un $\R$-espace vectoriel muni d'un produit scalaire $\langle \cdot , \c
     $|| \cdot ||_2$ est bien définie et à valeurs dans $\R^+$ car le produit scalaire est positif. 
 
     \begin{itemize}
-        \item \uline{Séparation :} Si $||u||_2 = 0 $ alors $<u, u> = 0$ donc $u = 0$ car le produit scalaire est défini. 
+        \item \uline{Séparation :} Si $||u||_2 = 0 $ alors $\langle u, u \rangle = 0$ donc $u = 0$ car le produit scalaire est défini. 
 
         \item \uline{Homogénéité :} $||\lambda u|| = \sqrt{\langle \lambda u, \lambda u\rangle} = |\lambda| ~ ||u||_2$
 
@@ -1094,7 +1093,7 @@ Soit $E$ un $\R$-espace vectoriel muni d'un produit scalaire $\langle \cdot , \c
 \end{definition}
 
 \begin{theoreme}{Espace vectoriel des suites de carré sommable}{}
-    L'ensemble $E = \ell^2(\R) = \{(u_n)_{n \in \N} \mid \sum_{n \leqslant 0 }u_n^2 \text{ converge}\}$
+    L'ensemble $E = \ell^2(\R) = \{(u_n) \in \R^{\N} \mid \sum_{n \geqslant 0 }u_n^2 \text{ converge}\}$
     est un $\R$-espace vectoriel appelé espace des suites de carré sommable. 
 \end{theoreme}
 
@@ -1173,16 +1172,19 @@ Soit $E = \mathscr C(\inter{a}{b}, \R)$.
 \begin{proof}
     Soient $u, v \in E$, pour $\lambda \in \C$, $\langle\lambda u + v, \lambda u + v\rangle \in \R^+ $
 
+    Si $u = 0$ alors on a bien $0 \leqslant 0$.
+
+    Sinon :
     \[
     \begin{array}{rcl}
-        \langle\lambda u + v, \lambda u + v\rangle & = & \lambda \langle\lambda u + v, u \rangle + \langle\lambda u + v, v\rangle \\
-        \space & = & \lambda (\bar \lambda \langle u, u \rangle + \langle v, u \rangle ) + \bar \lambda \langle u, v \rangle + \langle v, v \rangle \\
-        \space & = & |\lambda|^2 \langle u, u \rangle + \bar \lambda  \langle u, v \rangle + \langle v, v \rangle \\
+        \langle\lambda u + v, \lambda u + v\rangle & = & \bar \lambda \langle u, \lambda u + v \rangle + \langle v, \lambda u + v\rangle \\
+        \space & = & \bar \lambda (\lambda \langle u, u \rangle + \langle u, v \rangle ) + \lambda \langle v, u \rangle + \langle v, v \rangle \\
+        \space & = & |\lambda|^2 \langle u, u \rangle + \bar \lambda  \langle u, v \rangle + \lambda \langle v, u \rangle + \langle v, v \rangle \\
         \space & = & |\lambda|^2 \langle u, u \rangle + 2 \re(\lambda \langle v, u \rangle) + \langle v, v \rangle \\
     \end{array}
     \]
 
-    Considérons $\ds \lambda = - \frac{- \langle u, v \rangle }{\langle u, u \rangle}$ en ce $\lambda$ la quantité est dans
+    Considérons $\ds \lambda = - \frac{\langle u, v \rangle }{\langle u, u \rangle}$. Pour ce $\lambda$ la quantité est dans
     $\R^+$.
 
     $\displaystyle \frac{|\langle u, v \rangle|^2}{\langle u, u \rangle} - 2 \re \left(\frac{|\langle u, v \rangle|^2}{\langle u, u \rangle}\right) + \langle v, v \rangle \geqslant 0$
@@ -1195,7 +1197,7 @@ Soit $E = \mathscr C(\inter{a}{b}, \R)$.
 \end{proof}
 
 \begin{theoreme}{Norme hermitienne associée}{}
-    $||u||_2 = \sqrt{\langle u, v \rangle}$ est une norme sur $E$ appelée norme hermitienne associée. 
+    $||u||_2 = \sqrt{\langle u, u \rangle}$ est une norme sur $E$ appelée norme hermitienne associée. 
 \end{theoreme}
 
 \begin{proof}
@@ -1207,7 +1209,7 @@ Soit $E = \mathscr C(\inter{a}{b}, \R)$.
         \item \uline{Homogénéité :}
         \[
             \begin{array}{rcl}
-                || \lambda u ||_2 & = & \sqrt{\langle\lambda u, \lambda v \rangle} \\
+                || \lambda u ||_2 & = & \sqrt{\langle\lambda u, \lambda u \rangle} \\
                 \space & = & |\lambda| ~ ||u||_2
             \end{array}
         \]
@@ -1217,7 +1219,7 @@ Soit $E = \mathscr C(\inter{a}{b}, \R)$.
         \[
         \begin{array}{rcl}
             ||u + v||^2_2 & = & \langle u + v, u + v \rangle  \\
-            \space & = & \langle u + u \rangle + \langle u, v \rangle + \langle v, u \rangle + \langle v, v \rangle \\
+            \space & = & \langle u, u \rangle + \langle u, v \rangle + \langle v, u \rangle + \langle v, v \rangle \\
             \space & = & ||u||_2^2 + \langle u, v \rangle + \overline{\langle u, v \rangle} + ||v||_2^2  \\
             \space & =& ||u||_2^2 + 2 \re(\langle u, v \rangle) + ||v||_2^2 \\
             \space & \leqslant & ||u||_2^2 + 2 |\langle u, v \rangle| + ||v||_2^2 \\
@@ -1240,19 +1242,19 @@ Soit $E = \mathscr C(\inter{a}{b}, \R)$.
 
     \[
     \langle u, v \rangle = \begin{cases}
-        \ds \sum_{i = 1}^{n} u_i v_i & \text{si } \K = \R \\
-        \ds \sum_{i = 1}^{n} u_i \overline{v_i} & \text{si } \K = \C \\
+        \ds \sum_{i = 1}^{n} u_i v_i & ~ \text{si} ~ \K = \R \\
+        \ds \sum_{i = 1}^{n} u_i \overline{v_i} & ~ \text{si} ~ \K = \C \\
     \end{cases}
     \]
 
-    Sur $\ell^2(\K)$ espace vectoriel des suites de carré sommables,
-    $\ds \ell^2(\K) = \{(u_n)_{n \in \N} \mid \sum_{n \geqslant 0} |u_n|^2 \text{ converge}\}$.
+    Sur $\ell^2(\K)$ espace vectoriel des suites de carré sommable,
+    $\ds \ell^2(\K) = \{(u_n) \in \K^{\N} \mid \sum_{n \geqslant 0} |u_n|^2 \text{ converge}\}$.
     
-    On pose $\ds ||u_n||_2 = \sqrt{\sum_{n = 0 }^{+ \infty} |u_n|^2}$.
+    On pose $\ds ||u||_2 = \sqrt{\sum_{n = 0 }^{+ \infty} |u_n|^2}$.
 
     C'est une norme euclidienne (resp. hermitienne) si $\K = \R$ (resp. $\C$) issue
-    du produit scalaire $\ds \langle u_n, v_n \rangle = \sum_{n = 0}^{+ \infty} u_n v_n \text{si } \K = \R$
-    $\ds \langle u_n, v_n \rangle = \sum_{n = 0}^{+ \infty} u_n \overline{v_n} \text{si } \K = \C$.
+    du produit scalaire $\ds \langle u, v \rangle = \sum_{n = 0}^{+\infty} u_n v_n ~ \text{si} ~ \K = \R$
+    $\ds \langle u, v \rangle = \sum_{n = 0}^{+\infty} u_n \overline{v_n} ~ \text{si} ~ \K = \C$.
 
     \uline{Preuve :}
 
