@@ -1,4 +1,3 @@
-
 Dans tout le chapitre, $\K = \R$ ou $\C$.
 
 On prendra $(E, N)$ un $\K$-espace vectoriel normé.
@@ -48,7 +47,7 @@ On prendra $(E, N)$ un $\K$-espace vectoriel normé.
     \idee{Unicité : utiliser la définition de limite deux fois puis inégalité triangulaire.}
     \uline{Unicité de la limite :}
 
-    \vspace{0.2em} Supposons que $\ell_1$ et $\ell_2$ conviennent : 
+    Soit $\varepsilon > 0$, supposons que $\ell_1$ et $\ell_2$ conviennent : 
 
     Il existe $n_0$ tel que $\forall n \geqslant n_0$, $|u_n - \ell_1| \leqslant \varepsilon$ et $\forall n > n_1, |u_n - \ell_2| \leqslant \varepsilon$.
 
@@ -64,8 +63,7 @@ On prendra $(E, N)$ un $\K$-espace vectoriel normé.
 
 \begin{proposition}{Caractérisation dans $\C$}{}
     Soit $(u_n) \in \C^{\N}$ et $\ell \in \C$. Alors : 
-
-    \[u_n \limit{n}{+\infty} \ell \iff \re(u_n) \limit{n}{+\infty} \re(\ell) \text{ et } \im(u_n) \limit{n}{+\infty} \im(\ell)\]
+    \[u_n \limit{n}{+\infty} \ell \iff \re(u_n) \limit{n}{+\infty} \re(\ell) ~ \text{et} ~ \im(u_n) \limit{n}{+\infty} \im(\ell)\]
 \end{proposition}
 
 \begin{theoreme}{}{}
@@ -138,8 +136,7 @@ On prendra $(E, N)$ un $\K$-espace vectoriel normé.
 
 \begin{theoreme}{Passage à la limite dans les inégalités}{}
     Soient $(u_n)$ et $(v_n)$ deux suites réelles, et $\ell_1, \ell_2 \in \R$ telles que :
-
-    \[ u_n \limit{n}{+\infty} \ell_1 \quad et \quad v_n \limit{n}{+\infty} \ell_2 \]
+    \[ u_n \limit{n}{+\infty} \ell_1 \quad \text{et} \quad v_n \limit{n}{+\infty} \ell_2 \]
 
     Si $\exists n_0 \in \N, \forall n \geqslant n_0, u_n \leqslant v_n$, alors $\ell_1 \leqslant \ell_2$.
 \end{theoreme}
@@ -148,7 +145,7 @@ On prendra $(E, N)$ un $\K$-espace vectoriel normé.
     Soient $(u_n), (v_n), (w_n) \in \R^{\N}$ et $\ell \in \R$. 
     
     On suppose que : 
-    \[u_n \limit{n}{+\infty} \ell~\text{et}~w_n \limit{n}{+\infty} \ell\]
+    \[u_n \limit{n}{+\infty} \ell \quad \text{et} \quad w_n \limit{n}{+\infty} \ell\]
 
     et $\exists n_0 \in \N, \forall n \geqslant n_0, u_n \leqslant v_n \leqslant w_n$. 
 
@@ -198,7 +195,7 @@ On prendra $(E, N)$ un $\K$-espace vectoriel normé.
 \end{theoreme}
 
 \begin{theoreme}{Lien suites-séries}{}
-    Soit $(u_n)$ une suite réelle, alors $(u_n)$ converge ssi $\Sigma_{n>0} (u_{n+1} - u_n)$ converge.
+    Soit $(u_n)$ une suite réelle, alors $(u_n)$ converge ssi $\ds \sum_{n>0} (u_{n+1} - u_n)$ converge.
 \end{theoreme}
 
 \begin{exemple}
@@ -220,14 +217,14 @@ On prendra $(E, N)$ un $\K$-espace vectoriel normé.
 
     Il reste à montrer que $\lim_{n \to +\infty} (v_n - u_n) = 0$.
 
-    \begin{align}
+    \begin{align*}
         0 & \leqslant  v_{n + 1} - u_{n + 1} \\
         \space & = \frac{u_n + v_n} 2 - u_{n + 1} \\
         \space &  \leqslant \frac{u_n + v_n} 2 - u_n \\
         \space & \leqslant \frac{v_n - u_n} 2 \\
-    \end{align}
+    \end{align*}
     
-    Donc par réccurence, 
+    Donc par récurrence, 
     \[\forall n \in \N, 0 \leqslant v_n - u_n \leqslant \frac{b - a}{2^n} \limit{n}{+ \infty} 0\]
 
     Donc ce sont des suites adjacentes.
@@ -270,7 +267,7 @@ $\varphi$ possède quelques propriétés intéressantes, en voici deux :
 \end{itemize}
 }
 \begin{exemple}
-    $u_0 = 1$, $u_1 = 1$, $\forall n \geqslant 0, \, u_{n + 2} = u_{n + 1} + u_n$ (fibonacci).
+    $u_0 = 1$, $u_1 = 1$, $\forall n \geqslant 0, \, u_{n + 2} = u_{n + 1} + u_n$ (Fibonacci).
 
     L'équation caractéristique est $r^2 = r + 1$, de racines $\frac{1 - \sqrt{5}} 2$ et $\frac{1 + \sqrt{5}} 2$.
 
@@ -319,7 +316,7 @@ Si $(u_n)$ converge vers $\ell$ et si $f$ continue alors $f(\ell) = \ell$. $\ell
 
     \begin{itemize}
         \item \uline{$|f'(l)| < 1$ :}
-         $l$ est un point fixe attractif et si $f'(l) = 0$, il est super attractif. 
+         $l$ est un point fixe attractif et si $f'(l) = 0$, il est super-attractif. 
 
         \item \uline{$|f'(l)| = 1$ :}
         $l$ est un point fixe indifférent. 
@@ -446,7 +443,7 @@ Si $(u_n)$ converge vers $\ell$ et si $f$ continue alors $f(\ell) = \ell$. $\ell
 
     Donc $g(u_n) \geqslant 0$, donc $(u_n)$ est croissante et majorée donc convergente. 
 
-    $f$ est continue donc sa limite $\ell$ vérifie $f(\ell) = \ell$, c'est à dire 
+    $f$ est continue donc sa limite $\ell$ vérifie $f(\ell) = \ell$, c'est-à-dire 
     $g(\ell) = 0$.
 
     Donc $\ell = e$.
@@ -496,7 +493,7 @@ Si $(u_n)$ converge vers $\ell$ et si $f$ continue alors $f(\ell) = \ell$. $\ell
     \begin{enumerate}
         \item $\forall \varepsilon > 0, \, \exists n_0 \in \N, \, \forall n \in \N, \, n \geqslant n_0 \, \Rightarrow N(u_n - \ell) \leqslant \varepsilon$
         \item La suite réelle positive $(N(u_n - \ell))_{n \in \N}$ converge vers 0.
-        \item En notant pour $\varepsilon > 0, \, M_\varepsilon = \{n \in \N, \, N(u_n - l) > \varepsilon\}$ on a
+        \item En notant pour $\varepsilon > 0, \, M_\varepsilon = \{n \in \N, \, N(u_n - \ell) > \varepsilon\}$ on a
             $\forall \varepsilon > 0, \, M_\varepsilon$ est fini. \\
     \end{enumerate}
 
@@ -535,7 +532,7 @@ Si $(u_n)$ converge vers $\ell$ et si $f$ continue alors $f(\ell) = \ell$. $\ell
 
 \begin{definition}{Convergence}{}
     Soit $(u_n) \in E^{\N}$. On dit que $(u_n)$ est convergente pour N ssi 
-    $\exists \ell \in E, \, N(u_n) \limit{n}{+\infty} N(\ell)$. \\
+    $\exists \ell \in E, \, u_n \limitnorme{N}{n}{+\infty} \ell$. \\
 
     Dans le cas contraire, on dit que $(u_n)$ diverge.
 \end{definition}
@@ -549,7 +546,7 @@ Si $(u_n)$ converge vers $\ell$ et si $f$ continue alors $f(\ell) = \ell$. $\ell
 \begin{proof}
     Avec cette hypothèse, notons $\ell$ la limite de la suite. 
 
-    Par définiton, pour $\varepsilon = 1$,
+    Par définition, pour $\varepsilon = 1$,
     
     $\exists n_0 \in \N, \, \forall n \geqslant n_0, \, N(u_n - \ell) \leqslant 1$.
 
@@ -594,7 +591,7 @@ Si $(u_n)$ converge vers $\ell$ et si $f$ continue alors $f(\ell) = \ell$. $\ell
 \end{proof}
 
 \begin{theoreme}{LHP}{}
-    La réciproque du théorème précédent est vraie, c'est à dire si $N_1$ et $N_2$ ne sont pas 
+    La réciproque du théorème précédent est vraie, c'est-à-dire si $N_1$ et $N_2$ ne sont pas 
     équivalentes, il existe une suite $(u_n)$ qui converge pour l'une des deux normes 
     et diverge pour l'autre. 
 \end{theoreme}
@@ -605,8 +602,8 @@ Si $(u_n)$ converge vers $\ell$ et si $f$ continue alors $f(\ell) = \ell$. $\ell
 }
 
 \begin{proof}
-    Supposons $N_1$ et $N_2$ non équivalentes, c'est à dire par exemple que $N_1$ n'est pas plus 
-    fine que $N_2$ c'est à dire : 
+    Supposons $N_1$ et $N_2$ non équivalentes, c'est-à-dire par exemple que $N_1$ n'est pas plus 
+    fine que $N_2$ c'est-à-dire : 
 
     $\forall \alpha >0, \, \exists x \in E, \; N_2(x) > \alpha N_1(x)$.
 
@@ -620,7 +617,7 @@ Si $(u_n)$ converge vers $\ell$ et si $f$ continue alors $f(\ell) = \ell$. $\ell
 
     Donc $(u_n)$ non bornée pour $N_2$ donc divergente pour $N_2$. 
 
-    $N_1(u_n) =  \frac 1 {\sqrt n} \to 0$ donc $u_n \to 0$ pour $n_1$.
+    $N_1(u_n) =  \frac 1 {\sqrt n} \to 0$ donc $u_n \to 0$ pour $N_1$.
 \end{proof}
 
 \subsection{Application à la dimension finie}
@@ -640,7 +637,7 @@ Soit $B = (e_1, \dots, e_p)$ une base de $E$.
 Notons $\displaystyle  \forall n \in \N, \; u_n = \sum_{j = 1}^{p} x_{n, j} e_j$
 et $\displaystyle \ell = \sum_{j = 1}^{p} \ell_j e_j$
 
-Alors $u_n \limit{n}{+ \infty} l$ ssi $\forall j \in \ninter{1}{p}, \; x_{n, j} \limit{n}{+ \infty} \ell_j$
+Alors $u_n \limit{n}{+ \infty} \ell$ ssi $\forall j \in \ninter{1}{p}, \; x_{n, j} \limit{n}{+ \infty} \ell_j$
 
 Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtient coordonnée par coordonnée. 
 
@@ -659,17 +656,19 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtient coordo
 \subsection{Espace produit}
 
 \begin{definition}{}{}
-    Soient $(E_1, N_1), \dots, (E_p, N_p)$ un espace produit muni de $N_\infty$ la norme produit. 
-    Soit $(u_n)$ suite de $E$ et $\ell \in E$.
+    Soient $(E_1, N_1), \dots, (E_p, N_p)$ des espaces vectoriels normés.
+
+    Soit $E = E_1 \times \dots E_p$ un espace produit muni de $N_\infty$ la norme produit. 
+
+    Soit $(u_n)$ une suite de $E$ et $\ell \in E$.
 
     En notant $\forall n, \; u_n = (u_{n, 1}, \dots, u_{n, p})$ et $\ell = (\ell_1, \dots, \ell_p)$, 
-    alors $u_n \to l$ pour $N_\infty$ ssi
-
-    \[\forall j \in \ninter 1 p,~u_{n, j} \to l_j\]
+    alors $u_n \to \ell$ pour $N_\infty$ ssi
+    \[\forall j \in \ninter 1 p,~u_{n, j} \to \ell_j\]
 \end{definition}
 
 \begin{proof}~\\
-    $\displaystyle N_\infty(u_n - \ell) = \max_{j \in \ninter 1 p} N_j(u_{n, j} - l_j)$.
+    $\displaystyle N_\infty(u_n - \ell) = \max_{j \in \ninter 1 p} N_j(u_{n, j} - \ell_j)$.
 
     Si $u_n \to \ell$ pour la norme infinie, $N_\infty(u_n - \ell) \to 0$.
 
@@ -680,7 +679,7 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtient coordo
 
     Si $\forall j \in \ninter 1 p, u_{n, j} \to l_j$ pour $N_j$, $N_j(u_{n, j} - \ell_j) \to 0$.
 
-    Or $\displaystyle N_\infty(u_b - \ell) \leqslant \sum_{j = 1}^{p } N_j(u_{n, j} - \ell_j) \to 0$.
+    Or $\displaystyle N_\infty(u_n - \ell) \leqslant \sum_{j = 1}^{p } N_j(u_{n, j} - \ell_j) \to 0$.
 
     Donc $u_n \to \ell$ pour la norme infinie. 
 \end{proof}
@@ -747,7 +746,7 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtient coordo
     $\varphi (n) = n +1$ et $\varphi (n) = 2n + 1$ sont des extracteurs.    
 \end{exemple}
 
-\begin{proposition}{Relation d'ordre etracteur et identité}{}
+\begin{proposition}{Relation d'ordre entre extracteur et identité}{}
     Si $\varphi$ est un extracteur, alors $\forall n \in \N, \, \varphi(n) \geqslant n$.
 \end{proposition}
 
@@ -792,7 +791,7 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtient coordo
         \item Il existe une suite extraite $(u_{\varphi(n)})$ qui converge 
             vers $a$.
         \item Pour tout $\varepsilon > 0$, l'ensemble 
-            $G_\varepsilon\{n \in \N, N(u_n - a) \leqslant \varepsilon\}$ est infini.
+            $G_\varepsilon = \{n \in \N, N(u_n - a) \leqslant \varepsilon\}$ est infini.
     \end{enumerate}
 
     On dira alors que $a$ est une valeur d'adhérence de la suite $(u_n)$.
@@ -807,11 +806,11 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtient coordo
 \begin{proof}~\\
     \uline{(1) $\Rightarrow$ (2) :}
 
-    Supposons 1, c'est à dire $u_{\varphi(n)} \limit{n}{+\infty} a$.
+    Supposons 1, c'est-à-dire $u_{\varphi(n)} \limit{n}{+\infty} a$.
 
     Soit $\varepsilon > 0$ et $G_\varepsilon = \{n \in \N, N(u_n - a) \leqslant \varepsilon\}$.
     Par définition de la limite, il existe $n_0 \in \N, \, \forall n \geqslant n_0, \, N(u_{\varphi(n)} - a) \leqslant \varepsilon$, 
-    c'est à dire $\varphi(n) \in G_\varepsilon$.
+    c'est-à-dire $\varphi(n) \in G_\varepsilon$.
 
     Donc $\{\varphi(n), n \geqslant n_0\} \subset G_\varepsilon$.
 
@@ -831,7 +830,7 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtient coordo
     \quad \uline{Initialisation :}
 
     \svspace Pour $\mathscr P(0)$ on doit trouver un entier $\varphi(0)$ tel que
-    $N(u_{\varphi(0)} - a) \leqslant 1$, c'est à dire $\varphi(0) \in G_1$.
+    $N(u_{\varphi(0)} - a) \leqslant 1$, c'est-à-dire $\varphi(0) \in G_1$.
 
     Par hypothèse, $G_1$ est infini donc en particulier non vide, on peut donc 
     choisir $\varphi(0)  = \min(G_1)$, qui convient. 
@@ -905,7 +904,7 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtient coordo
 
 \begin{theoreme}{Bolzano-Weierstrass}{}
     Soit $E$ un $\K$-espace vectoriel normé de dimension finie. Alors de toute suite
-    \textbf{bornée} de $E$ on peut extraire une suite convergente, c'est à dire toute 
+    \textbf{bornée} de $E$ on peut extraire une suite convergente, c'est-à-dire toute 
     suite bornée de $E$ possède une valeur d'adhérence. 
 \end{theoreme}
 
@@ -929,7 +928,7 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtient coordo
 
     Soit $\ell$ sa limite, $\varepsilon > 0$ et $G_\varepsilon = \{n \in \N \mid |u_n - \ell| \leqslant \varepsilon\}$.
 
-    Montrons que $G_\varepsilon$ est infini, pour cela montrons q'il n'est pas majoré.
+    Montrons que $G_\varepsilon$ est infini, pour cela montrons qu'il n'est pas majoré.
 
     On a $x_n \limit{n}{+\infty} \ell$, donc $\exists n_0 \in \N, \, \forall n \geqslant n_0, \, |x_n - \ell| \leqslant \frac \varepsilon 2$.
 
@@ -968,7 +967,7 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtient coordo
     De même on peut extraire de $(y_{\varphi(n)})$ une suite convergente $(y_{\varphi \circ \psi(n)})$ 
     qui converge. 
 
-    En efet, en notant $y_{\varphi(n)} = v_n$ une suite extraite est :
+    En effet, en notant $y_{\varphi(n)} = v_n$ une suite extraite est :
     \[y_{\varphi \circ \psi(n)} = v_{\psi(n)}\]
 
     Or $\varphi \circ \psi$ est un extracteur.
@@ -1007,7 +1006,7 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtient coordo
 \idee{Par l'absurde. }
 
 \begin{proof}
-    Sens direct traité précédement. 
+    Sens direct traité précédemment. 
 
     $\Leftarrow$ : Soit $(u_n)$ une suite bornée de $E$ possédant une unique valeur d'adhérence $a$.
 
@@ -1019,7 +1018,7 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtient coordo
 
     Construisons par récurrence $u_{\varphi(n)}$ telle que $\forall n, \, N(u_{\varphi(n)} - a) > \varepsilon$.
 
-    C'est à dire $\varphi(n) $ vérifiant $\mathscr P(n)$ : "$\varphi(n) > \varphi(n - 1)$ et $N(u_{\varphi(n)} - a) > \varepsilon$".
+    C'est-à-dire $\varphi(n) $ vérifiant $\mathscr P(n)$ : "$\varphi(n) > \varphi(n - 1)$ et $N(u_{\varphi(n)} - a) > \varepsilon$".
 
     Avec $n_0 = 0$, on choisit $\varphi(0)$.
 
@@ -1076,14 +1075,14 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtient coordo
 \begin{proof}
     Soit $(u_n)$ une suite de Cauchy.
 
-    La définiton avec $\varepsilon = 4$ fournit un $n_0$ tel que $\forall n, p \geqslant n_0, \, N(u_n - u_p) \leqslant 4$.
+    La définition avec $\varepsilon = 4$ fournit un $n_0$ tel que $\forall n, p \geqslant n_0, \, N(u_n - u_p) \leqslant 4$.
 
     Soit $n \geqslant n_0$. 
 
     \begin{align*}
         N(u_n) & = N(u_n - u_{n_0} + u_{n_0}) \\
         & \leqslant N(u_n - u_{n_0}) + N(u_{n_0}) \\
-        & \leqslant  \underbrace{4 + N(u_{n_0})}_{\text{= M \text{constante}}}
+        & \leqslant  \underbrace{4 + N(u_{n_0})}_{= M ~ \text{constante}}
     \end{align*}
 
     Donc $\forall n \in \N$, $N(u_n) \leqslant K$ où $K = \max( N(u_0), \ldots, N(u_{n_0 - 1}), M)$.
