@@ -15,7 +15,7 @@ C'est cependant Cayley en 1854 qui donnera la première définition abstraite de
         il existe un unique élément de $G$ appelé symétrique de $x$ noté $x^{-1}$ tel que $x \ast x^{-1} = e_G$.
     \end{itemize}
 
-    Si de plus $\ast$ est commutative, c'est à dire si $\forall x, y \in G, x \ast y = y \ast x$, 
+    Si de plus $\ast$ est commutative, c'est-à-dire si $\forall x, y \in G, x \ast y = y \ast x$, 
     on dit que $(G, \ast)$ est un \emph{groupe abélien}.
 \end{definition}
 
@@ -117,10 +117,11 @@ Notations, vocabulaire :
 
 \begin{proof}
     Notons $\ds H = \bigcap_{i \in I} H_i$, alors $H \subset G$ 
-    et $\forall i \in I, e \in G_i$, donc $e \in H$ et donc $H \neq \emptyset$.
+    et $\forall i \in I, e \in H_i$, donc $e \in H$ et donc $H \neq \emptyset$.
 
     Soient $x, y \in H$, alors $\forall i \in I, x, y \in H_i$, or 
-    $\forall i \in I,~G_i$ est un sous-groupe de $(G, \ast)$, donc $x \ast y^{-1} \in H$
+    $\forall i \in I,~H_i$ est un sous-groupe de $(G, \ast)$.
+    Donc $x \ast y^{-1} \in H$.
 \end{proof}
 
 \begin{proposition}{Réunion de deux sous-groupes - LHP}{}
@@ -270,7 +271,7 @@ Notations, vocabulaire :
 \begin{proof}
     Soit $\varphi : G \to H$ un isomorphisme de groupes. 
 
-    Alors $\varphi^{-1} : H \to G$ est bijecive. 
+    Alors $\varphi^{-1} : H \to G$ est bijective. 
 
     Soient $h_1, h_2 \in H$. Alors :
     \begin{align*}
@@ -288,7 +289,7 @@ Dans la suite, on prend $n \in \N, \, n \geqslant 2$.
 \begin{definition}{Congruence modulo $n$}{}
     \index{Congruence}
     On dit que $a$ est congru à $b$ modulo $n$ et on note $a \equiv b [n]$ ssi
-    $\exists k \in \Z, b - a = kn$, c'est à dire $n \mid b - a$.    
+    $\exists k \in \Z, b - a = kn$, c'est-à-dire $n \mid b - a$.    
 \end{definition}
 
 \begin{proposition}{}{}
@@ -359,7 +360,7 @@ Dans la suite, on prend $n \in \N, \, n \geqslant 2$.
     $\varphi$ est surjective par définition de $\Z/n\Z$.
 
     Soit $c \in \Z/n\Z$. Par définition, $\exists x \in \Z, c = \hat x$. Or $\exists ! r \in \ninter{0}{n-1}$ 
-    tel que $x \equiv r [n]$, c'est à dire tel que $c = \hat r = \psi(r)$
+    tel que $x \equiv r [n]$, c'est-à-dire tel que $c = \hat r = \psi(r)$
 \end{proof}
 
 \begin{corollaire}{Contenu de $\Z/n\Z$}{}
@@ -387,7 +388,7 @@ Dans la suite, on prend $n \in \N, \, n \geqslant 2$.
     $+$ définit donc une loi de composition interne sur $\Z/n\Z$.
 \end{proposition}
 
-\idee{Prendre des représentants et claculer.}
+\idee{Prendre des représentants et calculer.}
 
 \begin{proof}
     Soient $x, x' \in c$ et $y, y' \in d$.
@@ -512,7 +513,7 @@ Soit $(G, \ast)$ un groupe et $a \in G$.
 
 \begin{remarque}
     Si $(G, +)$ est un groupe additif et $a \in G$, alors 
-    $\fonction {\varphi_a} \Z G k {ka}$ 
+    $\fonction {\varphi_a} \Z G k {ka}$ est un morphisme de groupes. 
 \end{remarque}
 
 \begin{exemple}
@@ -606,7 +607,7 @@ Soit $(G, \ast)$ un groupe et $a \in G$.
     Soient $k_1, k_2 \in \ninter{0}{n-1}$ tels que $a^{k_1} = a^{k_2}$.
 
     Alors $a^{k_1 - k_2} = e_G$, donc $n \mid k_1 - k_2$.
-    Or $-(n-1) < k_1 - k_2 < n-1$, donc $k_1 - k_2 = 0$ et $k_1 = k_2$.
+    Or $-(n-1) \leqslant k_1 - k_2 \leqslant n-1$, donc $k_1 - k_2 = 0$ et $k_1 = k_2$.
 
     Donc les éléments de $B$ sont deux à deux distincts, et Card $B = n$.
 \end{proof}
@@ -720,8 +721,8 @@ de même cardinal que $H$.}
         \item $\Z = \langle 1 \rangle$ est un groupe monogène d'ordre infini.
         \item $\U_n = \langle e^{\frac{2i\pi} n} \rangle$ est un groupe cyclique d'ordre $n$.
         \item $(\Z/n\Z, +) = \langle \hat 1 \rangle$ est un groupe cyclique d'ordre $n$.
-        \item $(Z / 10 \Z) = \langle \hat 3 \rangle$ est un groupe cyclique d'ordre $10$.
-        \item $(\Z / 2 \Z) \times (\Z / 2 \Z)$ n'est pas monogène car tous ses éléments sont d'ordre $2$. 
+        \item $(\Z/10\Z) = \langle \hat 3 \rangle$ est un groupe cyclique d'ordre $10$.
+        \item $(\Z/2\Z) \times (\Z / 2 \Z)$ n'est pas monogène car tous ses éléments sont d'ordre $2$. 
     \end{itemize}
 \end{exemple}
 
@@ -756,9 +757,9 @@ de même cardinal que $H$.}
 
     Donc $a$ est d'ordre fini $n$.
 
-    Considérons $\fonction{\varphi}{(\Z/n\Z, +)}{(G, \ast)}{c = \hat k}{a^k}$.
+    Considérons $\fonction{\varphi_a}{(\Z/n\Z, +)}{(G, \ast)}{c = \hat k}{a^k}$.
 
-    \uline{Montrons que $\varphi$ est bien définie :}
+    \uline{Montrons que $\varphi_a$ est bien définie :}
 
     \svspace Soient $k_1, k_2 \in c$. Alors $k_1 \equiv k_2 [n]$, donc $\exists b \in \Z, k_2 = k_1 + bn$.
     
@@ -766,7 +767,7 @@ de même cardinal que $H$.}
 
     Donc $\varphi_a$ est bien définie.
 
-    \uline{Montrons que $\varphi$ est un morphisme de groupes :}
+    \uline{Montrons que $\varphi_a$ est un morphisme de groupes :}
 
     \svspace Soient $c_1, c_2 \in \Z/n\Z$, $k_1 \in c_1, k_2 \in c_2$.
 
@@ -778,11 +779,11 @@ de même cardinal que $H$.}
         & = \varphi(c_1) \ast \varphi(c_2)
     \end{align*}
 
-    Donc $\varphi$ est un morphisme de groupes.
+    Donc $\varphi_a$ est un morphisme de groupes.
 
-    Soit $b \in G, $ alors $\exists k \in \Z$ tel que $b = a^k$, donc $b = \varphi(\hat k)$, donc $\varphi$ est surjective.
+    Soit $b \in G, $ alors $\exists k \in \Z$ tel que $b = a^k$, donc $b = \varphi_a(\hat k)$, donc $\varphi_a$ est surjective.
 
-    Or $\operatorname{Card} \Z/n\Z = n = \operatorname{Card} G$, donc $\varphi$ est bijective.
+    Or $\operatorname{Card} \Z/n\Z = n = \operatorname{Card} G$, donc $\varphi_a$ est bijective.
 \end{proof}
 
 \subsection{Générateurs de \texorpdfstring{$\Z / n \Z$}{Z/nZ} et \texorpdfstring{$\symbb U_n$}{Un}}
@@ -840,15 +841,15 @@ de même cardinal que $H$.}
     
         \item Pour $n = 3$, $X^3 - 1 = (X - 1)(X - j)(X - j^2)$ avec $j = e^{\frac{2i\pi}3}$.
         
-        Donc $1 \wedge 3 = 1 = 2 \wedge 3$ donc il y a 2 racines primitives $3$-ième de l'unité.
+        Donc $1 \wedge 3 = 1 = 2 \wedge 3$ donc il y a 2 racines primitives $3$-ièmes de l'unité.
 
         \item Pour $n = 4$, $X^4 - 1 = (X - 1)(X + 1)(X - i)(X + i) = (X - 1)(X + 1)(X^2 + 1)$.
         
-        Donc $1 \wedge 4 = 1 = 3 \wedge 4$ donc 2 racines primitives $4$-ième de l'unité : $i$ et $-i$.
+        Donc $1 \wedge 4 = 1 = 3 \wedge 4$ donc 2 racines primitives $4$-ièmes de l'unité : $i$ et $-i$.
     
         \item Pour $n = 5$, $X^5 - 1 = (X - 1)\left(X - e^{\frac{2i\pi}5}\right)\left(X - e^{\frac{4i\pi}5}\right)\left(X - e^{\frac{6i\pi}5}\right)\left(X - e^{\frac{8i\pi}5}\right)$
 
-        Donc $1 \wedge 5 = 1 = 2 \wedge 5 = 3 \wedge 5 = 4 \wedge 5$ donc 4 racines primitives $5$-ième de l'unité.
+        Donc $1 \wedge 5 = 1 = 2 \wedge 5 = 3 \wedge 5 = 4 \wedge 5$ donc 4 racines primitives $5$-ièmes de l'unité.
     \end{itemize}
 \end{exemple}
 
@@ -901,7 +902,7 @@ de même cardinal que $H$.}
 \idee{Caractérisation des sous-groupes.}
 
 \begin{proof}
-    Posons $B$ l'horreur dans le théorème précédent. 
+    Posons $B$ l'ensemble du théorème précédent. 
 
     $\subset$ Soit $x \in A$, alors $x = x^1 \in B$, donc $A \subset B$.
 
@@ -925,9 +926,9 @@ de même cardinal que $H$.}
     $G = \Z$ et $k_1, k_2 \in \Z$, $A = \{k_1, k_2\}$. 
     Alors $\langle A \rangle = k_3 \Z$, avec $k_3 = \pgcd(k_1, k_2)$.
 
-    Posons $k_3 = \pgcd(k_1, k_2)$. et montrons que $\langle A \rangle = k_3 \Z$.
+    Posons $k_3 = \pgcd(k_1, k_2)$ et montrons que $\langle A \rangle = k_3 \Z$.
 
-    Par théorème, $\langle A \rangle = \{y \in \Z | \exists \alpha, \beta \in \Z, y = \alpha k_1 + \beta k_2\}$.
+    Par théorème, $\langle A \rangle = \{y \in \Z \mid \exists \alpha, \beta \in \Z, y = \alpha k_1 + \beta k_2\}$.
     car $+$ est commutative, donc une somme de $n$ éléments égaux à des multiples de $k_1$ et $k_2$
     se transforme en une somme de deux éléments égaux à des multiples de $k_1$ et $k_2$.
 
@@ -967,8 +968,8 @@ de même cardinal que $H$.}
 
         Donc $k_3 = \frac{k_2} q$ et $\langle A \rangle = k_3 \Z$.
 
-        \item Si $\frac{k_1}{k_2} \notin \Q$, alors $\not \exists k_3 \in \R, \, \langle A \rangle = k_3 \Z$, 
-        c'est à dire que $\langle A \rangle$ est monogène et donc (par exo 12 du TD), 
+        \item Si $\frac{k_1}{k_2} \notin \Q$, alors $\nexists k_3 \in \R, \, \langle A \rangle = k_3 \Z$, 
+        c'est-à-dire que $\langle A \rangle$ est monogène et donc (par exo 12 du TD), 
         $\langle A \rangle$ est dense dans $\R$.
 
         \svspace Supposons maintenant que $\frac{k_1}{k_2} \notin \Q$ et montrons 
