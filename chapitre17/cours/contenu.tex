@@ -13,11 +13,11 @@
     \index{Famille!orthogonale}
     \index{Famille!orthonormale}
     Soit $(e_j)_{1 \leqslant j \leqslant p}$ famille de vecteurs de $E$.
-    On dit qu'elle est orthogonale ssi pour $i \neq j$, $e_i \perp e_j$ c'est à dire 
+    On dit qu'elle est orthogonale ssi pour $i \neq j$, $e_i \perp e_j$ c'est-à-dire 
     que $\langle e_i, e_j \rangle = 0$.
 
     On dit qu'elle est orthonormale si elle est de plus formée de vecteurs unitaires,
-    c'est à dire que $\forall i, j \in \ninter{1}{p}, \langle e_i, e_j \rangle = \delta_{i,j}$.
+    c'est-à-dire que $\forall i, j \in \ninter{1}{p}, \langle e_i, e_j \rangle = \delta_{i,j}$.
 
     Toute famille orthonormale est libre. 
 \end{definition}
@@ -736,7 +736,7 @@ On a alors $s(x) = f_1 - f_2$.
     Soit $u \in \mathscr L(E)$, alors les assertions suivantes sont équivalentes :
     \begin{enumerate}
         \item $u$ est une isométrie vectorielle
-        \item $u$ conserve le produit scalaire, c'est à dire 
+        \item $u$ conserve le produit scalaire, c'est-à-dire 
         $\forall x, y \in E$, $\langle u(x), u(y) \rangle = \langle x, y \rangle$
         \item $u$ bijective et $u^{-1} = u^*$
         \item Si $B$ est une base orthonormale de $E$, alors $u(B)$ est une base orthonormale de $E$.
@@ -856,7 +856,7 @@ Soit $E$ un plan euclidien orienté.
 
 \begin{theoreme}{Rotation}{}
     \index{Rotation}
-    Soit $u \in SO(E)$ c'est à dire une rotation vectorielle de $E$. 
+    Soit $u \in SO(E)$ c'est-à-dire une rotation vectorielle de $E$. 
     Alors $\exists ! \theta \in ]- \pi, \pi]$ tel que pour toute base orthonormale directe
     $B$ de $E$, 
 $$M_B(u) = \begin{pmatrix}
@@ -900,7 +900,7 @@ $$M_B(u) = \begin{pmatrix}
     $\frac y {\| y \|} = \alpha e_1 + \beta e_2$ avec $\alpha^2 + \beta^2 = 1$.
 
     Donc il existe un unique $\theta \in ]- \pi, \pi]$ tel que $\frac y {\| y \|} = \cos \theta e_1 + \sin \theta e_2$, 
-    c'est à dire $\ds r_\theta\left( \frac x {\| x \|} \right) = \frac y {\| y \|}$.
+    c'est-à-dire $\ds r_\theta\left( \frac x {\| x \|} \right) = \frac y {\| y \|}$.
 
     Si un autre $\theta'$ convient, $\theta = \theta'$ par unicité des coordonnées. 
 \end{proof}
@@ -1170,7 +1170,7 @@ $\blacktriangleright$ Si $M_B(u) = \begin{pmatrix}
     0 & -1 & 0 \\
     0 & 0 & -1
     \end{pmatrix}$ alors $u$ est la symétrie orthogonale par rapport à la droite 
-    $\Vect(e_1)$ c'est à dire le demi tour autour de cette droite. 
+    $\Vect(e_1)$ c'est-à-dire le demi-tour autour de cette droite. 
 
 \uindent{Cas 2 } $r = 1$, $p = 1$ et $q = 0$.
 
@@ -1211,7 +1211,7 @@ Pour montrer qu'on a des symétries, il suffit de calculer le carré de la matri
 être l'identité.
 
 Pour montrer qu'on a des rotations, il suffit de montrer que celle-ci appartient à $SO(3)$, 
-c'est à dire que son déterminant est 1 et qu'elle est orthogonale.
+c'est-à-dire que son déterminant est 1 et qu'elle est orthogonale.
 
 
 \begin{exemple}
@@ -1238,7 +1238,7 @@ c'est à dire que son déterminant est 1 et qu'elle est orthogonale.
 
     On a $e_1 \begin{pmatrix}
         x \\ y \\ z
-    \end{pmatrix}$ vérifie $u(e_1) = e_1$, c'est à dire 
+    \end{pmatrix}$ vérifie $u(e_1) = e_1$, c'est-à-dire 
     $\begin{cases}
         -\frac 1 3x + \frac 1 {\sqrt 2} y + \frac 1 {3 \sqrt 2} z = 0 \\
         \frac 2 3 x -( 1 + \frac 1 {\sqrt 2}) y + \frac 1 {3 \sqrt 2} z = 0 \\
@@ -1340,7 +1340,7 @@ c'est à dire que son déterminant est 1 et qu'elle est orthogonale.
 
 \begin{proposition}{Projecteurs autoadjoints}{}
     Soit $p \in \mathscr L(E)$ un projecteur. Alors $p = p^*$ ssi 
-    $\Ker p \perp \im p$, c'est à dire ssi $p$ est un projecteur orthogonal. 
+    $\Ker p \perp \im p$, c'est-à-dire ssi $p$ est un projecteur orthogonal. 
     Ainsi, un projecteur est autoadjoint ssi il est orthogonal.
 \end{proposition}
 

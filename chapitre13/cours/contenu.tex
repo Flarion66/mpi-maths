@@ -252,7 +252,7 @@ n'a aucun sens (à montrer à Quibel un jour).
 Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
 \begin{theoreme}{Continuité croissante}{}
-    Soit $(A_n)_{n \in \N}$ une suite croissante d'évènements, c'est à dire telle que $\forall n \in \N$, 
+    Soit $(A_n)_{n \in \N}$ une suite croissante d'évènements, c'est-à-dire telle que $\forall n \in \N$, 
     $A_n \subset A_{n+1}$. Alors $$P(A_n) \xrightarrow[n \to + \infty]{} P\left( \bigcup_{n \in \N} A_n \right)$$
 \end{theoreme}
 
@@ -287,14 +287,14 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 \begin{proof}
     On pose $\forall n \in \N, \, \displaystyle A_n = \bigcup_{k = 0}^n c_k$. 
 
-    Alors $(A_n)_{n \in \N}$ est croissante, c'est à dire que $A_n \subset A_{n + 1}$. 
+    Alors $(A_n)_{n \in \N}$ est croissante, c'est-à-dire que $A_n \subset A_{n + 1}$. 
 
     Donc par continuité croissante, $P(A_n) \xrightarrow[n \to + \infty]{} P(A)$
     avec $\displaystyle A = \bigcup_{k \in \N} A_k = \bigcup_{k \in \N} c_k$.
 \end{proof}
 
 \begin{theoreme}{Continuité décroissante}{}
-    Soit $(B_n)_{n \in \N}$ une suite décroissante d'évènements c'est à dire telle que $\forall n \in \N, \, B_{n + 1} \subset B_n$.
+    Soit $(B_n)_{n \in \N}$ une suite décroissante d'évènements c'est-à-dire telle que $\forall n \in \N, \, B_{n + 1} \subset B_n$.
     Alors $$\displaystyle P(B_n) \xrightarrow[n \to + \infty]{} P\left( \bigcap_{n \in \N} B_n \right)$$
 \end{theoreme}
 
@@ -728,7 +728,7 @@ Or $\bigsqcup_{i \in I} X^{-1}(\{x_i\}) = \{\omega \in \Omega, \exists i \in I, 
     $(x_j)_{j \in J}$ où $\forall n \in J, x_n \in X_n(\Omega)$, 
     $\displaystyle P\left( \bigcap_{j \in J} (X_j = x_j) \right) = \prod_{j \in J} P(X_j = x_j)$
 
-    c'est à dire que les évènements $(X_j = x_j)$ sont mutuellement indépendants.
+    c'est-à-dire que les évènements $(X_j = x_j)$ sont mutuellement indépendants.
 \end{definition}
 
 
@@ -736,7 +736,7 @@ Or $\bigsqcup_{i \in I} X^{-1}(\{x_i\}) = \{\omega \in \Omega, \exists i \in I, 
     Soient $(X_n)_{n \in I}$ des variables aléatoires discrètes mutuellement indépendantes et 
     $(A_n)_{n \in I}$ une famille de parties des $X_n(\Omega)$. 
 
-    Alors les évènements $(X_n \in A_n)_{n \in I}$ sont mutuellement indépendants, c'est à dire que pour 
+    Alors les évènements $(X_n \in A_n)_{n \in I}$ sont mutuellement indépendants, c'est-à-dire que pour 
     $J \subset I$ fini, $$ P\left( \bigcap_{j \in J} (X_j \in A_j) \right) = \prod_{j \in J} P(X_j \in A_j) $$
 \end{proposition}
 
@@ -767,7 +767,7 @@ Preuve inutile
     sur un espace probabilisé $(\Omega, \mathcal A, P)$ telles que $\forall n \in \N, \, X_n \sim L$.
 
     On dira alors que la suite de variables aléatoires discrètes $(X_n)_{n \in \N}$ 
-    est iid, c'est à dire indépendante et identiquement distribuée.
+    est iid, c'est-à-dire indépendante et identiquement distribuée.
 \end{corollaire}
 
 \subsection{Lois usuelles}
@@ -1058,7 +1058,7 @@ Les résultats du 2) se généralisent à ce cas.
     Posons $Y = (X_1, \dots, X_m)$ et $Z = (X_{m + 1}, \dots, X_n)$.
 
     Les $(X_i)$ étant indépendants, $Y$ et $Z$ sont indépendants, donc par composition $f(Y)$ et $g(Z)$ sont indépendantes,
-    c'est à dire $f(X_1, \dots, X_m)$ et $g(X_{m + 1}, \dots, X_n)$ sont indépendantes.
+    c'est-à-dire $f(X_1, \dots, X_m)$ et $g(X_{m + 1}, \dots, X_n)$ sont indépendantes.
 \end{proof}
 
 \begin{proposition}{}{}
@@ -1219,8 +1219,8 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
     $$ E(X) = \sum_{x \in X(\Omega)} x P(X = x) $$
 
     L'ensemble des variables aléatoires complexes d'espérance finie est notée $L^1$.
-    Ainsi, $X \in L^1$ signifie que $E(X)$ existe dans $\C$, c'est à dire que 
-    $(x P(X = x))_{x \in X(\Omega)}$ est sommable, c'est à dire que 
+    Ainsi, $X \in L^1$ signifie que $E(X)$ existe dans $\C$, c'est-à-dire que 
+    $(x P(X = x))_{x \in X(\Omega)}$ est sommable, c'est-à-dire que 
     $\displaystyle \sum_{x \in X(\Omega)} |x| P(X = x) < + \infty   $.
 \end{definition}
 
@@ -1272,7 +1272,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 \subsection{Propriétés de l'espérance}
 
 \begin{proposition}{Espace vectoriel et linéarité}{}
-    $L^1$ est un $\C$-espace vectoriel, et l'espérance est linéaire, c'est à dire si 
+    $L^1$ est un $\C$-espace vectoriel, et l'espérance est linéaire, c'est-à-dire si 
     $X, Y \in L^1$, et $\alpha, \beta \in \C$, alors
     $$ E(\alpha X + \beta Y) = \alpha E(X) + \beta E(Y) $$
 \end{proposition}
@@ -1478,7 +1478,7 @@ considérées dans ce paragraphe sont réelles.
 \begin{definition}{Moment d'ordre 2}{}
     Soit $X$ une variable aléatoire discrète réelle. 
 
-    On dit que $X$ possède un moment d'ordre 2 ssi $X^2 \in L^1$, c'est à dire que
+    On dit que $X$ possède un moment d'ordre 2 ssi $X^2 \in L^1$, c'est-à-dire que
     $X^2$ est d'espérance finie.
 
     L'ensemble des variables aléatoires discrètes réelles possédant un moment d'ordre 2 
@@ -1489,7 +1489,7 @@ considérées dans ce paragraphe sont réelles.
 
 \begin{proposition}{Relation entre L2 et L1}{}
     Soit $X$ une variable aléatoire discrète réelle possédant un moment d'ordre $2$, 
-    alors $X$ est d'espérance finie, c'est à dire $L^2 \subset L^1$.
+    alors $X$ est d'espérance finie, c'est-à-dire $L^2 \subset L^1$.
 \end{proposition}
 
 \begin{proof}
@@ -1581,7 +1581,7 @@ considérées dans ce paragraphe sont réelles.
     Cas 1 : $E(X^2) = 0$ alors $E(XY) =0$ et égalité. En ce cas $P(X^2 = 0) = 1$ donc 
     $P(X = 0) = 1$.
 
-    \uindent{Cas 2 } $E(X^2) \neq 0$ en ce cas égalité ssi $\Delta = 0$, c'est à dire
+    \uindent{Cas 2 } $E(X^2) \neq 0$ en ce cas égalité ssi $\Delta = 0$, c'est-à-dire
     
     ssi $\exists \alpha \in \R, \, E((\alpha X + Y)^2) = 0$
 
@@ -1774,7 +1774,7 @@ considérées dans ce paragraphe sont réelles.
 \begin{definition}{Décorrélation}{}
     Soient $X, Y \in L^2$. On dit que $X$ et $Y$ sont \textbf{décorellées} ssi 
     $$ \cov(X, Y) = 0 $$
-    c'est à dire ssi $E(XY) = E(X) E(Y)$.
+    c'est-à-dire ssi $E(XY) = E(X) E(Y)$.
 \end{definition}
 
 \begin{proposition}{Indépendance et décorellation}{}
@@ -2004,7 +2004,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
 \begin{corollaire}{variance avec fonction génératrice}{}
     Soit $X$ une variable aléatoire discrète à  valeurs dans $\N$ possédant un moment 
-    d'ordre $2$, c'est à dire $X \in L^2$. Alors 
+    d'ordre $2$, c'est-à-dire $X \in L^2$. Alors 
     $G_X$ est dérivable deux fois en $1$ et
     $$ G''_X(1) = E(X(X - 1)) $$
 

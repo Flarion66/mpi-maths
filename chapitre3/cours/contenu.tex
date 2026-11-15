@@ -371,7 +371,7 @@ Montrons qu'au contraire, cela n'est pas vrai en dimension infinie.
     Soit $A \subset E$. 
 
     On appelle intérieur de $A$, et on note $\mathring{A}$, l'ensemble des points intérieurs à $A$, 
-    c'est à dire : 
+    c'est-à-dire : 
     \[\mathring A = \{a \in A, \, \exists R > 0, \, B(a, R) \subset A\}.\]
 \end{definition}
 
@@ -812,13 +812,13 @@ Donc $x \in \overline A$ donc $E = \overline A$.
 
 Dans toute cette partie, on fixe $A$ partie non vide de $E$.
 
-On va définir la topologie relative à $A$, c'est à dire les ouverts relatifs de $A$, fermés relatifs de $A$ et voisinages relatifs d'un point vis-à-vis de $A$.
+On va définir la topologie relative à $A$, c'est-à-dire les ouverts relatifs de $A$, fermés relatifs de $A$ et voisinages relatifs d'un point vis-à-vis de $A$.
 
 \begin{definition}{Ouvert relatif}{}
     Soit $U \subset A$. On dit que $U$ est un ouvert relatif de $A$ 
     ssi $\forall a \in U, \, \exists R > 0, \, \forall x \in A, \, d(a, x) < R \Rightarrow x \in U$.
 
-    C'est à dire $B(a, R) \cap A \subset U$.
+    C'est-à-dire $B(a, R) \cap A \subset U$.
 \end{definition}
 
 \begin{definition}{Voisinage relatif}{}
@@ -952,9 +952,9 @@ On va définir la topologie relative à $A$, c'est à dire les ouverts relatifs 
 
     On dit que $f$ a pour limite $\ell$ en $a$ ssi 
     \[\forall \varepsilon > 0, \, \exists \eta > 0, \, \forall x \in A, \, N(x - a) < \eta \Rightarrow N'(f(x) - \ell) < \varepsilon\]
-    C'est à dire $d(x, a) \leqslant \eta \Rightarrow d(f(x), \ell) \leqslant \varepsilon$.
+    C'est-à-dire $d(x, a) \leqslant \eta \Rightarrow d(f(x), \ell) \leqslant \varepsilon$.
 
-    C'est à dire $x \in B'(a, \eta) \Rightarrow f(x) \in B'(\ell, \varepsilon)$.
+    C'est-à-dire $x \in B'(a, \eta) \Rightarrow f(x) \in B'(\ell, \varepsilon)$.
 
     $\ell$ est alors unique, on l'appelle limite de $f$ en $a$ et on note :
     \[f(x) \xrightarrow[x \to a ]{N'} \ell\]
@@ -1751,7 +1751,7 @@ $\fonction {\psi}{\mathscr M_{n, p}(\K) \times \mathscr M_{p, q}(\K)}{\mathscr M
 \subsubsection{Étude de $||| \cdot |||_1$ associée à $|| \cdot ||_1$ - LHP}
 Soit $A \in \mathscr M_n(\K)$, $|||A|||_1 = \sup (\{ ||AX||_1, X \in \K^n, ||X||_1 = 1 \} = z) $.
 
-Soit $X \in \K^n$ tel que $||X||_1 = 1$, c'est à dire $X = (x_1, \ldots, x_n)^T$ et $\ds \sum_{i=1}^n |x_i| = 1$.
+Soit $X \in \K^n$ tel que $||X||_1 = 1$, c'est-à-dire $X = (x_1, \ldots, x_n)^T$ et $\ds \sum_{i=1}^n |x_i| = 1$.
 
 $AX = \begin{pmatrix}
     y_1 \\
@@ -1785,7 +1785,7 @@ Donc $\ds |||A|||_1 = \max \left\{ \sum_{i=1}^n |a_{i, j}|, j \in \ninter{1}{n} 
 \subsubsection{Étude de $||| \cdot |||_\infty$ associée à $|| \cdot ||_\infty$ - LHP}
 Soit $A \in \mathscr M_n(\K)$, $|||A|||_\infty = \sup (\{ ||AX||_\infty, X \in \K^n, ||X||_\infty = 1 \} = z) $.
 
-Soit $X \in \K^n$ tel que $||X||_\infty = 1$, c'est à dire $X = (x_1, \ldots, x_n)^T$ et $\max(|x_1|, \ldots, |x_n|) = 1$.
+Soit $X \in \K^n$ tel que $||X||_\infty = 1$, c'est-à-dire $X = (x_1, \ldots, x_n)^T$ et $\max(|x_1|, \ldots, |x_n|) = 1$.
 
 $AX = \begin{pmatrix}
     y_1 \\
@@ -1881,7 +1881,7 @@ Donc $|| AX||_\infty \geqslant k$, or $k$ majorant donc $k = |||AX |||_\infty$ e
     On dit que $A$ est compact (ou que $A$ est un compact) ssi toute suite de $A$ possède une 
     valeur d'adhérence dans $A$.
 
-    \avspace C'est à dire pour toute suite $(u_n)$ de $A$, on peut en extraire une suite 
+    \avspace C'est-à-dire pour toute suite $(u_n)$ de $A$, on peut en extraire une suite 
     $(u_{\varphi(n)})$ telle que $u_{\varphi(n)} \to \ell \in A$.
 \end{definition}
 
@@ -1912,7 +1912,7 @@ Mézalors à cause de la propriété, comme $\varphi(n+1)>\varphi(n)$ , $d(y_{\v
     Soit $A \subset E$, alors
     $A$ est un compact ssi de toute recouvrement de $A$ par des ouverts on peut extraire un sous-recouvrement fini.
 
-    C'est à dire pour toute famille $(U_i)_{i \in I}$ d'ouverts de $E$ 
+    C'est-à-dire pour toute famille $(U_i)_{i \in I}$ d'ouverts de $E$ 
     telle que $\displaystyle A \subset \bigcup_{i \in I} U_i$, il existe $i_1, \ldots, i_n \in I$ tels que :
     \[A \subset \bigcup_{k=1}^n U_{i_k}\]
 \end{definition}
@@ -2186,7 +2186,7 @@ ce qui contredit $N(e_{\varphi(n_0)}-e_{\varphi(n_0+1)}) \geqslant \frac 1 2$.
 \end{proof}
 
 \begin{theoreme}{Théorème des bornes atteintes}{}
-    Toute fonction numérique continue sur un compact est bornée et atteint ses bornes, c'est à dire 
+    Toute fonction numérique continue sur un compact est bornée et atteint ses bornes, c'est-à-dire 
     si $A \subset E$ compact et $f \in \mathscr C(A, \R)$, alors 
     $\exists x_1, x_2 \in A$,
     \[\forall x \in A, \, f(x_1) \leqslant f(x) \leqslant f(x_2)\]
@@ -2266,7 +2266,7 @@ Dans ce paragraphe on prendra $\K = \R$.
     Soit $A \subset E$. 
     On dit que $A$ est connexe par arcs ssi $\forall (a, b) \in A^2, \, \exists f \in \mathscr C(\inter 0 1, A), f(0) = a \text{ et } f(1) = b$. 
 
-    C'est à dire que pour tout $(a, b) \in A^2$, il existe un chemin de $A$ reliant $a$ à $b$.
+    C'est-à-dire que pour tout $(a, b) \in A^2$, il existe un chemin de $A$ reliant $a$ à $b$.
 \end{definition}
 
 \begin{definition}{Ensemble étoilé}{}
