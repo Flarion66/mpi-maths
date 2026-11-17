@@ -1218,35 +1218,35 @@ Alors $df \in \mathscr C(\Omega, \mathscr L(E, \R))$.
 \end{proposition}
 
 \begin{proof}
-    $\blacktriangleright$ Inclusion directe : $T_{x_0}X \subset \Vect((1, f'(t_0)))$
+    \begin{itemize}
+        \item Inclusion directe : $T_{x_0}X \subset \operatorname{Vect}\big((1, f'(t_0))\big)$
 
-    Soit $v \in T_{x_0}X$. Alors il existe $\gamma : \; ]- \varepsilon, \varepsilon[ \to X$ telle que 
-    $\gamma(0) = x_0$ et $\gamma'(0) = v$.
+        Soit $v = (v_1, v_2) \in T_{x_0}X$. Il existe un $\gamma : ]-\varepsilon, \varepsilon[ \to X$ tel que $\gamma(0) = x_0 = (t_0, f(t_0))$ et $\gamma'(0) = v$.
 
-    $\gamma(z) \in X$ donc $\forall z \in ]- \varepsilon, \varepsilon[$, 
-    $\exists \theta(z) \in I$ tel que $\gamma(z) = (\theta(z), f(\theta(z)))$.
+        Puisque $\gamma(z) \in X$, il existe une fonction $\theta : ]-\varepsilon, \varepsilon[ \to I$ telle que $\gamma(z) = \big(\theta(z), f(\theta(z))\big)$ avec $\theta(0) = t_0$. Comme $\gamma$ est dérivable en $0$, le développement limité à l'ordre $1$ donne au voisinage de $0$ :
+        \[
+            \gamma(z) = \gamma(0) + zv + o(z), \quad \text{soit} \quad \theta(z) = t_0 + zv_1 + o(z).
+        \]
+        Par composition avec $f$ (dérivable en $t_0$), on obtient :
+        \[
+            f\big(\theta(z)\big) = f(t_0) + f'(t_0)zv_1 + o(z).
+        \]
+        Ainsi, le taux d'accroissement s'écrit :
+        \[
+            \frac{\gamma(z) - \gamma(0)}{z} = \big(v_1, f'(t_0)v_1\big) + o(1) \xrightarrow[z \to 0]{} \big(v_1, f'(t_0)v_1\big).
+        \]
+        Par unicité de la limite, on conclut que $v = \gamma'(0) = v_1\big(1, f'(t_0)\big) \in \operatorname{Vect}\big((1, f'(t_0))\big)$.
 
-    On a $\gamma'(0) = v$ et $\gamma(0) = x_0 = (t_0, f(t_0))$, donc $\theta(0) = t_0$ 
-    et pour $z$ voisin de $0$, $\gamma(z) = \gamma(0) + zv + ||z|| g(z)$ avec
-    $\displaystyle \lim_{z \to 0} g(z) = 0$
-
-    $$\theta(z) = t + z v + ||z|| g_1(z)$$ et donc $$f(\theta(z)) = f(t) + f'(t)z v_1 + \circ (z)$$ 
-
-    Donc $\displaystyle \frac{\gamma(z) - \gamma(0)} z = (v_1, f'(t) v_1) + \frac{\circ(z)} z \to (v_1, f'(t) v_1)$
-
-    Donc $v = (v_1, f'(t) v_1) \in \Vect((1, f'(t)))$.
-
-    \lvspace
+        \item Montrons l'inclusion réciproque. 
     
-    $\blacktriangleright$ Montrons l'inclusion réciproque. 
-    
-    Soit $v \in \Vect((1, f'(t_0)))$, $\; v = v_1 (1, f'(t))$.
+        Soit $v \in \Vect((1, f'(t_0)))$, $\; v = v_1 (1, f'(t))$.
 
-    Posons $\gamma(z) = (t_0 + v_1 z, f(t_0 + v_1 z))$.
+        Posons $\gamma(z) = (t_0 + v_1 z, f(t_0 + v_1 z))$.
 
-    Alors $\gamma(0) = x_0$ et $\gamma'(0) = (v_1, f'(t_0) v_1) = v$.
+        Alors $\gamma(0) = x_0$ et $\gamma'(0) = (v_1, f'(t_0) v_1) = v$.
 
-    Donc $v \in T_{x_0}X$ et $T_{x_0}X = \Vect((1, f'(t_0)))$.
+        Donc $v \in T_{x_0}X$ et $T_{x_0}X = \Vect((1, f'(t_0)))$.
+    \end{itemize}
 \end{proof}
 
 Pour les personnes les plus à l'aise, voici une autre preuve, qui contient une (ou plusieurs) erreurs. 

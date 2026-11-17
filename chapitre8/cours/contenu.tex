@@ -830,7 +830,7 @@ fh:close()
 
 Soit $n \geqslant 2$ un entier.
 
-\begin{theoreme}{Structure de $\Z / n \Z$}{}
+\begin{theoreme}{Structure de $\Z/n\Z$}{}
     Soient $c, d \in \Z/ n \Z$, $x \in c $ et $y \in d$. Alors 
     $\widehat{x \cdot y}$ ne dépend pas des choix de $x$ et $y$.
 
@@ -847,7 +847,7 @@ Soit $n \geqslant 2$ un entier.
 
     Alors $xy = (x' + k_1 n)(y' + k_2 n) = x'y' + n(k_1 y' + k_2 x' + k_1 k_2 n)$.
 
-    Donc $\widehat{xy} = \widehat{x'y'}$. Donc la lci $\cdot$ est bien définie.
+    Donc $\widehat{xy} = \widehat{x'y'}$. Donc la loi de composition interne $\cdot$ est bien définie.
 
     \avspace $(\Z / n \Z, +)$ est un groupe abélien.
 
@@ -872,18 +872,18 @@ Soit $n \geqslant 2$ un entier.
 \end{proof}
 
 \begin{exemple}
-    $n = 4$ :
-    \[
-        \begin{array}{c|cccc}
-            \cdot & \widehat{0} & \widehat{1} & \widehat{2} & \widehat{3} \\
-            \hline
-            \widehat{0} & \widehat{0} & \widehat{0} & \widehat{0} & \widehat{0} \\
-            \widehat{1} & \widehat{0} & \widehat{1} & \widehat{2} & \widehat{3} \\
-            \widehat{2} & \widehat{0} & \widehat{2} & \widehat{0} & \widehat{2} \\
-            \widehat{3} & \widehat{0} & \widehat{3} & \widehat{2} & \widehat{1} 
-        \end{array}
-    \]
-
+    Pour $n = 4$ :
+        \begin{center}
+        \begin{tabular}{ccccc}
+            \toprule
+            $\cdot$ & $\widehat{0}$ & $\widehat{1}$ & $\widehat{2}$ & $\widehat{3}$ \\
+            $\hat 0$ & $\hat 0$ & $\hat 0$ & $\hat 0$ & $\hat 0$\\
+            $\hat 1$ & $\hat 0$ & $\hat 1$ & $\hat 2$ & $\hat 3$ \\
+            $\hat 2$ & $\hat 0$ & $\hat 2$ & $\hat 0$ & $\hat 2$ \\
+            $\hat 3$ & $\hat 0$ & $\hat 3$ & $\hat 2$ & $\hat 1$ \\
+            \bottomrule
+        \end{tabular}
+        \end{center}
 \end{exemple}
 
 \begin{theoreme}{Éléments inversibles de $\Z / n \Z$}{}
@@ -920,7 +920,7 @@ Soit $n \geqslant 2$ un entier.
 \end{exemple}
 
 \begin{theoreme}{Corps $\Z/n\Z$}{}
-    $\Z/n\Z$ est un corps ssi $n$ est premier. Pour $p \in \symbb{P}$, ce corps est noté 
+    $\Z/n\Z$ est un corps ssi $n$ est premier. Pour $p \in \symbb{P}$, ce corps est noté :
     \[\Z/p\Z = \symbb{F}_p\]
 \end{theoreme}
 
@@ -928,25 +928,26 @@ Soit $n \geqslant 2$ un entier.
     $\Z/n \Z$ est un corps ssi $\forall c \in \Z / n \Z \setminus \{\widehat{0}\}, \, c \in (\Z / n \Z)^*$
 
     ssi $\forall x \in \ninter 1 {n - 1}, \, \pgcd(x, n) = 1$ par le théorème précédent
-
     ssi $n$ est premier.
 \end{proof}
 
 \begin{exemple}
     Posons $p = 53$, $c = \widehat{18}$. Cherchons $c^{-1}$ :
+    \begin{center}
     \begin{align*}
-        1\times 53 + 0 \times 18 &= 53 \\
+        1 \times 53 + 0 \times 18 &= 53 \\
         0 \times 53 + 1 \times 18 &= 18 \\
         1 \times 53 + (-2) \times 18 &= 17 \\
         - 53 + 3 \times 18 &= 1 
     \end{align*}
+    \end{center}
     Donc $c^{-1} = \widehat{3} $
 
-    \lvspace Posons maintenant $p = 13$, résolvons $x^2 - 3x + \widehat 3 = 0$ dans $\zz 3$
-    $\widehat 2^{-1} = \widehat 7$. 
+    \lvspace Posons maintenant $p = 13$, résolvons $x^2 - 3x + \widehat 3 = 0$
+    , $\widehat 2^{-1} = \widehat 7$. 
     \begin{align*}
-        (E) & \iff x^2 - 3 *7*2x + 3 = 0 \\
-        & \iff x^2 - 8 * 2x + 3 = 0 \\
+        (E) & \iff x^2 - 3 \times 7 \times 2x + 3 = 0 \\
+        & \iff x^2 - 8 \times 2x + 3 = 0 \\
         & \iff (x - 8)^2 + 1 + 3 = 0 \\
         & \iff (x - 8)^2 + 4 = 0 \\
         & \iff (x - 8)^2 - 3^2 = 0 \\
@@ -955,7 +956,7 @@ Soit $n \geqslant 2$ un entier.
     \end{align*}
 \end{exemple}
 
-\begin{theoreme}{Structure de $\zz p ^*$ HP}{}
+\begin{theoreme}{Structure de $(\zz p)^*$ - HP}{}
     Soit $p$ un nombre premier. 
 
     Alors $(\zz p)^* = \zz p \setminus \{\widehat 0\}$ est un groupe monogène. 
@@ -964,30 +965,33 @@ Soit $n \geqslant 2$ un entier.
 \end{theoreme}
 
 \begin{exemple}
-    Pour $p = 7$, on a 
-    \[
-        \begin{array}{c|cccccc}
-            \cdot & \widehat{1} & \widehat{2} & \widehat{3} & \widehat{4} & \widehat{5} & \widehat{6} \\
-            \hline
-            \widehat{1} & \widehat{1} & \widehat{2} & \widehat{3} & \widehat{4} & \widehat{5} & \widehat{6} \\
-            \widehat{2} & \widehat{2} & \widehat{4} & \widehat{6} & \widehat{1} & \widehat{3} & \widehat{5} \\
-            \widehat{3} & \widehat{3} & \widehat{6} & \widehat{2} & \widehat{5} & \widehat{1} & \widehat{4} \\
-            \widehat{4} & \widehat{4} & \widehat{1} & \widehat{5} & \widehat{2} & \widehat{6} & \widehat{3} \\
-            \widehat{5} & \widehat{5} & \widehat{3} & \widehat{1} & \widehat{6} & \widehat{4} & \widehat{2} \\
-            \widehat{6} & \widehat{6} & \widehat{5} & \widehat{4} & \widehat{3} & \widehat{2} & \widehat{1} 
-        \end{array}
-    \]
-
-    On vérifie que $\widehat 3$ et $\widehat 5$ sont des élément primitif.
+    Pour $p = 7$, on a :
+    \begin{center}
+    \begin{tabular}{ccccccc}
+        \toprule
+        $\cdot$ & $\widehat 1$ & $\widehat 2$ & $\widehat 3$ & $\widehat 4$ & $\widehat 5$ & $\widehat 6$ \\
+        $\widehat 1$ & $\widehat 1$ & $\widehat 2$ & $\widehat 3$ & $\widehat 4$ & $\widehat 5$ & $\widehat 6$ \\
+        $\widehat 2$ & $\widehat 2$ & $\widehat 4$ & $\widehat 6$ & $\widehat 1$ & $\widehat 3$ & $\widehat 5$ \\
+        $\widehat 3$ & $\widehat 3$ & $\widehat 6$ & $\widehat 2$ & $\widehat 5$ & $\widehat 1$ & $\widehat 4$ \\
+        $\widehat 4$ & $\widehat 4$ & $\widehat 1$ & $\widehat 5$ & $\widehat 2$ & $\widehat 6$ & $\widehat 3$ \\
+        $\widehat 5$ & $\widehat 5$ & $\widehat 3$ & $\widehat 1$ & $\widehat 6$ & $\widehat 4$ & $\widehat 2$ \\
+        $\widehat 6$ & $\widehat 6$ & $\widehat 5$ & $\widehat 4$ & $\widehat 3$ & $\widehat 2$ & $\widehat 1$ \\
+        \bottomrule
+    \end{tabular}
+    \end{center}
+    On vérifie que $\widehat 3$ et $\widehat 5$ sont des éléments primitifs.
 \end{exemple}
 
 \subsection{Théorème chinois}
 
 \begin{theoreme}{Théorème chinois}{}
-    Soient $n, k \geqslant 2$ premiers entre eux. Notons $\overline{.} \space $ les 
-    classes dans $\Z / (n k) \Z$, $\widetilde{.}\space $ les classes dans $\Z / k \Z$ et 
-    $\space \widehat{.} \space $ les classes dans $\Z / n \Z$.
-    Alors l'application 
+    Soient $n, k \geqslant 2$ premiers entre eux.
+
+    Notons $\overline{\cdot}$ les classes dans $\Z / (n k) \Z$,
+    $\widetilde{\cdot}$ les classes dans $\Z / k \Z$ et 
+    $\widehat{\cdot}$ les classes dans $\Z / n \Z$.
+
+    Alors l'application :
     \[\fonction{\varphi}{\Z / (n k) \Z}{\Z / n \Z \times \Z / k \Z}{c = \overline x}{(\widehat x, \widetilde x)}\]
 
     est bien définie et est un isomorphisme d'anneaux.
@@ -1030,7 +1034,7 @@ Soit $n \geqslant 2$ un entier.
 
 \begin{proposition}{Généralisation du théorème chinois}{}
     Soient $n_1, n_2, \ldots, n_k \geqslant 2$ entiers deux à deux premiers entre eux. 
-    Alors \[\fonction{\varphi}{\Z / (n_1 n_2 \cdots n_k) \Z}{\Z / n_1 \Z \times \Z / n_2 \Z \times \cdots \times \Z / n_k \Z}{\overline x}{(\widehat x_1, \widehat x_2, \ldots, \widehat x_k)}\]
+    Alors : \[\fonction{\varphi}{\Z / (n_1 n_2 \cdots n_k) \Z}{\Z / n_1 \Z \times \Z / n_2 \Z \times \cdots \times \Z / n_k \Z}{\overline x}{(\widehat x_1, \widehat x_2, \ldots, \widehat x_k)}\]
     est bien définie et est un isomorphisme d'anneaux.
 \end{proposition}
 
@@ -1119,7 +1123,7 @@ Donc $x_0$ est une solution particulière de $(S)$.
 
 \begin{definition}{Indicatrice d'Euler}{}
     On appelle indicatrice d'Euler l'application suivante : 
-    \[\fonction{\varphi}{\N^* \setminus \{1 \}}{\N}{n}{\operatorname{card}((\zz n)^*)}\]
+    \[\fonction{\varphi}{\N^* \setminus \{1 \}}{\N}{n}{\operatorname{Card}((\zz n)^*)}\]
 
     Donc $\varphi(n) = \operatorname{Card}\{ k \in \ninter{1}{n - 1} , \, k \wedge n = 1\}$.
 \end{definition}
@@ -1153,7 +1157,7 @@ Donc $x_0$ est une solution particulière de $(S)$.
 
 \begin{theoreme}{Multiplicativité de $\varphi$}{}
     $\varphi$ est une fonction multiplicative, c'est-à-dire que 
-    si $n \wedge k = 1$, avec $n, k \geqslant 2$, alors
+    si $n \wedge k = 1$, avec $n, k \geqslant 2$, alors :
     \[\varphi(nk) = \varphi(n) \times \varphi(k)\]
 \end{theoreme}
 
@@ -1187,10 +1191,8 @@ Donc $x_0$ est une solution particulière de $(S)$.
 
 \subsubsection{Calcul de $\varphi(n)$}
 
-\uline{Lemme :} Soit $p$ un nombre premier et $\alpha \geqslant 1$. Alors 
-\[
-    \varphi(p^\alpha) = p^\alpha - p^{\alpha - 1} 
-\]
+\uline{Lemme :} Soit $p$ un nombre premier et $\alpha \geqslant 1$. Alors :
+\[\varphi(p^\alpha) = p^\alpha - p^{\alpha - 1}\]
 
 \begin{proof}
     Notons :
@@ -1212,7 +1214,7 @@ Donc $x_0$ est une solution particulière de $(S)$.
 \end{theoreme}
 
 \begin{proof}
-    Par multiplicativité de $\varphi$, on a
+    Par multiplicativité de $\varphi$, on a :
     \begin{align*}
         \varphi(n) & = \prod_{i = 1}^k \varphi(p_i^{\alpha_i}) \\
         & = \prod_{i = 1}^k \left(p_i^{\alpha_i} - p_i^{\alpha_i - 1}\right) \\
@@ -1223,7 +1225,7 @@ Donc $x_0$ est une solution particulière de $(S)$.
 
 \begin{theoreme}{Théorème d'Euler}{}
     Soit $n \geqslant 2$ et $a \in \Z$ tel que $a \wedge n = 1$.
-    Alors \[a^{\varphi(n)} \equiv 1 [n]\]
+    Alors : \[a^{\varphi(n)} \equiv 1 [n]\]
 \end{theoreme}
 
 \begin{proof}
@@ -1238,7 +1240,7 @@ Donc $x_0$ est une solution particulière de $(S)$.
 
 \begin{corollaire}{petit théorème de Fermat}{}
     Soit $p$ un nombre premier et $a \in \Z$ tel que $p \nmid a$.
-    Alors \[a^{p - 1} \equiv 1 [p]\]
+    Alors : \[a^{p - 1} \equiv 1 [p]\]
 \end{corollaire}
 
 \begin{proof}
