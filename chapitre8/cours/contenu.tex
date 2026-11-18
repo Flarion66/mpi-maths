@@ -1238,7 +1238,7 @@ Donc $x_0$ est une solution particulière de $(S)$.
     Donc $\overline a^{\varphi(n)} = \overline 1$.
 \end{proof}
 
-\begin{corollaire}{petit théorème de Fermat}{}
+\begin{corollaire}{Petit théorème de Fermat}{}
     Soit $p$ un nombre premier et $a \in \Z$ tel que $p \nmid a$.
     Alors : \[a^{p - 1} \equiv 1 [p]\]
 \end{corollaire}
@@ -1593,18 +1593,18 @@ Alors $D \mid P_0$
 \end{proof}
 
 \begin{exemple}
-    $\K = \symbb F_2$. Polynômes de degré $1$ dans $\symbb F_2[X]$ : $X$ et $X + 1$, irréductibles.
+    Prenons $\K = \symbb F_2$. Polynômes de degré $1$ dans $\symbb F_2[X]$ : $X$ et $X + 1$, irréductibles.
 
     Polynômes de degré $2$ dans $\symbb F_2[X]$ : $X^2, X^2 + 1, X^2 + X, X^2 + X + 1$.
 
-    $X^2 + 1 = (X + 1)^2$, $X^2 + X = X(X + 1)$, donc seul $X^2 + X + 1$ est irréductible.
+    $X^2 + 1 = (X + 1)^2$, $X^2 + X = X(X + 1)$, donc seul $X^2 + X + 1$ est irréductible de degré $2$.
 \end{exemple}
 
 \section{Algèbres} 
 \subsection{Définitions}
 
 \begin{definition}{Algèbre}{}
-    Soit $\K$ un corps, $A \neq \emptyset$ muni de 3 lois, avec $+$ et $\times$ des lci, 
+    Soit $\K$ un corps, $A \neq \emptyset$ muni de 3 lois, avec $+$ et $\times$ des lois de composition interne, 
     et $\cdot$ externe à opérateurs dans $\K$.
 
     On dit que $(A, +, \times, \cdot)$ est une $\K$-algèbre ssi :
@@ -1617,10 +1617,14 @@ Alors $D \mid P_0$
 \end{definition}
 
 \begin{exemple}
-    Si $B$ est non vide, alors $\mathscr F(B, \K)$ l'ensemble des fonctions de $B$ dans $\K$ est une $\K$-algèbre
-    pour les lois usuelles.
+    \begin{itemize}
+        \item Si $B$ est non vide, alors $\mathscr F(B, \K)$ l'ensemble des fonctions de $B$ dans $\K$ est une $\K$-algèbre
+        pour les lois usuelles.
 
-    $\mathcal M_n(\K)$, $\K[X]$, et si $E$ est un $\K$-ev, $(\mathcal L(E), +, \circ, \cdot)$ sont des $\K$-algèbres.
+        \item Si $E$ est un $\K$-ev, $(\mathcal L(E), +, \circ, \cdot)$ est une $\K$-algèbre.
+        
+        \item $\mathcal M_n(\K)$ et $\K[X]$ sont des $\K$-algèbres.
+    \end{itemize}
 \end{exemple}
 
 \subsection{Sous-algèbre}

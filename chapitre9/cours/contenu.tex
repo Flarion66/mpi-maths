@@ -1,4 +1,4 @@
-Soient $(E, N)$ et $(E', N')$ deux espaces vectoriels normés, avec 
+Soient $(E, N)$ et $(E', N')$ deux espaces vectoriels normés de dimension finie, avec 
 $A \subset E$.
 
 \section{Différents types de convergence}
@@ -6,10 +6,8 @@ $A \subset E$.
 
 \begin{definition}{Convergence simple}{}
     Soit $(f_n)$ une suite de fonctions de $A$ dans $E'$ et $g$ fonction de $A$ dans $E'$. 
-    On dit que $(f_n)$ converge simplement vers $g$ et on note 
-    \[
-        f_n \xrightarrow[CS]{N'} g 
-    \]
+    On dit que $(f_n)$ converge simplement vers $g$ et on note :
+    \[f_n \xrightarrow[CS]{} g\]
     ssi $\forall x \in A, \, f_n(x) \xrightarrow[n\to +\infty]{N'} g(x)$.
 \end{definition}
 
@@ -19,18 +17,18 @@ $A \subset E$.
 \end{exemple}
 
 \begin{definition}{Série de fonctions, convergence simple}{}
-    Soit $(u_n)_{n \in \N}$ suite de fonctions de $A$ dans $E'$.
+    Soit $(u_n)$ suite de fonctions de $A$ dans $E'$.
 
     On dit que la série de fonctions $\displaystyle \sum_{n \geqslant 0} u_n$ converge simplement 
     ssi pour tout $x \in A$, la série $\displaystyle \sum_{n \geqslant 0} u_n(x)$ converge.
 
-    On définit alors la fonction 
+    On définit alors la fonction :
     \[
         \fonction{\sum_{n = 0 }^{ + \infty } u_n }{A}{E'}{x}{\sum_{n = 0}^{ + \infty } u_n(x)}
     \]
-    et on a alors en notant $\forall N \in \N$, $$\fonction{S_N}{A}{E'}{x}{\sum_{n = 0}^N u_n(x)}$$
+    et on a alors en notant $\forall N \in \N$, \[\fonction{S_N}{A}{E'}{x}{\sum_{n = 0}^N u_n(x)}\]
 
-    $\displaystyle \sum_{n \geqslant 0} u_n$ converge simplement ssi $(S_n)_{n \in \N}$ converge simplement.
+    $\displaystyle \sum_{n \geqslant 0} u_n$ converge simplement ssi $(S_n)$ converge simplement.
 
 \end{definition}
 
@@ -48,32 +46,35 @@ $A \subset E$.
 
     On dit que $(f_n)$ converge uniformément vers $g$ sur $A$ ssi 
     
-    $$\forall \varepsilon >0, \, \exists n_0 \in \N, \, \forall n \geqslant n_0, \, \forall x \in A, \, N'(f_n(x) - g(x) ) \leqslant \varepsilon$$
+    \[\forall \varepsilon >0, \, \exists n_0 \in \N, \, \forall n \geqslant n_0, \, \forall x \in A, \, N'(f_n(x) - g(x) ) \leqslant \varepsilon\]
 
     On note alors $f_n \xrightarrow[CU]{} g$.
 \end{definition}
 
 \begin{proposition}{Caractérisation de la convergence uniforme}{}
-    Avec les mêmes notations, $f_n \xrightarrow[CU]{} g$ ssi 
-    
-    \begin{itemize}
-        \item pour $n$ assez grand $f_n - g$ est bornée 
-        \item $\displaystyle || f_n - g ||_{\infty} \xrightarrow[n\to +\infty]{} 0$
-    \end{itemize}
 
-    où $\displaystyle || f_n - g ||_{\infty} = \sup\{ N'(f_n(x) - g(x)), \, x \in A \}$
-    
-    ssi il existe une suite $(a_n)$ réelle telle que pour $n$ assez grand, 
-    $\forall x \in A, N'(f_n(x) - g(x)) \leqslant a_n$ et $a_n \xrightarrow[n\to +\infty]{} 0$.
-     
+    Les assertions suivantes sont équivalentes :
+    \begin{enumerate}
+        \item Avec les mêmes notations, $f_n \xrightarrow[CU]{} g$ 
+
+        \item
+        \begin{itemize}
+            \item Pour $n$ assez grand $f_n - g$ est bornée 
+            \item $\displaystyle || f_n - g ||_{\infty} \xrightarrow[n\to +\infty]{} 0$
+            où $\displaystyle || f_n - g ||_{\infty} = \sup\{ N'(f_n(x) - g(x)), \, x \in A \}$
+        \end{itemize}
+
+        \item Il existe une suite $(a_n)$ réelle telle que pour $n$ assez grand, 
+        $\forall x \in A, N'(f_n(x) - g(x)) \leqslant a_n$ et $a_n \xrightarrow[n\to +\infty]{} 0$.
+    \end{enumerate}
 \end{proposition}
 
 \idee{
-    $1 \Rightarrow 2$ : utiliser la def 
+    $1 \Rightarrow 2$ : Utiliser la définition. 
 
-    $2 \Rightarrow 3$ : poser $a_n = || f_n - g ||_{\infty}$
+    $2 \Rightarrow 3$ : Poser $a_n = || f_n - g ||_{\infty}$.
 
-    $3 \Rightarrow 1$ : Suffit d'écrire
+    $3 \Rightarrow 1$ : Il suffit de l'écrire.
 }
 
 \begin{proof}
@@ -121,9 +122,7 @@ $A \subset E$.
     La convergence uniforme implique la convergence simple.
 \end{proposition}
 
-\idee{
-    Prop précédente
-}
+\idee{Utiliser la proposition précédente.}
 
 \begin{proof}
     Supposons que $f_n \xrightarrow[CU]{} g$.
@@ -135,8 +134,8 @@ $A \subset E$.
     Donc $f_n(x) \xrightarrow[n\to +\infty]{} g(x)$ et donc $f_n \xrightarrow[CS]{} g$.
 \end{proof}
 
-\begin{proposition}{Equivalence convergence uniforme et norme infinie}{}
-    Soient $(f_n)_{n \in \N}$ et $g$ des fonctions bornées de $A$ dans $E'$.
+\begin{proposition}{Équivalence convergence uniforme et norme infinie}{}
+    Soit $(f_n)$ une suite de fonctions bornées de $A$ dans $E'$ et $g$ une fonction bornée de $A$ dans $E'$.
     Alors $f_n \xrightarrow[CU]{n \to + \infty} g$ ssi $\displaystyle f_n \xrightarrow[n \to + \infty]{||\cdot ||_{\infty}} g$.
 \end{proposition}
 
@@ -147,14 +146,14 @@ $A \subset E$.
 \begin{exemple}
     Pour $0 < a < 1$, posons $\displaystyle \fonction{f_n}{[0, a]}{\R}{x}{x^n}$.
 
-    \uindent{Fixons $x \in [0, a]$}
+    \uline{Fixons $x \in [0, a]$ :}
 
     \avspace On a $0 \leqslant x \leqslant a < 1$ donc $x^n \xrightarrow[n\to +\infty]{} 0$, donc 
     $f_n(x) \xrightarrow[n\to +\infty]{} 0$.
 
     Posons $\forall x \in [0, a], \, g(x) = 0$. On a donc $f_n \xrightarrow[CS]{} g$.
 
-    \uindent{Fixons $n \in \N$} 
+    \uline{Fixons $n \in \N$ :} 
 
     \avspace Soit $x \in [0, a]$. On a $\displaystyle |f_n(x) - g(x)| \leqslant x^n \leqslant a^n$.
 
@@ -166,19 +165,19 @@ $A \subset E$.
     Soit $ \sum_{n \geqslant 0} u_n$ une série de fonctions de $A$ dans $E'$. 
 
     Posons $\displaystyle \forall n \in \N, \, f_n = \sum_{k = 0}^n u_k$. On dit que la série de fonctions converge 
-    uniformément ssi la suite de fonctions $(f_n)_{n \in \N}$ converge uniformément.
+    uniformément ssi la suite de fonctions $(f_n)$ converge uniformément.
 \end{definition}
 
-\begin{propositionnt}{Caractérisation convergence uniforme des séries de fonctions}
+\begin{proposition}{Caractérisation convergence uniforme des séries de fonctions}{}
     Soit $\displaystyle \sum_{n \geqslant 0} u_n$ une série de fonctions. Alors 
     cette série de fonctions converge uniformément ssi elle converge simplement et
     la suite des restes converge uniformément vers $0$. 
-\end{propositionnt}
+\end{proposition}
 
 \idee{
-    $\Rightarrow$ : écrire la définition des restes 
+    $\Rightarrow$ : Écrire la définition des restes.
 
-    $\Leftarrow$ : écrire la définition de la convergence uniforme avec les restes
+    $\Leftarrow$ : Écrire la définition de la convergence uniforme avec les restes.
 }
 
 \begin{proof}
@@ -202,16 +201,16 @@ $A \subset E$.
 \begin{exemple}
     $\forall n \in \N^*$, $\fonction{u_n}{[0, 1]}{\R}{x}{\frac{(-1)^n x^n}{n}}$.
 
-    \uindent{Fixons $x \in [0, 1]$ } 
+    \uline{Fixons $x \in [0, 1]$ :} 
     
     \avspace $\displaystyle \frac{x^n }{n } \xrightarrow[n\to +\infty]{} 0$ et décroit, 
     donc par le critère de Leibniz, la série $\displaystyle \sum_{n = 1}^{ + \infty } u_n(x)$ converge.
 
     Donc $\displaystyle \sum_{n \geqslant 0} u_n$ converge simplement et on peut considérer sa somme 
 
-    $$S = \sum_{n = 0}^{ + \infty } u_n \fonction{}{[0, 1]}{\R}{x}{\sum_{n = 0}^{ + \infty } \frac{(-1)^n x^n}{n}}$$
+    \[S = \sum_{n = 0}^{ + \infty } u_n \fonction{}{[0, 1]}{\R}{x}{\sum_{n = 0}^{ + \infty } \frac{(-1)^n x^n}{n}}\]
 
-    \uindent{Fixons $n \geqslant 1$} 
+    \uline{Fixons $n \geqslant 1$ :} 
 
     \avspace Pour $x \in [0, 1], \, \displaystyle |R_n(x)| = \left| \sum_{k = n + 1}^{ + \infty } \frac{(-1)^k x^k}{k} \right| \leqslant \frac{x^{n + 1}}{n + 1} \leqslant \frac 1 {n + 1}$ 
     (suite de limite nulle indépendante de $x$)
@@ -221,6 +220,35 @@ $A \subset E$.
     Donc $\displaystyle \sum_{n \geqslant 0} u_n$ converge uniformément sur $[0, 1]$.
 \end{exemple}
 
+\subsection{Complément pour montrer la non convergence uniforme}
+
+\begin{proposition}{}{}
+    Soit $(f_n)$ suite de fonctions de $I$ dans $E'$ tel que $f_n \xrightarrow{CS} g$. 
+
+    S'il existe $(x_n)_{n \in \N}$ suite de $I$ telle que 
+    $f_n(x_n) - g(x_n) \nrightarrow 0$, alors il n'y a pas convergence uniforme de $(f_n)$ vers $g$.
+
+    En effet, \[||f_n - g||_{\infty, I} \geqslant N'(f_n(x_n) - g(x_n))\]
+\end{proposition}
+
+\begin{exemple}
+    $\fonction{f_n}{[0, 1]}{\R} x {x^n}$ on a $f_n \xrightarrow{CS} 0$
+    car à $x$ fixé, $x^n \to 0$.
+
+    Posons $x_n = \sqrt[n]{\frac 1 2}$, on a $x_n \in [0, 1[$ et 
+    $x_n^n = \frac 1 2 \nrightarrow 0$. 
+
+    Donc il n'y a pas convergence uniforme sur $[0, 1[$. 
+\end{exemple}
+
+
+\begin{proposition}{}{}
+    Soit $\sum_{n \geqslant 0} u_n$ définie sur $I$ qui converge simplement. 
+
+    Si on exhibe une suite $(x_n)$ telle que $\displaystyle \sum_{k = n + 1 }^{+ \infty  } u_n(x_n) \nrightarrow 0$,
+    il n'y a pas de convergence uniforme. En particulier, si $u_k$ est à valeurs dans $\R^+$ il suffit 
+    d'exhiber $x_n$ telle que $\displaystyle \sum_{k = n + 1}^{2n} u_k(x_n) \nrightarrow 0$.
+\end{proposition}
 
 \subsection{Convergence normale}
 
@@ -228,9 +256,9 @@ $A \subset E$.
     Soit $\displaystyle \sum_{n \geqslant 0} u_n$ une série de fonctions bornées de $A$ dans $E'$.
 
     On dit que cette série de fonctions converge normalement sur $A$ ssi la série numérique 
-    à termes positifs $\displaystyle \sum_{n \geqslant 0} || u_n ||_{\infty}$ converge où 
+    à termes positifs $\displaystyle \sum_{n \geqslant 0} || u_n ||_{\infty}$ converge où :
 
-    $$||u_n||_{\infty} = \sup\{ N'(u_n(x)), \, x \in A \}$$
+    \[||u_n||_{\infty} = \sup\{ N'(u_n(x)), \, x \in A \}\]
 \end{definition}
 
 \begin{theoreme}{Convergence normale implique convergence uniforme}{}
@@ -239,7 +267,7 @@ $A \subset E$.
 \end{theoreme}
 
 \idee{
-    absolue et simple : $N'(u_n(x)) \leqslant || u_n ||_{\infty}$
+    Absolue et simple : $N'(u_n(x)) \leqslant || u_n ||_{\infty}$
 
     Uniforme : majorer les restes avec la norme infinie 
 }
@@ -257,9 +285,9 @@ $A \subset E$.
 
     On peut ainsi définir pour $n \in \N$ et $x \in A$, $\displaystyle R_n(x) = \sum_{k = n + 1}^{ + \infty } u_k(x)$.
 
-    \uindent{Fixons $n \in \N$}
+    \uline{Fixons $n \in \N$ :}
 
-    Soit $N_0 \geqslant n + 1$. Alors 
+    Soit $N_0 \geqslant n + 1$. Alors :
 
     \begin{align}
         N'\left( \sum_{k = n + 1}^{N_0} u_k(x) \right) & \leqslant \sum_{k = n + 1}^{N_0} N'(u_k(x)) \\
@@ -268,9 +296,7 @@ $A \subset E$.
     \end{align}
 
     Avec $N_0 \to + \infty$, par continuité de $N'$ on a : 
-    \[
-        N'(R_n(x)) \leqslant \sum_{k = n + 1}^{ + \infty } || u_k ||_{\infty}
-    \]
+    \[N'(R_n(x)) \leqslant \sum_{k = n + 1}^{ + \infty } || u_k ||_{\infty}\]
 
     Donc $\displaystyle R_n \xrightarrow[CU]{} 0$ et donc $\displaystyle \sum_{n \geqslant 0} u_n$ converge uniformément.
 \end{proof}
@@ -282,7 +308,7 @@ $A \subset E$.
     $\sum_{n \geqslant 0} u_n$ converge normalement.
 \end{proposition}
 
-\idee{comparaison}
+\idee{Comparaison.}
 
 \begin{proof}
     Avec l'hypothèse, on a $||u_n||_\infty \leqslant \alpha_n$ pour $n$ assez grand. 
@@ -330,7 +356,7 @@ $A \subset E$.
         \item $\displaystyle \lim_{x \to a} g(x) = \lim_{n \to +\infty} l_n$
     \end{itemize}
 
-    Donc $$\lim_{x \to a} \lim_{n \to +\infty} f_n(x) = \lim_{n \to +\infty} \lim_{x \to a} f_n(x)$$
+    Donc \[\lim_{x \to a} \lim_{n \to +\infty} f_n(x) = \lim_{n \to +\infty} \lim_{x \to a} f_n(x)\]
 \end{theoreme}
 
 Si $E = \R$ et $a = \pm \infty$, le théorème s'applique aussi.
@@ -356,7 +382,7 @@ Si $E = \R$ et $a = \pm \infty$, le théorème s'applique aussi.
         $\exists \eta ', \, \forall x \in A, \, N(x - a) \leqslant \eta ' \Rightarrow N'(f_p(x) - l_p) \leqslant \frac \varepsilon 4$
     
         Donc pour $x \in A$ tel que $N(x - a) \leqslant \min(\eta, \eta ')$ (possible car $a \in \bar A$), on a :
-        $$ N'(l_n - l_p) \leqslant N'(l_n - f_n(x)) + N'(f_n(x) - g(x)) + N'(g(x) - f_p(x)) + N'(f_p(x) - l_p) \leqslant \varepsilon$$
+        \[N'(l_n - l_p) \leqslant N'(l_n - f_n(x)) + N'(f_n(x) - g(x)) + N'(g(x) - f_p(x)) + N'(f_p(x) - l_p) \leqslant \varepsilon\]
 
         Donc on a une suite de Cauchy. 
 
@@ -380,7 +406,7 @@ Si $E = \R$ et $a = \pm \infty$, le théorème s'applique aussi.
         Donc $\exists \eta > 0, \, \forall x \in A, \, N(x - a) \leqslant \eta \Rightarrow N'(f_{n_2}(x) - l_{n_2}) \leqslant \frac \varepsilon 3$.
 
         Soit $x \in A$ tel que $N(x - a) \leqslant \eta$. On a : 
-        $$N'(g(x) - L) \leqslant N'(g(x) - f_{n_2}(x)) + N'(f_{n_2}(x) - l_{n_2}) + N'(l_{n_2} - L) \leqslant \varepsilon$$
+        \[N'(g(x) - L) \leqslant N'(g(x) - f_{n_2}(x)) + N'(f_{n_2}(x) - l_{n_2}) + N'(l_{n_2} - L) \leqslant \varepsilon\]
 
         Donc $g(x) \xrightarrow[x \to a]{} L$.
 \end{proof}
@@ -401,7 +427,7 @@ Si $E = \R$ et $a = \pm \infty$, le théorème s'applique aussi.
     \end{itemize} 
 
     C'est-à-dire que :
-    $$\lim_{x \to a} \sum_{n = 0}^{+ \infty} u_n(x) = \sum_{n = 0}^{+ \infty} \lim_{x \to a} u_n(x)$$
+    \[\lim_{x \to a} \sum_{n = 0}^{+ \infty} u_n(x) = \sum_{n = 0}^{+ \infty} \lim_{x \to a} u_n(x)\]
 \end{theoreme}
 
 \idee{théorème de la double limite}
@@ -569,8 +595,8 @@ Dans cette partie, $E = \R$
     $[a, b]$ qui converge uniformément vers $g$ sur $[a, b]$. 
     
     Alors $g$ est continue, et
-    $\displaystyle \int_a^b f_n(t) dt \xrightarrow[n\to +\infty]{} \int_a^b g(t) dt$, c'est-à-dire 
-    que $$\lim_{n \to +\infty} \int_a^b f_n(t) dt = \int_a^b \lim_{n \to +\infty} f_n(t) dt$$ 
+    $\displaystyle \int_a^b f_n(t) dt \xrightarrow[n\to +\infty]{} \int_a^b g(t) dt$, c'est-à-dire
+    que \[\lim_{n \to +\infty} \int_a^b f_n(t) dt = \int_a^b \lim_{n \to +\infty} f_n(t) dt\]
 \end{corollaire}
 
 \idee{
@@ -720,13 +746,13 @@ séries de fonctions.
     
     et 
     $\forall x \in I$, 
-    $$\sum_{n = 0 }^{+ \infty } \int_{a }^{x } u_n(t) dt = \int_{a}^{x } \sum_{n = 0}^{+ \infty} u_n(t) dt$$
+    \[\sum_{n = 0 }^{+ \infty } \int_{a }^{x } u_n(t) dt = \int_{a}^{x } \sum_{n = 0}^{+ \infty} u_n(t) dt\]
 \end{theoreme}
 
 \begin{corollaire}{}{}
     Soit $\sum_{n \geqslant 0} u_n$ une série de fonctions continues qui converge uniformément sur 
-    $[a, b]$, alors 
-    $$\sum_{n = 0}^{+ \infty} \int_{a}^{b} u_n(t) dt = \int_{a}^{b} \sum_{n = 0}^{+ \infty} u_n(t) dt$$
+    $[a, b]$, alors :
+    \[\sum_{n = 0}^{+ \infty} \int_{a}^{b} u_n(t) dt = \int_{a}^{b} \sum_{n = 0}^{+ \infty} u_n(t) dt\]
 \end{corollaire}
 
 \begin{proof}
@@ -746,7 +772,7 @@ séries de fonctions.
         \item $\displaystyle \sum_{n = 0 }^{+ \infty } u_n$ est de classe $\mathscr C^1$
     \end{itemize}
     Donc : 
-    $$\left(\sum_{n = 0}^{+ \infty} u_n\right)' = \sum_{n = 0 }^{+ \infty } u_n'$$
+    \[\left(\sum_{n = 0}^{+ \infty} u_n\right)' = \sum_{n = 0 }^{+ \infty } u_n'\]
 \end{theoreme}
 
 \begin{theoreme}{Généralisation}{}
@@ -769,13 +795,13 @@ séries de fonctions.
     $u_n$ est de classe $\mathscr {C}^{\infty}$ et $\forall k \geqslant 1, \, u_n^{(k)}(x) = \frac{(- \ln(n))^k}{n^x}$. 
 
     Soit $[a, b] \subset ]1, +\infty[$.
-    $$\left| u_n^{(k)}(x) \right| \leqslant \frac{(\ln n )^k}{n^a}$$
+    \[\left| u_n^{(k)}(x) \right| \leqslant \frac{(\ln n )^k}{n^a}\]
 
     De plus, $\displaystyle \frac{(\ln n)^k}{n^a} = \circ \left( \frac 1 {n^{\frac{a + 1}{2}}} \right)$, terme 
     général d'une série convergente, donc la série converge normalement. 
 
     Donc $\zeta$ est de classe $\mathscr{C}^{k}$ pour tout $k$ donc $\mathscr{C}^{\infty}$ est 
-    $$\zeta^{(k)}(x) = \sum_{n = 0}^{+ \infty} \frac{(- \ln(n))^k}{n^x}$$
+    \[\zeta^{(k)}(x) = \sum_{n = 0}^{+ \infty} \frac{(- \ln(n))^k}{n^x}\]
 \end{exemple}
 
 \subsection{Etude de fonctions définies comme somme de série }
@@ -818,35 +844,6 @@ On considère $f : \displaystyle x \mapsto \sum_{n = 0}^{+ \infty} u_n(x)$.
     Donc $\frac 1 {x - 1} \leqslant \zeta(x)$. et donc $\zeta(x) \xrightarrow[x \to 1^+]{} + \infty$.
 \end{exemple}
 
-\subsection{Complément pour montrer la non convergence uniforme}
-
-\begin{proposition}{}{}
-    Soit $(f_n)$ suite de fonctions de $I$ dans $E'$ tel que $f_n \xrightarrow{CS} g$. 
-
-    S'il existe $(x_n)_{n \in \N}$ suite de $I$ telle que 
-    $f_n(x_n) - g(x_n) \nrightarrow 0$, alors il n'y a pas convergence uniforme de $(f_n)$ vers $g$.
-
-    En effet, $$||f_n - g||_{\infty, I} \geqslant N'(f_n(x_n) - g(x_n))$$
-\end{proposition}
-
-\begin{exemple}
-    $\fonction{f_n}{[0, 1]}{\R} x {x^n}$ on a $f_n \xrightarrow{CS} 0$
-    car à $x$ fixé, $x^n \to 0$.
-
-    Posons $x_n = \sqrt[n]{\frac 1 2}$, on a $x_n \in [0, 1[$ et 
-    $x_n^n = \frac 1 2 \nrightarrow 0$. 
-
-    Donc il n'y a pas convergence uniforme sur $[0, 1[$. 
-\end{exemple}
-
-
-\begin{proposition}{}{}
-    Soit $\sum_{n \geqslant 0} u_n$ définie sur $I$ qui converge simplement. 
-
-    Si on exhibe une suite $(x_n)$ telle que $\displaystyle \sum_{k = n + 1 }^{+ \infty  } u_n(x_n) \nrightarrow 0$,
-    il n'y a pas de convergence uniforme. En particulier, si $u_k$ est à valeurs dans $\R^+$ il suffit 
-    d'exhiber $x_n$ telle que $\displaystyle \sum_{k = n + 1}^{2n} u_k(x_n) \nrightarrow 0$.
-\end{proposition}
 
 % fin anki 
 
@@ -873,8 +870,7 @@ On considère $f : \displaystyle x \mapsto \sum_{n = 0}^{+ \infty} u_n(x)$.
 
 
 \begin{proposition}{Lemme de Lebesgue, LHP}{}
-    Soit $f \in \mathscr C^{pm}([a, b], \R)$ alors 
-    $$\int_a^b f(t) \sin(nt) \mathrm d t \xrightarrow[n \to + \infty ]{} 0$$
+    Soit $f \in \mathscr C^{pm}([a, b], \R)$ alors \[\int_a^b f(t) \sin(nt) \mathrm d t \xrightarrow[n \to + \infty ]{} 0\]
 \end{proposition}
 
 \idee{
@@ -934,7 +930,7 @@ On considère $f : \displaystyle x \mapsto \sum_{n = 0}^{+ \infty} u_n(x)$.
 
     La suite de Bernstein permet d'éviter ce phénomène.
 
-    $$B_n(X) = \sum_{k = 0}^{n} \binom{n}{k} X^k (1 - X)^{n - k} f\left( \frac k n \right)$$
+    \[B_n(X) = \sum_{k = 0}^{n} \binom{n}{k} X^k (1 - X)^{n - k} f\left( \frac k n \right)\]
 
     En remarquant que $\displaystyle f(x) = 1 \times f(x) = (x + 1 - x)^n f(x) = \sum_{k = 0}^{n} \binom{n}{k} x^k (1 - x)^{n - k} f(x)$,
 
