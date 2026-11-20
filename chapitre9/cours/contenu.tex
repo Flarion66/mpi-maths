@@ -341,55 +341,53 @@ $A \subset E$.
 \subsection{Théorème de la double limite} 
 
 \begin{theoreme}{Théorème de la double limite}{}
-    Soit $(f_n)_{n \in \N}$ suite de fonctions de $A$ dans $E'$ et $g$ fonction de $A$ dans $E'$.
+    Soit $(f_n)$ suite de fonctions de $A$ dans $E'$ et $g$ fonction de $A$ dans $E'$.
 
     Soit $a \in \bar A$. On suppose que : 
     \begin{itemize}
         \item $f_n \xrightarrow[CU]{N'} g$ 
-        \item $\forall n \in \N, \, f_n \xrightarrow[x \to a]{N'} l_n \in E'$
+        \item $\forall n \in \N, \, f_n \xrightarrow[x \to a]{N'} \ell_n \in E'$
     \end{itemize}
 
     Alors : 
     \begin{itemize}
         \item $g$ a une limite en $a$
-        \item $(l_n)_{n \in \N}$ converge dans $E'$
-        \item $\displaystyle \lim_{x \to a} g(x) = \lim_{n \to +\infty} l_n$
+        \item $(\ell_n)$ converge dans $E'$
+        \item $\displaystyle \lim_{x \to a} g(x) = \lim_{n \to +\infty} \ell_n$
     \end{itemize}
 
     Donc \[\lim_{x \to a} \lim_{n \to +\infty} f_n(x) = \lim_{n \to +\infty} \lim_{x \to a} f_n(x)\]
 \end{theoreme}
 
-Si $E = \R$ et $a = \pm \infty$, le théorème s'applique aussi.
+\begin{remarque}
+    Si $E = \R$ et $a = \pm \infty$, le théorème s'applique aussi.
+\end{remarque}
 
-\idee{
-    Principalement du découpage d'$\varepsilon$
-}
+\idee{Principalement du découpage d'$\varepsilon$.}
+
+\uline{Lemme :} (HP) Avec ces hypothèses, $(\ell_n)$ est de Cauchy.
 
 \begin{proof}
-    Hors programme 
+    Soit $\varepsilon > 0$. On a $f_n \xrightarrow[CU]{} g$, donc $||f_n - g||_{\infty} \xrightarrow[n\to +\infty]{} 0$.
 
-    \uindent{Lemme } Avec ces hypothèses, $(l_n)_{n \in \N}$ est de Cauchy.
+    Donc $\exists n_0 \in \N$ tel que $\forall n \geqslant n_0, \, || f_n - g ||_{\infty} \leqslant \varepsilon$.
 
-    \begin{proof}
-        Soit $\varepsilon > 0$. On a $f_n \xrightarrow[CU]{} g$, donc $||f_n - g||_{\infty} \xrightarrow[n\to +\infty]{} 0$.
+    $\forall x \in A, \forall n \geqslant n_0, \, N'(f_n(x) - g(x)) \leqslant \varepsilon$.
 
-        Donc $\exists n_0 \in \N$ tel que $\forall n \geqslant n_0, \, || f_n - g ||_{\infty} \leqslant \varepsilon$.
+    Soient $n, p \geqslant n_0$. Alors $\exists \eta > 0, \, \forall x \in A, \, N(x - a) \leqslant \eta \Rightarrow N'(f_n(x) - \ell_n) \leqslant \frac \varepsilon 4$
 
-        $\forall x \in A, \forall n \geqslant n_0, \, N'(f_n(x) - g(x)) \leqslant \varepsilon$.
-
-        Soient $n, p \geqslant n_0$. Alors $\exists \eta > 0, \, \forall x \in A, \, N(x - a) \leqslant \eta \Rightarrow N'(f_n(x) - l_n) \leqslant \frac \varepsilon 4$
-
-        $\exists \eta ', \, \forall x \in A, \, N(x - a) \leqslant \eta ' \Rightarrow N'(f_p(x) - l_p) \leqslant \frac \varepsilon 4$
+    $\exists \eta ', \, \forall x \in A, \, N(x - a) \leqslant \eta ' \Rightarrow N'(f_p(x) - \ell_p) \leqslant \frac \varepsilon 4$
     
-        Donc pour $x \in A$ tel que $N(x - a) \leqslant \min(\eta, \eta ')$ (possible car $a \in \bar A$), on a :
-        \[N'(l_n - l_p) \leqslant N'(l_n - f_n(x)) + N'(f_n(x) - g(x)) + N'(g(x) - f_p(x)) + N'(f_p(x) - l_p) \leqslant \varepsilon\]
+    Donc pour $x \in A$ tel que $N(x - a) \leqslant \min(\eta, \eta ')$ (possible car $a \in \bar A$), on a :
+    \[N'(\ell_n - \ell_p) \leqslant N'(\ell_n - f_n(x)) + N'(f_n(x) - g(x)) + N'(g(x) - f_p(x)) + N'(f_p(x) - \ell_p) \leqslant \varepsilon\]
 
-        Donc on a une suite de Cauchy. 
+    Donc on a une suite de Cauchy. 
+\end{proof}
 
-        Comme $E'$ est de dimension finie, $(l_n)_{n \in \N}$ converge vers $L \in E'$.
-
-        
-    \end{proof}
+\begin{proof}
+    Hors programme.
+    
+    Comme $E'$ est de dimension finie et que $(\ell_n)$ est de Cauchy, elle converge vers $L \in E'$.
 
     Montrons que $g(x) \xrightarrow[x \to a]{} L$.
 
@@ -397,16 +395,16 @@ Si $E = \R$ et $a = \pm \infty$, le théorème s'applique aussi.
 
         $\exists n_0 \in \N, \, \forall n \geqslant n_0, \forall x \in A, \, N'(f_n(x) - g(x)) \leqslant \frac \varepsilon 3$. 
 
-        $\exists n_1 \in \N, \, \forall n \geqslant n_1, \, N'(l_n - L) \leqslant \frac \varepsilon 3$.
+        $\exists n_1 \in \N, \, \forall n \geqslant n_1, \, N'(\ell_n - L) \leqslant \frac \varepsilon 3$.
 
         Soit $n_2 \geqslant \max(n_0, n_1)$. 
 
-        On a $f_{n_2}(x) \xrightarrow[x \to a]{} l_{n_2}$.
+        On a $f_{n_2}(x) \xrightarrow[x \to a]{} \ell_{n_2}$.
 
-        Donc $\exists \eta > 0, \, \forall x \in A, \, N(x - a) \leqslant \eta \Rightarrow N'(f_{n_2}(x) - l_{n_2}) \leqslant \frac \varepsilon 3$.
+        Donc $\exists \eta > 0, \, \forall x \in A, \, N(x - a) \leqslant \eta \Rightarrow N'(f_{n_2}(x) - \ell_{n_2}) \leqslant \frac \varepsilon 3$.
 
         Soit $x \in A$ tel que $N(x - a) \leqslant \eta$. On a : 
-        \[N'(g(x) - L) \leqslant N'(g(x) - f_{n_2}(x)) + N'(f_{n_2}(x) - l_{n_2}) + N'(l_{n_2} - L) \leqslant \varepsilon\]
+        \[N'(g(x) - L) \leqslant N'(g(x) - f_{n_2}(x)) + N'(f_{n_2}(x) - \ell_{n_2}) + N'(\ell_{n_2} - L) \leqslant \varepsilon\]
 
         Donc $g(x) \xrightarrow[x \to a]{} L$.
 \end{proof}
@@ -417,28 +415,30 @@ Si $E = \R$ et $a = \pm \infty$, le théorème s'applique aussi.
 
     Supposons que :
     \begin{itemize}
-        \item $\forall n \in \N, \, u_n(x) \xrightarrow[x \to a]{} \alpha_n$
-        \item $\sum_{n \geqslant 0} u_n$ converge uniformément sur $A$
+        \item $\forall n \in \N, \, u_n(x) \xrightarrow[x \to a]{} \alpha_n$.
+        \item $\sum_{n \geqslant 0} u_n$ converge uniformément sur $A$.
     \end{itemize}
     Alors : 
     \begin{itemize}
-        \item $\displaystyle \sum_{n \geqslant 0} \alpha_n$ converge
-        \item $ \displaystyle \sum_{n = 0 }^{+ \infty    } u_n(x) \xrightarrow[x \to a]{} \sum_{n = 0}^{+ \infty} \alpha_n$
+        \item $\displaystyle \sum_{n \geqslant 0} \alpha_n$ converge.
+        \item $ \displaystyle \sum_{n = 0 }^{+\infty} u_n(x) \xrightarrow[x \to a]{} \sum_{n = 0}^{+ \infty} \alpha_n$.
     \end{itemize} 
 
     C'est-à-dire que :
     \[\lim_{x \to a} \sum_{n = 0}^{+ \infty} u_n(x) = \sum_{n = 0}^{+ \infty} \lim_{x \to a} u_n(x)\]
 \end{theoreme}
 
-\idee{théorème de la double limite}
+\idee{Théorème de la double limite.}
 
 \begin{proof}
     Posons $\forall n \in \N, \forall x \in A$, $\displaystyle f_n(x) = \sum_{k = 0}^n u_k(x)$ et par hypothèse 
-    $(f_n)_{n \in \N}$ converge uniformément sur $A$ vers $\displaystyle g : x \mapsto \sum_{n = 0}^{+ \infty} u_n(x)$.
+    $(f_n)$ converge uniformément sur $A$ vers $\displaystyle g : x \mapsto \sum_{n = 0}^{+ \infty} u_n(x)$.
 
-    De plus $\displaystyle \forall n \in \N$, $\displaystyle f_n(x) \xrightarrow[x \to a]{} \sum_{k = 0}^n \alpha_k$ par théorème d'opérations. 
+    De plus $\displaystyle \forall n \in \N$, $\displaystyle f_n(x) \xrightarrow[x \to a]{} \sum_{k = 0}^n \alpha_k = \ell_n$ par théorème d'opérations. 
 
-    Donc par le théorème de la double limite, $(l_n)_{n \in \N}$ converge donc $\displaystyle \sum_{n \geqslant 0} \alpha_n$ converge et 
+    Donc par le théorème de la double limite, $(\ell_n)$ converge.
+
+    Donc $\displaystyle \sum_{n \geqslant 0} \alpha_n$ converge et 
     $\displaystyle g(x) \xrightarrow[x \to a]{} \sum_{n = 0}^{+ \infty} \alpha_n$.
 \end{proof}
 
@@ -449,44 +449,43 @@ Si $E = \R$ et $a = \pm \infty$, le théorème s'applique aussi.
 
     Avec $a = + \infty$, on a $\forall n \geqslant 1, \, u_n(x) \xrightarrow[x \to +\infty]{} \alpha_n = \left\{\begin{array}{cc} 1 & \text{ si } n = 1 \\ 0 & \text{ sinon } \end{array} \right.$.
         
-    Posons $A = [23, + \infty[$
+    Posons $A = [42, + \infty[$
 
-    On a $A$ voisinage de $+ \infty$ et $\forall x \in A, \, \forall n \in \N, \, \left| \frac{1}{n^x} \right| \leqslant \frac 1 {n^{23}}$ 
+    On a $A$ voisinage de $+ \infty$ et $\forall x \in A, \, \forall n \in \N, \, \left| \frac{1}{n^x} \right| \leqslant \frac 1 {n^{42}}$ 
     terme général d'une série convergente indépendante de $x$.
 
     Donc $\displaystyle \sum_{n \geqslant 1} u_n$ converge normalement sur $A$. 
 
     Donc $\displaystyle \sum_{n \geqslant 1} \alpha_n$ converge et donc $\zeta$ a une limite en $+ \infty$ et 
-    $\zeta(x) \xrightarrow[x \to +\infty]{} \sum_{n = 1 }^{+ \infty } \alpha_n = 1$.
+    $\ds \zeta(x) \xrightarrow[x \to +\infty]{} \sum_{n = 1}^{+\infty} \alpha_n = 1$.
 
 \end{exemple}
 
-\subsection{Continuité en un point }
+\subsection{Continuité en un point}
 
 \begin{proposition}{Continuité de la limite d'une suite de fonctions}{}
-    Soit $a \in A$, $(f_n)_{n \in \N}$ suite de fonctions de $A$ dans $E'$. Supposons que : 
+    Soit $a \in A$, $(f_n)$ suite de fonctions de $A$ dans $E'$. Supposons que : 
     \begin{itemize}
-        \item Les $f_n$ sont continues en $a$
-        \item $(f_n)_{n \in \N}$ converge uniformément vers $g$ sur $A$
+        \item Les $f_n$ sont continues en $a$.
+        \item $(f_n)$ converge uniformément vers $g$ sur $A$.
     \end{itemize}
     Alors $g$ est continue en $a$.
 \end{proposition}
 
-\idee{
-    Découpage d'$\varepsilon$, issus de la continuité et CU puis astuce 
-    du topin
-}
+\idee{Découpage d'$\varepsilon$, issus de la continuité et CU puis astuce du taupin.}
 
 \begin{proof}
     Par hypothèse, $\forall \varepsilon > 0, \, \exists n_0 \in \N, \, \forall n \geqslant n_0, \, \forall x \in A, \, N'(f_n(x) - g(x)) \leqslant \frac \varepsilon 3$.
 
-    et $f_{n_0}$ est continue en $a$. Donc $\exists \eta > 0, \forall x \in A, \, N(x - a) \leqslant \eta \Rightarrow N'(f_{n_0}(x) - f_{n_0}(a)) \leqslant \frac \varepsilon 3$
+    Et $f_{n_0}$ est continue en $a$. Donc $\exists \eta > 0, \forall x \in A, \, N(x - a) \leqslant \eta \Rightarrow N'(f_{n_0}(x) - f_{n_0}(a)) \leqslant \frac \varepsilon 3$.
 
     Soit $x \in A$ tel que $N(x - a) \leqslant \eta$. On a :
     \begin{align}
         N'(g(x) - g(a)) & \leqslant N'(g(x) - f_{n_0}(x)) + N'(f_{n_0}(x) - f_{n_0}(a)) + N'(f_{n_0}(a) - g(a)) \\
         & \leqslant \frac \varepsilon 3 + \frac \varepsilon 3 + \frac \varepsilon 3 = \varepsilon
     \end{align}
+
+    Dong $g$ est continue en $a$.
 \end{proof}
 
 \begin{theoreme}{Continuité série en un point}{}
@@ -502,28 +501,29 @@ Si $E = \R$ et $a = \pm \infty$, le théorème s'applique aussi.
     On applique le théorème précédent à la suite des sommes partielles.
 \end{proof}
 
-\subsection{Continuité sur une partie }
+\subsection{Continuité sur une partie}
 
 \begin{theoreme}{}{}
-    Soit $(f_n)_{n \in \N}$ suite de fonctions de $A$ dans $E'$ continues sur $A$. 
+    Soit $(f_n)$ suite de fonctions de $A$ dans $E'$ continues sur $A$.
+
+    \begin{enumerate}
+        \item On suppose que $(f_n)$ converge uniformément sur $A$ vers $g$. Alors $g$ est continue sur $A$.
+
+        \item \uline{Variante locale :}
+         On suppose que $(f_n)$ converge simplement sur $A$ vers $g$ et que pour tout $a \in A$,
+        il existe $A'$ ouvert tel que $a \in A', \, A' \subset A$ tel que $(f_n)$ converge uniformément vers $g$ sur $A'$.
+        Alors $g$ est continue sur $A$.
+
+        \item \uline{Variante sur $\R$ :}
+        Soit $(f_n)$ une suite de fonctions continues de $\R$ dans $E'$ qui converge simplement vers $g$. 
+        On suppose que pour tout $\alpha > 0, \, f_n$ converge uniformément sur $[-\alpha, \alpha]$ vers $g$.
+        Alors $g$ est continue sur $\R$.
+
+        \item \uline{Variante sur $\R^+_*$ :} Soit $(f_n)$ suite de fonctions continues de $\R_+^*$ dans $E'$ qui converge simplement vers $g$. 
+        On suppose que pour tout $0<a<b, \, f_n$ converge uniformément sur $[a, b]$ vers $g$.
+        Alors $g$ est continue sur $\R_+^*$.
+    \end{enumerate}
     
-    1) On suppose que $(f_n)$ converge uniformément sur $A$ vers $g$. Alors $g$ est continue sur $A$.
-
-    \uindent{Variante locale }
-
-    2) On suppose que $(f_n)$ converge simplement sur $A$ vers $g$ et que pour tout $a \in A$,
-    il existe $A'$ ouvert tel que $a \in A', \, A' \subset A$ tel que $(f_n)$ converge uniformément sur $A'$ vers $g$.
-    Alors $g$ est continue sur $A$.
-
-    \uindent{Variante sur $\R$ }
-
-    3) Soit $(f_n)$ une suite de fonctions continues de $\R$ dans $E'$ qui converge simplement vers $g$. 
-    On suppose que pour tout $\alpha > 0, \, f_n$ converge uniformément sur $[-\alpha, \alpha]$ vers $g$.
-    Alors $g$ est continue sur $\R$.
-
-    \avspace 4) Soit $(f_n)$ suite de fonctions continues de $\R_+^*$ dans $E'$ qui converge simplement vers $g$. 
-    On suppose que pour tout $0<a<b, \, f_n$ converge uniformément sur $[a, b]$ vers $g$.
-    Alors $g$ est continue sur $\R_+^*$.
 \end{theoreme}
 
 \begin{theoreme}{}{}
@@ -556,7 +556,6 @@ Si $E = \R$ et $a = \pm \infty$, le théorème s'applique aussi.
     donc $\zeta$ continue en $x_0$ donc $\zeta$ est continue sur $]1; +\infty[$.
 \end{exemple}
 
-
 \begin{exemple}
     $\fonction{f}{\U}{\C}{z}{\sum_{n = 0}^{+ \infty} \frac{z^n }{n^2}}$. 
 
@@ -570,33 +569,35 @@ Si $E = \R$ et $a = \pm \infty$, le théorème s'applique aussi.
 \end{exemple}
 
 \section{Intégration et dérivation}
-Dans cette partie, $E = \R$
+
+Dans cette partie, $E = \R$.
+
 \subsection{Cas des suites de fonctions}
 
 \begin{theoreme}{Intégration}{}
-    Soit $(f_n)_{n \in \N}$ suite de fonctions de $\mathscr C (I, E')$ avec
+    Soit $(f_n)$ suite de fonctions de $\mathscr C (I, E')$ avec
     $\mathring I \neq \emptyset$.
 
     Soit $a \in I$, et posons $\fonction{F_n}{I}{E'}{x}{\int_a^x f_n(t) dt}$
 
-    On suppose que $(f_n)_{n \in \N}$ converge uniformément vers $g$ 
+    On suppose que $(f_n)$ converge uniformément vers $g$ 
     sur tout segment inclus dans $I$.
 
     Alors : 
     \begin{itemize}
         \item $g$ est continue sur $I$
         \item On peut définir $\fonction{G}{I}{E'}{x}{\int_a^x g(t) dt}$
-        \item $(F_n)_{n \in \N}$ converge uniformément vers $G$ sur tout segment inclus dans $I$
+        \item $(F_n)$ converge uniformément vers $G$ sur tout segment inclus dans $I$.
     \end{itemize}
 \end{theoreme}
 
 \begin{corollaire}{Conséquence du théorème d'intégration}{}
-    Soit $(f_n)_{n \in \N}$ suite de fonctions continues sur 
+    Soit $(f_n)$ suite de fonctions continues sur 
     $[a, b]$ qui converge uniformément vers $g$ sur $[a, b]$. 
     
     Alors $g$ est continue, et
     $\displaystyle \int_a^b f_n(t) dt \xrightarrow[n\to +\infty]{} \int_a^b g(t) dt$, c'est-à-dire
-    que \[\lim_{n \to +\infty} \int_a^b f_n(t) dt = \int_a^b \lim_{n \to +\infty} f_n(t) dt\]
+    que : \[\lim_{n \to +\infty} \int_a^b f_n(t) dt = \int_a^b \lim_{n \to +\infty} f_n(t) dt\]
 \end{corollaire}
 
 \idee{
