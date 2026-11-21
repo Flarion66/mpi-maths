@@ -50,6 +50,19 @@ Montrer que $\Z[\sqrt{2}]$ est un anneau intègre.
 
 \subsection{L'anneau \texorpdfstring{$\Z$}{Z}}
 
+\begin{exercice}[Exercice 86 Algèbre]
+\begin{enumerate}
+    \item Soit $(a,b,p)\in \Z^3$. Prouver que si $p \wedge a = 1 $ et $p\wedge b=1$, alors $p\wedge (ab)=1$.
+    \item Soit $p$ un nombre premier.
+    \begin{enumerate}
+        \item Prouver que $\forall k \in \{ 1,...,p-1\}$, $p$ divise $\dbinom{p}{k}k!$\:\:  puis que $p$ divise $\dbinom{p}{k}$.
+        \item Prouver que:  $\forall n \in \N$,\: $n^{p}\equiv n \:\mod p $.\\
+        \textit{Indication: Procéder par récurrence.}
+        \item En déduire que :\: $\forall n \in{\mathbb{N}}$, $  p \:\text{ne divise pas }\: n \Longrightarrow\: n^{p-1}\equiv 1 \mod p$.
+    \end{enumerate}
+\end{enumerate}
+\end{exercice}
+
 % --- Exercice 21 ---
 \begin{exercice}
 \begin{enumerate}
@@ -92,6 +105,35 @@ On cherche à résoudre le système :
  \item[a)] Trouver deux entiers $u$ et $v$ tels que $13u+17v=1$. 
  \item[b)] En déduire les solutions du système en utilisant le théorème chinois. 
 \end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Exercice 94 Algèbre]
+\begin{enumerate}
+    \item En raisonnant par l'absurde, montrer que le système 
+    $\left\{\begin{array}{lccl}
+    x&\equiv&5& \text{mod}(6)\\
+    x&\equiv&4&\text{mod}(8)
+    \end{array}\right.$ n'a pas de solution $x$ appartient à $\Z$.
+
+    \item Énoncer le théorème de Bézout dans $\Z$.
+
+    \item Soient $a$ et $b$ deux entiers naturels premiers entre eux. \\
+    Soit $c\in \N$.\\
+    \medskip
+    Prouver que:  $\left( a|c\:\text{et} \:b|c\right) \iff ab|c$.
+
+    \item On considère le système $(S)$: 
+    $\left\{\begin{array}{lccl}
+    x&\equiv&6& \text{mod}(17)\\
+    x&\equiv&5& \text{mod}(16)\\
+    x&\equiv&4&\text{mod}(15)
+    \end{array}\right.$ dans lequel l'inconnue $x$ appartient à $\Z$.
+    \begin{enumerate}
+        \item Déterminer une solution particuliére $x_0$ de $(S)$ dans $\Z$.
+
+        \item Déduire des questions précédentes la résolution dans $\Z$ du système $(S)$.
+    \end{enumerate}
+\end{enumerate}    
 \end{exercice}
 
 % --- Exercice 25 ---
@@ -146,6 +188,29 @@ pour déterminer le nombre de carrés dans $(\Z/p\Z)^{*}$.
 \end{exercice}
 
 \subsection{L'anneau \texorpdfstring{$\K[X]$}{K[X]}}
+
+\begin{exercice}[Exercice 84 Algèbre]
+\begin{enumerate}
+    \item Donner la définition d'un argument d'un nombre complexe non nul (on ne demande ni l'interprétation géométrique, ni la démonstration de l'existence d'un tel nombre).
+    \item Soit $n\in \N^*$. Donner, en justifiant, les solutions dans  $\C$ de l'équation $z^{n}=1$ et préciser leur nombre.
+    \item En déduire, pour $n\in \N^*$, les solutions dans $\C$ de l'équation $\left( z+i\right)^{n}=\left(z-i\right)^{n}$ et démontrer que ce sont des nombres réels.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Exercice 85 Algèbre]
+\begin{itemize}
+    \item Soient $n\in \N^*$, $P\in \R_n[X]$ et $a\in \R$.
+    \begin{itemize}
+        \item Donner sans démonstration, en utilisant la formule de Taylor, la décomposition de $P(X)$ dans la base
+        \[(1,(X-a),(X-a)^2,...,(X-a)^n)\]
+
+        \item Soit $r\in \N^*$. En déduire que :
+        $a$ est une racine de $P$ d’ordre de multiplicité $r$ si et seulement si $P^{(r)}(a)\neq 0$ et $\forall k\in \{0,...,r-1\}\ , \ P^{(k)}(a) = 0$.
+    \end{itemize}
+
+    \item Déterminer deux réels $a$ et $b$ pour que $1$ soit racine double du polynôme $P = X^5 + aX^2 + bX$ et factoriser alors ce polynôme dans $\R[X]$.    
+\end{itemize}
+\end{exercice}
 
 % --- Exercice 32 ---
 \begin{exercice}
@@ -269,7 +334,7 @@ Comme l'anneau des réels $\R$ est intègre, tout sous-anneau de $\R$ hérite de
 \end{correction}
 
 % --- Correction 21 ---
-\begin{correction}{21}
+\begin{correction}{22}
 \begin{enumerate}
  \item Soit $x \in \R$. La somme $\lfloor x \rfloor + \lfloor -x \rfloor$ vaut $0$ si $x \in \Z$, et $-1$ si $x \notin \Z$. 
  \item L'élément $k\frac{a}{b} = k\frac{da'}{db'} = k\frac{a'}{b'}$. Cet élément est entier si et seulement si $b' \mid k a'$. 
@@ -288,7 +353,7 @@ Comme l'anneau des réels $\R$ est intègre, tout sous-anneau de $\R$ hérite de
 \end{correction}
 
 % --- Correction 22 ---
-\begin{correction}{22}
+\begin{correction}{23}
 Posons $p = 2^n - 1$ supposé premier, et soit $N = 2^{n-1}p$.
 Les diviseurs positifs de $N$ proviennent de sa décomposition en facteurs premiers. Comme $p$ est un nombre premier distinct de 2 (car $p$ est impair pour $n\ge2$), ses diviseurs sont de la forme $2^k$ et $2^k p$ pour $k \in \{0, \dots, n-1\}$.
 Calculons la somme de ses diviseurs :
@@ -299,7 +364,7 @@ On a donc bien $\sum_{d \mid N} d = 2 \times 2^{n-1} (2^n - 1) = 2N$. Le nombre 
 \end{correction}
 
 % --- Correction 23 ---
-\begin{correction}{23}
+\begin{correction}{24}
 \begin{enumerate}
  \item[a)] On utilise l'identité remarquable : $a^n - 1 = (a-1)(a^{n-1} + a^{n-2} + \dots + a + 1)$. 
  Ceci démontre que $a^n-1$ est divisible par $a-1$. Si $a>2$, alors $a-1 > 1$. 
@@ -312,7 +377,7 @@ On a donc bien $\sum_{d \mid N} d = 2 \times 2^{n-1} (2^n - 1) = 2N$. Le nombre 
 \end{correction}
 
 % --- Correction 24 ---
-\begin{correction}{24}
+\begin{correction}{25}
 \begin{enumerate}
  \item[a)] En effectuant l'algorithme d'Euclide étendu : $17 = 13 \times 1 + 4 \implies 4 = 17 - 13$. 
  Puis $13 = 4 \times 3 + 1 \implies 1 = 13 - 3 \times 4$. 
@@ -327,7 +392,7 @@ On a donc bien $\sum_{d \mid N} d = 2 \times 2^{n-1} (2^n - 1) = 2N$. Le nombre 
 \end{correction}
 
 % --- Correction 25 ---
-\begin{correction}{25}
+\begin{correction}{27}
 \begin{enumerate}
  \item[a)] Comme $p$ est premier, $\Z/p\Z$ est un corps. 
  Dans le groupe multiplicatif $(\Z/p\Z)^*$, chaque élément possède un unique inverse. 
@@ -343,7 +408,7 @@ On a donc bien $\sum_{d \mid N} d = 2 \times 2^{n-1} (2^n - 1) = 2N$. Le nombre 
 \end{correction}
 
 % --- Correction 26 ---
-\begin{correction}{26}
+\begin{correction}{28}
 \begin{enumerate}
  \item D'après le petit théorème de Fermat, $a^{p-1} \equiv 1 \pmod{p}$. 
  On en déduit que $a^{2^r q} \equiv 1 \pmod{p}$, ce qui prouve que $r \in A$. 
@@ -363,7 +428,7 @@ On a donc bien $\sum_{d \mid N} d = 2 \times 2^{n-1} (2^n - 1) = 2N$. Le nombre 
 \end{correction}
 
 % --- Correction 27 ---
-\begin{correction}{27}
+\begin{correction}{29}
 L'anneau $\Z/37\Z$ est un corps car 37 est premier. 
 On calcule le discriminant de l'équation : $\Delta = 1^2 - 4(17) = 1 - 68 = -67$. 
 Or $-67 \equiv 7 \pmod{37}$. 
@@ -375,7 +440,7 @@ L'ensemble des solutions est $S = \{\overline{4}, \overline{32}\}$.
 \end{correction}
 
 % --- Correction 28 ---
-\begin{correction}{28}
+\begin{correction}{30}
 On a la factorisation $x^2 - 4x + 3 = (x-1)(x-3)$. 
 Dans $\Z/143\Z$, l'équation est donc équivalente à $(x-1)(x-3) \equiv 0 \pmod{143}$. 
 L'anneau $\Z/143\Z$ n'est pas intègre car $143 = 11 \times 13$. 
@@ -388,7 +453,7 @@ $S = \{1, 3, 12, 14\}$ modulo 143.
 \end{correction}
 
 % --- Correction 29 ---
-\begin{correction}{29}
+\begin{correction}{31}
 Par le théorème des restes chinois, comme $20 = 4 \times 5$, on peut résoudre le système dans $\Z/4\Z$ et dans $\Z/5\Z$. 
 Dans $\Z/5\Z$ : 
 \[\begin{cases}5x+2y \equiv 3 \implies 2y \equiv 3 \equiv 8 \implies y \equiv 4 \\ 2x+4y \equiv 6 \equiv 1 \implies 2x + 16 \equiv 1 \implies 2x \equiv -15 \equiv 0 \implies x \equiv 0\end{cases}\] 
@@ -400,7 +465,7 @@ En recombinant ces solutions par le théorème des restes chinois, on obtiendrai
 \end{correction}
 
 % --- Correction 30 ---
-\begin{correction}{30}
+\begin{correction}{32}
 L'équation s'écrit $x^2(x-1) \equiv 0$.
 Dans $\Z/13\Z$, qui est un corps (car 13 est premier), l'anneau est intègre. Les seules solutions sont donc $x=0$ et $x=1$.
 Dans $\Z/12\Z$, l'anneau n'est pas intègre. $x=0$ et $x=1$ sont des solutions évidentes.
@@ -411,7 +476,7 @@ Les solutions dans $\Z/12\Z$ sont $S = \{0, 1, 4, 9\}$.
 \end{correction}
 
 % --- Correction 31 ---
-\begin{correction}{31}
+\begin{correction}{33}
 Soit l'application $\varphi(x) = x^2$. Comme le groupe $(\Z/p\Z)^*$ est abélien, $\varphi$ est un morphisme de groupes de $(\Z/p\Z)^*$ dans lui-même. 
 Le noyau $\ker(\varphi)$ est l'ensemble des éléments vérifiant $x^2 = \overline{1}$, c'est-à-dire l'ensemble des solutions de l'équation $X^2 - 1 = 0$ sur le corps $\Z/p\Z$. 
 Cette équation a pour racines $1$ et $-1$. 
@@ -423,7 +488,7 @@ Il y a donc exactement $\frac{p-1}{2}$ carrés non nuls dans $\Z/p\Z$.
 \end{correction}
 
 % --- Correction 32 ---
-\begin{correction}{32}
+\begin{correction}{36}
 \begin{enumerate}
  \item[a)] Par le théorème de Bézout, puisque $P$ et $Q$ sont premiers entre eux, il existe $U_0, V_0 \in \K[X]$ tels que $P U_0 + Q V_0 = 1$. 
  On effectue la division euclidienne de $U_0$ par $Q$ : il existe des polynômes $D$ et $U$ tels que $U_0 = Q D + U$ avec $\deg(U) < \deg(Q)$. 
@@ -442,7 +507,7 @@ Il y a donc exactement $\frac{p-1}{2}$ carrés non nuls dans $\Z/p\Z$.
 \end{correction}
 
 % --- Correction 33 ---
-\begin{correction}{33}
+\begin{correction}{37}
 Posons $P = nX^{n+1}-(n+1)X^{n}+1$ et $Q = X^{n}-nX+n-1$.
 On constate que $P(1) = 0$ et $Q(1) = 0$. Donc $X-1$ divise les deux polynômes.
 Examinons les racines multiples :
@@ -456,7 +521,7 @@ Le PGCD de $P$ et $Q$ est donc $(X-1)^2$.
 \end{correction}
 
 % --- Correction 34 ---
-\begin{correction}{34}
+\begin{correction}{38}
 \begin{itemize}
  \item \textbf{Dans $\C[X]$ :} Les racines de $X^4+1$ sont les racines quatrièmes de $-1$, c'est-à-dire $e^{i\frac{\pi}{4}}, e^{i\frac{3\pi}{4}}, e^{i\frac{5\pi}{4}} = e^{-i\frac{3\pi}{4}}$ et $e^{i\frac{7\pi}{4}} = e^{-i\frac{\pi}{4}}$. 
  La décomposition est :
@@ -475,7 +540,7 @@ Le PGCD de $P$ et $Q$ est donc $(X-1)^2$.
 \end{correction}
 
 % --- Correction 35 ---
-\begin{correction}{35}
+\begin{correction}{39}
 L'ensemble $\Q(\sqrt{2})$ est un sous-anneau de $\R$. Il suffit de montrer que tout élément non nul de cet anneau admet un inverse dans cet ensemble.
 Soit $x = a+b\sqrt{2} \in \Q(\sqrt{2}) \setminus \{0\}$. Les nombres rationnels $a$ et $b$ ne sont pas simultanément nuls.
 On cherche l'inverse dans $\R$ en utilisant la quantité conjuguée :
@@ -487,7 +552,7 @@ Ce qui est de la forme $a' + b'\sqrt{2}$ avec $a',b' \in \Q$. L'inverse appartie
 \end{correction}
 
 % --- Correction 36 ---
-\begin{correction}{36}
+\begin{correction}{40}
 Pour prouver l'injectivité de $\varphi_x$, on suppose que $\varphi_x(a) = \varphi_x(b)$ pour deux éléments $a,b \in A$.
 Cela signifie que $xa = xb$, soit $x(a-b) = 0$.
 Comme l'anneau $A$ est intègre et que par hypothèse $x \neq 0$, on en déduit que $a-b=0$, soit $a=b$. L'application $\varphi_x$ est donc injective.
