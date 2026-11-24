@@ -570,47 +570,36 @@ $A \subset E$.
 
 \section{Intégration et dérivation}
 
-Dans cette partie, $E = \R$.
+Dans toute cette partie on prend $E = \R$ et $I$ un intervalle d'intérieur non vide.
 
 \subsection{Cas des suites de fonctions}
 
 \begin{theoreme}{Intégration}{}
-    Soit $(f_n)$ suite de fonctions de $\mathscr C (I, E')$ avec
-    $\mathring I \neq \emptyset$.
+    Soit $(f_n)$ suite de fonctions de $\mathscr C (I, E')$.
 
-    Soit $a \in I$, et posons $\fonction{F_n}{I}{E'}{x}{\int_a^x f_n(t) dt}$
+    Soit $a \in I$, et posons $\fonction{F_n}{I}{E'}{x}{\int_a^x f_n(t) \dt}$
 
     On suppose que $(f_n)$ converge uniformément vers $g$ 
     sur tout segment inclus dans $I$.
 
     Alors : 
     \begin{itemize}
-        \item $g$ est continue sur $I$
-        \item On peut définir $\fonction{G}{I}{E'}{x}{\int_a^x g(t) dt}$
+        \item $g$ est continue sur $I$.
+        \item On peut définir $\fonction{G}{I}{E'}{x}{\int_a^x g(t) \dt}$.
         \item $(F_n)$ converge uniformément vers $G$ sur tout segment inclus dans $I$.
     \end{itemize}
 \end{theoreme}
 
-\begin{corollaire}{Conséquence du théorème d'intégration}{}
-    Soit $(f_n)$ suite de fonctions continues sur 
-    $[a, b]$ qui converge uniformément vers $g$ sur $[a, b]$. 
-    
-    Alors $g$ est continue, et
-    $\displaystyle \int_a^b f_n(t) dt \xrightarrow[n\to +\infty]{} \int_a^b g(t) dt$, c'est-à-dire
-    que : \[\lim_{n \to +\infty} \int_a^b f_n(t) dt = \int_a^b \lim_{n \to +\infty} f_n(t) dt\]
-\end{corollaire}
-
 \idee{
-    1) Continuité de $g$ : voisinage de $\alpha$, convergence uniforme sur $S$ voisinage 
-
-    2) Inégalité triangulaire des intégrales, puis convergence uniforme sur $S'$
-
-    3) Conséquence : $g$ continue par le théorème, puis convergence uniforme 
+    \begin{itemize}
+        \item Continuité de $g$ : voisinage de $\alpha$, convergence uniforme sur $S$ voisinage 
+        \item Inégalité triangulaire des intégrales, puis convergence uniforme sur $S'$
+    \end{itemize}
 }
 
 \begin{proof}
     Soit $\alpha \in I$, il existe $S$ segment inclus dans $I$ tel que $S$ soit un voisinage de $\alpha$. Or 
-    $(f_n)_{n \in \N}$ converge uniformément sur $S$ et est continue, donc $g$ continue en $\alpha$. 
+    $(f_n)$ converge uniformément sur $S$ et est continue, donc $g$ continue en $\alpha$. 
 
     Donc $g$ continue sur $I$.
 
@@ -638,20 +627,31 @@ Dans cette partie, $E = \R$.
     \end{equation*}
 
     qui est une suite de limite nulle indépendante de $x$ donc $F_n \xrightarrow[CU]{} G$ sur tout segment. 
+\end{proof}
 
-    \uindent{Preuve de la conséquence }
+\begin{corollaire}{Conséquence du théorème d'intégration}{}
+    Soit $(f_n)$ suite de fonctions continues sur 
+    $[a, b]$ qui converge uniformément vers $g$ sur $[a, b]$. 
+    
+    Alors $g$ est continue, et
+    $\displaystyle \int_a^b f_n(t) dt \xrightarrow[n\to +\infty]{} \int_a^b g(t) dt$, c'est-à-dire
+    que : \[\lim_{n \to +\infty} \int_a^b f_n(t) dt = \int_a^b \lim_{n \to +\infty} f_n(t) dt\]
+\end{corollaire}
 
+\idee{$g$ continue par le théorème, puis convergence uniforme }
+
+\begin{proof}
     \avspace Avec $I = [a, b]$, le théorème donne $g$ continue et $F_n \xrightarrow[CU]{} G$ sur $I$. 
 
-    En particuier il a convergence simple et $F_n(b) \to G(b)$.
+    En particulier il y a convergence simple et $F_n(b) \to G(b)$.
 \end{proof}
 
 \begin{theoreme}{Dérivation}{th:derivation}
-    Soit $(f_n)_{n \in \N}$ suite de fonctions de classe $\mathscr{C}^1$ de $I$ dans $E'$.
+    Soit $(f_n)$ suite de fonctions de classe $\mathscr{C}^1$ de $I$ dans $E'$.
     On suppose que : 
     \begin{itemize}
-        \item $(f_n)$ converge simplement vers $g$ sur $I$
-        \item $(f_n')$ converge uniformément sur tout segment vers $h : I \to E'$
+        \item $(f_n)$ converge simplement vers $g$ sur $I$.
+        \item $(f_n')$ converge uniformément sur tout segment de $I$ vers $h : I \to E'$.
     \end{itemize}
 
     alors $(f_n)$ converge uniformément sur tout segment vers $g$ et $g$ est de classe $\mathscr{C}^1$, 
@@ -659,9 +659,8 @@ Dans cette partie, $E = \R$.
 \end{theoreme}
 
 \idee{
-    1) Théorème précédent avec $f_n'$ et intégration
-
-    2) Inégalité triangulaire intégrale et unicité de la limite 
+    Théorème précédent avec $f_n'$ et intégration.
+    Puis inégalité triangulaire intégrale et unicité de la limite. 
 }
 
 \begin{proof}
@@ -673,23 +672,22 @@ Dans cette partie, $E = \R$.
 
     \avspace Soit $S$ segment inclus dans $I$ et $x \in S$. 
     
-    On a 
-    $f_n(x) - H(x) = F_n(x) + f_n(a) - H(x)$ et donc 
+    On a $f_n(x) - H(x) = F_n(x) + f_n(a) - H(x)$ et donc :
 
-    \begin{align}
+    \begin{align*}
         N'(f_n(x) - \int_{a }^{x } h(t) dt - f_n(a)) & \leqslant N'(F_n(x) - H(x)) \\
         & \leqslant ||F_n - H||_{\infty, S} \\
         & \to 0 \text{ et indépendant de } x
-    \end{align}
+    \end{align*}
 
     Posons alors $J(x) = H(x) + f_n(a)$. On a $f_n$ converge uniformément sur tout segment vers 
-    $J$ car  
+    $J$ car :
     
-    \begin{align}
+    \begin{align*}
         N'(f_n(x) - J(x)) & \leqslant N'(f_n(x) - H(x) - f_n(a)) + N'(f_n(a) - g(a)) \\
-        & \leqslant ||F_n - H||_{\infty, S} + N'(f_n(a) - g(a)) \\
-        & \to 0 \text{ et indépendant de } x
-    \end{align}
+        & \leqslant |x - a| ||F_n - H||_{\infty, S} + N'(f_n(a) - g(a)) \\
+        & \to 0 ~ \text{et indépendant de} ~ x ~ \text{comme vu dans la preuve du théorème de l'intégration}
+    \end{align*}
 
     Donc convergence simple, donc $J = g$ par unicité de la limite. 
 
@@ -697,39 +695,47 @@ Dans cette partie, $E = \R$.
 \end{proof}
 
 \begin{theoreme}{Généralisation à la classe $\mathscr{C}^k$}{}
-    Soit $(f_n)_{n \in \N}$ suite de fonctions de classe $\mathscr{C}^k$ sur $I$. 
+    Soit $(f_n)$ une suite de fonctions de classe $\mathscr{C}^k$ sur $I$. 
 
-    On suppose que  $\forall i \in \ninter{0}{k - 1}$, 
+    On suppose que :
     \begin{itemize}
-        \item $f_n^{(i)}$ converge simplement vers $g_i$ sur $I$
-        \item $f_n^{(k)}$ converge uniformément sur tout segment vers $g_k$
+        \item $\forall i \in \ninter{0}{k - 1}$,
+        $f_n^{(i)}$ converge simplement vers $g_i$ sur $I$.
+        \item $f_n^{(k)}$ converge uniformément sur tout segment vers $g_k$.
     \end{itemize}
 
     Alors $\forall i \in \ninter{0}{k - 1}, \, f_n^{(i)}$ converge uniformément sur tout segment vers $g_i$,
     $g_0$ est de classe $\mathscr{C}^k$ et $\forall i \in \ninter{0}{k}, \, g_0^{(i)} = g_i$.
 \end{theoreme}
 
-\idee{Récurrence sur $k$}
+\idee{Récurrence sur $k$.}
 
 \begin{proof}
     Par récurrence sur $k$, le cas $k = 1$ est le théorème précédent.
 
-    Hypothèse de récurrence : supposons cela vrai pour un certain $k \geqslant 1$, et toute 
+    \uline{Hypothèse de récurrence :} supposons cela vrai pour un certain $k \geqslant 1$, et toute 
     suite de fonctions $\mathscr C^k$. 
 
-    Soit $(f_n)_{n \in \N}$ suite de fonctions de classe $\mathscr{C}^{k + 1}$ vérifiant les hypothèses du théorème pour $k + 1$.
+    Soit $(f_n)$ suite de fonctions de classe $\mathscr{C}^{k + 1}$ vérifiant les hypothèses du théorème pour $k + 1$.
 
-    Alors on peut appliquer l'hypothèse de récurrence à la suite $(f_n')_{n \in \N}$ qui est de classe $\mathscr{C}^k$.
+    Alors on peut appliquer l'hypothèse de récurrence à la suite $(f_n')$ qui est de classe $\mathscr{C}^k$.
 
     Donc les convergences des $f_n^{(i)}$ pour $i \geqslant 1$ sont uniformes, donc 
     par le théorème précédent, $(f_n)$ converge uniformément sur tout segment et 
     $g_0$ est de classe $\mathscr{C}^1$ avec $g_0' = g_1$. 
 
     Or par l'hypothèse, $g_1$ est de classe $\mathscr{C}^k$ et donc $g_0$ est de classe $\mathscr{C}^{k + 1}$ avec
-    $g_1^{(j)} = g_{j + 1}$ et $g_0^{(j)} = g_j$ 
+    $g_1^{(j)} = g_{j + 1}$ et $g_0^{(j)} = g_j$.
 \end{proof}
 
-\subsection{Cas des séries de fonctions }
+\begin{remarque}
+    Si $f_n \xrightarrow[CU]{} g$ et $\forall n \in \N, ~ f_n$ est $\mathscr C^{\infty}$.
+
+    Pour montrer que $g$ est $\mathscr C^{\infty}$ il faut montrer que $\exists n_0 \in \N, \forall k \geqslant n_0,  f_n^{(k)} \xrightarrow[CU]{} g^{(k)}$.
+    Puis on applique le théorème 9.29.    
+\end{remarque}
+
+\subsection{Cas des séries de fonctions}
 
 Tous les théorèmes précédents s'appliquent en posant $\displaystyle f_n = \sum_{k = 0}^n u_k$ somme partielle des 
 séries de fonctions.
@@ -737,23 +743,23 @@ séries de fonctions.
 \begin{theoreme}{Intégration séries}{}
     Soit $\sum_{n \geqslant 0} u_n$ une série de fonctions. Supposons que : 
     \begin{itemize}
-        \item $\forall n \in \N, \, u_n$ est continue sur $I$
-        \item $\sum_{n \geqslant 0} u_n$ converge uniformément 
+        \item $\forall n \in \N, \, u_n$ est continue sur $I$.
+        \item $\sum_{n \geqslant 0} u_n$ converge uniformément. 
     sur tout segment inclus dans $I$
     \end{itemize}
-    Soit $a \in I$. Posons $\forall n \in \N, \, \fonction{U_n} I {E'}{x}{\int_a^x u_n(t) dt}$.
+    Soit $a \in I$. Posons $\forall n \in \N, \, \fonction{U_n} I {E'}{x}{\int_a^x u_n(t) \dt}$.
 
     Alors $\sum_{n \geqslant 0} U_n$ converge uniformément sur tout segment inclus dans $I$, 
     
     et 
     $\forall x \in I$, 
-    \[\sum_{n = 0 }^{+ \infty } \int_{a }^{x } u_n(t) dt = \int_{a}^{x } \sum_{n = 0}^{+ \infty} u_n(t) dt\]
+    \[\sum_{n = 0 }^{+ \infty } \int_{a }^{x } u_n(t) \dt = \int_{a}^{x } \sum_{n = 0}^{+ \infty} u_n(t) \dt\]
 \end{theoreme}
 
 \begin{corollaire}{}{}
     Soit $\sum_{n \geqslant 0} u_n$ une série de fonctions continues qui converge uniformément sur 
     $[a, b]$, alors :
-    \[\sum_{n = 0}^{+ \infty} \int_{a}^{b} u_n(t) dt = \int_{a}^{b} \sum_{n = 0}^{+ \infty} u_n(t) dt\]
+    \[\sum_{n = 0}^{+ \infty} \int_{a}^{b} u_n(t) \dt = \int_{a}^{b} \sum_{n = 0}^{+ \infty} u_n(t) \dt\]
 \end{corollaire}
 
 \begin{proof}
@@ -761,26 +767,34 @@ séries de fonctions.
     théorème sur les suites. 
 \end{proof}
 
+\begin{exemple}
+    Soit $\ds \forall n \in \N, a_n = \int_0^1 \frac{t^ne^{-t}}{n!} \dt$ montrons que $\sum a_n$ converge.
+
+    Posons $\fonction{u_n}{[0,1]}{\R}{t}{\frac{t^ne^{-t}}{n!}}$. $\|u_n\|_{\infty} \leqslant \frac 1 {n!} \to 0$ donc $\sum u_n$ converge normalement donc uniformément.
+
+    Donc $\ds \sum_{k=0}^{+\infty} a_n = \int_0^1 \sum_{k=0}^{+\infty} u_n \dt = \int_0^1 1 \dt = 1$. 
+\end{exemple}
+
 \begin{theoreme}{Dérivation série}{}
-    Soit $\sum_{n \geqslant 0} u_n$ une série de fonctions de classe $\mathscr{C}^1$ sur $I$ telle que
+    Soit $\sum_{n \geqslant 0} u_n$ une série de fonctions de classe $\mathscr{C}^1$ sur $I$ telle que :
     \begin{itemize}
-        \item $\sum_{n \geqslant 0} u_n$ converge simplement
-        \item $\sum_{n \geqslant 0} u'_n$ converge uniformément sur tout segment
+        \item $\sum_{n \geqslant 0} u_n$ converge simplement.
+        \item $\sum_{n \geqslant 0} u'_n$ converge uniformément sur tout segment.
     \end{itemize}
     Alors : 
     \begin{itemize}
-        \item $\sum_{n \geqslant 0} u_n$ converge uniformément sur tout segment
-        \item $\displaystyle \sum_{n = 0 }^{+ \infty } u_n$ est de classe $\mathscr C^1$
+        \item $\sum_{n \geqslant 0} u_n$ converge uniformément sur tout segment.
+        \item $\displaystyle \sum_{n = 0 }^{+ \infty } u_n$ est de classe $\mathscr C^1$.
     \end{itemize}
     Donc : 
     \[\left(\sum_{n = 0}^{+ \infty} u_n\right)' = \sum_{n = 0 }^{+ \infty } u_n'\]
 \end{theoreme}
 
 \begin{theoreme}{Généralisation}{}
-    Soit $\sum_{n \geqslant 0} u_n$ une série de fonctions de classe $\mathscr{C}^k$ sur $I$ tel que 
+    Soit $\sum_{n \geqslant 0} u_n$ une série de fonctions de classe $\mathscr{C}^k$ sur $I$ telle que :
     \begin{itemize}
-        \item $\forall i \in \ninter{0}{k - 1}, \, \sum_{n \geqslant 0} u_n^{(i)}$ converge simplement sur $I$ 
-        \item $\sum_{n \geqslant 0} u_n^{(k)}$ converge uniformément sur tout segment inclus dans $I$   
+        \item $\forall i \in \ninter{0}{k - 1}, \, \sum_{n \geqslant 0} u_n^{(i)}$ converge simplement sur $I$.
+        \item $\sum_{n \geqslant 0} u_n^{(k)}$ converge uniformément sur tout segment inclus dans $I$.
     \end{itemize}
 
     Alors $\forall i \in \ninter{0}{k - 1}, \, \sum_{n \geqslant 0} u_n^{(i)}$ converge uniformément sur tout segment
@@ -801,12 +815,11 @@ séries de fonctions.
     De plus, $\displaystyle \frac{(\ln n)^k}{n^a} = \circ \left( \frac 1 {n^{\frac{a + 1}{2}}} \right)$, terme 
     général d'une série convergente, donc la série converge normalement. 
 
-    Donc $\zeta$ est de classe $\mathscr{C}^{k}$ pour tout $k$ donc $\mathscr{C}^{\infty}$ est 
+    Donc $\zeta$ est de classe $\mathscr{C}^{k}$ pour tout $k$ donc $\mathscr{C}^{\infty}$ et :
     \[\zeta^{(k)}(x) = \sum_{n = 0}^{+ \infty} \frac{(- \ln(n))^k}{n^x}\]
 \end{exemple}
 
-\subsection{Etude de fonctions définies comme somme de série }
-
+\subsection{Étude de fonctions définies comme somme de série }
 
 On considère $f : \displaystyle x \mapsto \sum_{n = 0}^{+ \infty} u_n(x)$. 
 
