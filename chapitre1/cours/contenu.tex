@@ -501,14 +501,14 @@ Soit $(E, N)$ un espace vectoriel normé et $d$ la distance associée à $N$.
     Soit $P \in \C[X]$ de degré $\geqslant 2$. Alors les racines de $P'$ sont dans 
     l'enveloppe convexe des racines de $P$. 
 
-    Notons $\ds P = \lambda \prod_{i = 1}^{k}(X - z_i)^{m_i}$ car $\C$ est algébriquement clos
+    Notons $\ds P = \lambda \prod_{i = 1}^k (X - z_i)^{m_i}$ car $\C$ est algébriquement clos
     donc $P$ scindé. 
 
-    On a $\ds P' = \lambda \sum_{i = 1}^{k} m_i (X - z_i)^{m_i - 1} \prod_{j = 1,~j\not= i}^{k}(X - z_j)^{m_j}$
+    On a $\ds P' = \lambda \sum_{i = 1}^k m_i (X - z_i)^{m_i - 1} \prod_{j = 1,~j\not= i}^k (X - z_j)^{m_j}$
 
     Soit $\alpha$ une racine de $P'$ qui n'est pas racine de $P$.
 
-    Alors $\ds \lambda\sum_{i = 1}^{k }m_i(\alpha - z_i)^{m_i - 1} \prod_{j = 1,~j\not= i}^{k } (\alpha - z_j)^{m_j} = 0$
+    Alors $\ds \sum_{i = 1}^k m_i(\alpha - z_i)^{m_i - 1} \prod_{j = 1,~j\not= i}^k (\alpha - z_j)^{m_j} = 0$
 
     Donc en divisant par $P(\alpha)$ : 
     \[\frac{P'(\alpha)}{P(\alpha)}= \sum_{i = 1}^{k } \frac{m_i}{\alpha - z_i} = 0\]
@@ -980,7 +980,7 @@ Soit $E$ un $\K$-espace vectoriel.
     \end{itemize}
 \end{proof}
 
-\begin{definition}{Ensemble des suites sommable}{}
+\begin{definition}{Ensemble des suites sommables}{}
 
     On note $\ell^1(\K) = \{(u_n) \in \K^{\N} \mid \sum_{n \geqslant 0} |u_n| ~ \text{est une série convergente} ~ \}$
 \end{definition}
