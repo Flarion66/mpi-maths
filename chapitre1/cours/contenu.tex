@@ -781,7 +781,7 @@ Soit $E$ un $\K$-espace vectoriel.
 
     Posons $\forall n \in \N^*, f_n (x) = x^n$. 
 
-    Alors $\ds \int_{0}^{1} x^n \text d x = \left[\frac {x^n + 1}{n+ 1}\right]_0^1 = \frac 1 {n + 1}$
+    Alors $\ds \int_{0}^{1} x^n \text d x = \left[\frac {x^{n + 1}}{n+ 1}\right]_0^1 = \frac 1 {n + 1}$
     et $||f_n|| = 1$
 
     Donc $\ds \frac{||f_n||_1}{||f_n||_\infty} \limit{n}{+ \infty} 0$ : les normes ne sont pas équivalentes. \\
@@ -980,7 +980,7 @@ Soit $E$ un $\K$-espace vectoriel.
     \end{itemize}
 \end{proof}
 
-\begin{definition}{Ensemble des suites convergentes}{}
+\begin{definition}{Ensemble des suites sommable}{}
 
     On note $\ell^1(\K) = \{(u_n) \in \K^{\N} \mid \sum_{n \geqslant 0} |u_n| ~ \text{est une série convergente} ~ \}$
 \end{definition}
@@ -1020,7 +1020,7 @@ Soit $E$ un $\K$-espace vectoriel.
 
 \begin{remarque}
     Si on prend le produit scalaire $\ds \langle f, g \rangle = \int_{a}^{b} fg$, on a 
-    $f(x) =  \langle f', 1 \rangle $ (parfois utile en exercice). 
+    $f(a)-f(b) =  \langle f', 1 \rangle $ (parfois utile en exercice). 
 \end{remarque}
 
 \begin{theoreme}{Norme de la convergence moyenne}{}
